@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Figtree, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL, company } from "@/content/site";
+import { CtaTracker } from "@/components/layout/CtaTracker";
 import { revealBootScript } from "@/components/layout/RevealObserver";
 import "./globals.css";
 
@@ -62,6 +64,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="min-h-dvh">
         {children}
+        <Analytics />
+        <CtaTracker />
       </body>
     </html>
   );
