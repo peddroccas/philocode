@@ -4,14 +4,12 @@ import { Header } from "@/components/layout/Header";
 import { MobileCtaBar } from "@/components/layout/MobileCtaBar";
 import { RevealObserver } from "@/components/layout/RevealObserver";
 import { Contact } from "@/components/sections/Contact";
-import { Differentials } from "@/components/sections/Differentials";
 import { Faq } from "@/components/sections/Faq";
 import { Hero } from "@/components/sections/Hero";
 import { JsonLd } from "@/components/sections/JsonLd";
 import { Pricing } from "@/components/sections/Pricing";
 import { Process } from "@/components/sections/Process";
 import { Projects } from "@/components/sections/Projects";
-import { Services } from "@/components/sections/Services";
 import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Home() {
@@ -27,9 +25,7 @@ export default function Home() {
       <Header />
       <main id="conteudo">
         <Hero />
-        <Services />
         <Projects />
-        <Differentials />
         <Process />
         <Pricing />
         <Testimonials />

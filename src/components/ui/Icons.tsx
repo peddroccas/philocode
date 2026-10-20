@@ -41,41 +41,6 @@ export function MailIcon({ className }: IconProps) {
   );
 }
 
-export function SparkIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden className={className} {...stroke}>
-      <path d="M12 3v4M12 17v4M3 12h4M17 12h4" />
-      <path d="M12 8.5 13.2 10.8 15.5 12 13.2 13.2 12 15.5 10.8 13.2 8.5 12 10.8 10.8Z" />
-    </svg>
-  );
-}
-
-export function BoltIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden className={className} {...stroke}>
-      <path d="M13 3 5 13.5h6L10 21l8-10.5h-6L13 3Z" />
-    </svg>
-  );
-}
-
-export function DiamondIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden className={className} {...stroke}>
-      <path d="M6 4h12l3 5-9 11L3 9l3-5Z" />
-      <path d="M3 9h18M9 4l3 16 3-16" />
-    </svg>
-  );
-}
-
-export function ChatIcon({ className }: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" aria-hidden className={className} {...stroke}>
-      <path d="M20 12a8 8 0 0 1-11.6 7.14L4 20l.9-4.1A8 8 0 1 1 20 12Z" />
-      <path d="M8.5 11h7M8.5 14h4" />
-    </svg>
-  );
-}
-
 export function PlusIcon({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden className={className} {...stroke}>

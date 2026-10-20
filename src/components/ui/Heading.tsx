@@ -1,18 +1,16 @@
 import clsx from "clsx";
 import type { Emphasis } from "@/content/site";
-import { reveal } from "@/lib/reveal";
 
 /** Rótulo em mono com o traço azul dos braços da âncora. */
 export function Eyebrow({ children, tone = "light" }: { children: React.ReactNode; tone?: "light" | "dark" }) {
   return (
     <p
-      {...reveal("up", 0)}
       className={clsx(
         "flex items-center gap-3 font-mono text-xs tracking-[0.08em] uppercase",
         tone === "light" ? "text-muted" : "text-mist",
       )}
     >
-      <span {...reveal("line", 1)} aria-hidden className="h-0.75 w-5 rounded-full bg-brand" />
+      <span aria-hidden className="h-0.75 w-5 rounded-full bg-brand" />
       {children}
     </p>
   );
@@ -44,7 +42,6 @@ export function SectionHeading({ eyebrow, title, intro, id, tone = "light", clas
       <Eyebrow tone={tone}>{eyebrow}</Eyebrow>
       <h2
         id={id}
-        {...reveal("mask", 1)}
         className={clsx(
           "mt-4 text-3xl leading-[1.12] font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.75rem]",
           tone === "light" ? "text-ink" : "text-canvas",
@@ -54,7 +51,6 @@ export function SectionHeading({ eyebrow, title, intro, id, tone = "light", clas
       </h2>
       {intro && (
         <p
-          {...reveal("up", 2)}
           className={clsx("mt-4 text-lg leading-relaxed", tone === "light" ? "text-muted" : "text-mist")}
         >
           {intro}

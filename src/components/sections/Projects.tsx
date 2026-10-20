@@ -63,7 +63,7 @@ export function Projects() {
           ))}
         </ul>
 
-        <div {...reveal("up", 1)} className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <p className="flex items-center gap-3 text-muted">
             <span aria-hidden className="relative flex size-2.5">
               <span className="absolute inset-0 rounded-full bg-brand/40 motion-safe:animate-ping" />

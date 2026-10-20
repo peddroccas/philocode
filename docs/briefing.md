@@ -1,6 +1,8 @@
 # Briefing — Site institucional da Pôrto
 
-> Fonte: formulário “Briefing Site Institucional” (Tally, submissão `e5Geoyk`, 16/10/2026), arquivos de marca enviados (logo e favicons) e **complementos enviados pelo cliente no chat em 16/10/2026**: processo (call opcional, sem agendamento online) e, depois de pesquisa de mercado, oferta final: **Essential** (site de uma página) **R$ 997**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.997**, primeira versão em 5 a 7 dias úteis · **página extra R$ 297** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula) · **domínio no nome do cliente, com o primeiro ano pago pela Pôrto e as renovações pelo cliente** · **lançamento para os 5 primeiros clientes:** Essential R$ 500 e Premium R$ 997, em troca de depoimento e autorização de portfólio. Hospedagem: Vercel Pro.
+> Fonte: formulário “Briefing Site Institucional” (Tally, submissão `e5Geoyk`, 16/10/2026), arquivos de marca enviados (logo e favicons) e complementos enviados pelo cliente no chat entre 16 e 20/10/2026. Oferta atual: **Essential** (site de uma página) **R$ 499**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.197**, primeira versão em 5 a 7 dias úteis · **página extra R$ 150** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula; sem fidelidade) · **domínio registrado e pago pelo cliente, no nome dele; a Pôrto conecta ao site** · **lançamento para os 5 primeiros clientes: 40% de desconto** (Essential R$ 299 e Premium R$ 718), em troca de depoimento e autorização de portfólio. Hospedagem: Vercel Pro.
+>
+> **Revisão de 20/10/2026:** a esposa do cliente achou o site caro e com informação demais. O cliente reduziu os preços (de R$ 997/R$ 1.997 para R$ 597/R$ 1.197; lançamento de R$ 500/R$ 997 para R$ 497/R$ 997) e aprovou o enxugamento: saíram as seções “Para quem é” (serviços, redundante com os planos) e “Por que a Pôrto” (diferenciais, redundante com hero e processo); o processo passou de 6 para 4 passos; preços de 5 para 3 blocos; perguntas frequentes de 8 para 5. A página extra caiu de R$ 297 para R$ 150 para ficar coerente com o Premium (4 páginas a mais por R$ 600).
 > Legenda: **[Confirmado]** = informado pelo cliente · **[Sugerido]** = direção criativa ou texto proposto a partir da análise · **[Pendente]** = dado ausente, inconsistente ou a confirmar.
 
 ---
@@ -47,7 +49,7 @@
 - **[Confirmado]** Serviço único: **criação de sites profissionais e institucionais (para empresas)**. É o que a empresa tem hoje e o que deve ser destacado.
 - **[Confirmado]** Diferenciais: **AI First, velocidade e qualidade do produto**.
 - **[Confirmado]** O que os clientes mais valorizam: **atendimento e qualidade do serviço**.
-- **[Confirmado — complemento do cliente]** Oferta: **Essential** (site de uma página) **R$ 997**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.997**, primeira versão em 5 a 7 dias úteis · **página extra R$ 297** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula) · **domínio no nome do cliente, com o primeiro ano pago pela Pôrto e as renovações pelo cliente** · **lançamento para os 5 primeiros clientes:** Essential R$ 500 e Premium R$ 997, em troca de depoimento e autorização de portfólio. Nomes dos pacotes escolhidos pelo cliente (em inglês; “Signature” foi descartado por lembrar “assinatura”/mensalidade). O valor da rodada extra (R$ 150) foi sugerido e o cliente delegou a decisão. (Valores iniciais eram R$ 500 e R$ 100/ano; revistos após pesquisa — ver seção 26.)
+- **[Confirmado — complemento do cliente]** Oferta: **Essential** (site de uma página) **R$ 499**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.197**, primeira versão em 5 a 7 dias úteis · **página extra R$ 150** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula; sem fidelidade) · **domínio registrado e pago pelo cliente, no nome dele; a Pôrto conecta ao site** · **lançamento para os 5 primeiros clientes: 40% de desconto** (Essential R$ 299 e Premium R$ 718), em troca de depoimento e autorização de portfólio. Nomes dos pacotes escolhidos pelo cliente (em inglês; “Signature” foi descartado por lembrar “assinatura”/mensalidade). O valor da rodada extra (R$ 150) foi sugerido e o cliente delegou a decisão. Histórico de preços na seção 26.
 - **[Confirmado — complemento do cliente]** Processo comercial: **call opcional**; **pagamento via Pix, 50% de sinal e 50% na entrega**; **2 rodadas de ajuste**; primeira versão em **2 dias úteis** (Essential) ou **5 a 7 dias úteis** (Premium).
 - **[Sugerido]** Proposta de valor: *a Pôrto cria sua presença na internet com um site claro e bem acabado, feito para que as pessoas entendam o que você faz e entrem em contato.*
 - Termos do cliente que precisam aparecer no site: “presença na internet”, “sites profissionais”, “sites institucionais”, “AI First”, “velocidade”, “qualidade”, “call”, “agendar”.
@@ -135,7 +137,7 @@ Seções solicitadas **[Confirmado]** e onde estão:
 | Solicitado | Onde está |
 |---|---|
 | Início | Hero (`#inicio`) |
-| Serviços + Especialidades | “Para quem é” (`#servicos`), organizada por situação do visitante |
+| Serviços + Especialidades | Dentro dos planos de preço (“Para profissionais e pequenos negócios” / “Para empresas com vários serviços”). A seção própria saiu na revisão de 20/10 |
 | Experiência profissional | “Projetos” (`#projetos`) — portfólio real |
 | Depoimentos | **Não exibida** — cliente diz ter, mas nenhum foi enviado (estrutura pronta em `site.ts`, renderiza só se houver itens) |
 | Perguntas frequentes | `#duvidas` |
@@ -143,15 +145,15 @@ Seções solicitadas **[Confirmado]** e onde estão:
 
 | Preços (pedido no complemento do chat) | `#precos` |
 
-Também incluídos **[Sugerido]**: “Por que a Pôrto” (diferenciais informados) e “Como funciona” (processo descrito pelo cliente). Não incluídos: Sobre/história (cliente respondeu “Não”), Localização (atendimento só online).
+Também incluído **[Sugerido]**: “Como funciona” (processo descrito pelo cliente). “Por que a Pôrto” existiu até 20/10 e saiu na revisão. Não incluídos: Sobre/história (cliente respondeu “Não”), Localização (atendimento só online).
 
-Ordem: Cabeçalho → Hero → Para quem é → Projetos → Por que a Pôrto → Como funciona → Preços → Dúvidas → Contato → Rodapé, + barra fixa mobile. Preços vem logo depois do processo: o visitante já sabe o que recebe e como funciona quando vê o valor.
+Ordem: Barra de anúncio → Cabeçalho → Hero → Projetos → Como funciona → Preços → Dúvidas → Contato → Rodapé, + barra fixa mobile. O visitante vê quem já é atendido, entende o processo e só então vê o preço.
 
 ## 13. Descrição das seções
 
 ### 13.0 Barra de anúncio (`AnnouncementBar`)
 - **Finalidade:** avisar logo na entrada que há preço de lançamento, sem competir com o botão principal.
-- **Conteúdo:** “Preço de lançamento para os 5 primeiros clientes” · “5 de 5 vagas” · “Ver oferta →”. A barra inteira é um link para a faixa de lançamento (`#lancamento`), com `data-cta="barra-anuncio"`.
+- **Conteúdo:** “40% de desconto para os 5 primeiros clientes” · “5 de 5 vagas” · “Ver oferta →”. A barra inteira é um link para a faixa de lançamento (`#lancamento`), com `data-cta="barra-anuncio"`.
 - **Composição:** faixa fina em `night` acima do cabeçalho, com os quadradinhos de vagas em azul (desktop). No mobile quebra em duas linhas, sem cobrir o botão principal da primeira tela.
 - **Regra:** usa o mesmo `pricing.launch` da faixa de preços; some sozinha quando `active` é `false` ou as vagas chegam a zero.
 
@@ -169,19 +171,13 @@ Ordem: Cabeçalho → Hero → Para quem é → Projetos → Por que a Pôrto �
   - `h1`: “Sites profissionais para empresas e profissionais que *ainda não estão na internet*.”
   - Subtítulo: “A Pôrto cria a sua presença na internet: um site claro, bem acabado e pensado para que as pessoas entendam o que você faz e entrem em contato.”
   - Botão principal + link secundário “Ver projetos”.
-  - Sinais de confiança **[Confirmado]**: “Site de uma página em 2 dias úteis” · “Atendimento 100% online” · “Sediada em Brasília (DF)” · “3 sites publicados”.
+  - Sinais de confiança **[Confirmado]**: “Site de uma página em 2 dias úteis” · “Atendimento online · Brasília (DF)” · “3 sites publicados”.
 - **Composição:** desktop 2 colunas (texto à esquerda, ~55%; à direita duas molduras de navegador sobrepostas com capturas reais de projetos e etiqueta “Projetos reais da Pôrto”). Fundo `canvas` com grade de pixels muito sutil.
 - **Mobile:** rótulo → título → subtítulo → botão (largura total) → link → sinais → imagem (abaixo da dobra, sem empurrar o botão).
 - **CTA:** `data-cta="hero"`.
 
-### 13.3 Para quem é (`Services`)
-- **Finalidade:** o visitante se reconhecer em uma das duas situações e entender o serviço.
-- **Conteúdo:**
-  - `h2`: “Um site para cada momento do seu negócio” — apoio: “A Pôrto faz uma coisa e faz com cuidado: criar sites. O ponto de partida é a sua situação.”
-  - Cartão 1 — **Para quem:** “Você é profissional e atende seus próprios clientes.” · `h3` **Site profissional** · “Uma página que apresenta você, o que você faz e como atende, com o contato sempre à mão.” · Exemplos já feitos: psicologia, advocacia, farmácia clínica · link “Falar sobre site profissional”.
-  - Cartão 2 — **Para quem:** “Você tem uma empresa e precisa apresentá-la na internet.” · `h3` **Site institucional** · “O site da sua empresa: quem vocês são, o que oferecem e como falar com vocês, organizado para transmitir confiança a quem chega.” · link “Falar sobre site institucional”.
-- **Composição:** 2 cartões brancos lado a lado (≥ md), com número em mono, traço azul e degrau de pixel no canto. Mobile: empilhados.
-- **CTA:** link por cartão com mensagem pré-preenchida própria (`servico-profissional`, `servico-institucional`).
+### 13.3 Para quem é (`Services`) — removida em 20/10/2026
+Repetia o que os planos já dizem (site profissional = Essential; site institucional = Premium). O “para quem” foi para a descrição de cada plano.
 
 ### 13.4 Projetos (`Projects`) — “Experiência profissional”
 - **Finalidade:** provar a qualidade com trabalho real (principal sinal de confiança disponível).
@@ -193,40 +189,30 @@ Ordem: Cabeçalho → Hero → Para quem é → Projetos → Por que a Pôrto �
 - **Composição:** o primeiro projeto em destaque (largura total, captura à esquerda, texto à direita); os outros dois lado a lado. Capturas em moldura de navegador com o domínio em mono. Link “Ver site no ar ↗” (nova aba).
 - **Fecho:** “Mais dois projetos em desenvolvimento.” + botão principal (`data-cta="projetos"`).
 
-### 13.5 Por que a Pôrto (`Differentials`)
-- **Finalidade:** explicar os diferenciais informados.
-- **Conteúdo [Confirmado: títulos · Sugerido: textos de apoio a validar]:**
-  - **AI First** — “Usamos inteligência artificial no centro do processo para chegar mais rápido a um site bem resolvido, sem abrir mão da revisão humana.”
-  - **Velocidade** — “Um caminho curto entre a primeira conversa e o site no ar, com um processo enxuto e bem definido.”
-  - **Qualidade do produto** — “Design cuidadoso, textos claros e um site que funciona bem no celular, no computador e no Google.”
-  - **Atendimento próximo** — “Você fala direto com quem desenvolve o seu site, do primeiro contato à entrega.”
-- **Composição:** faixa em grade 4 colunas (2 no tablet, 1 no mobile), ícones em traço, separadores verticais finos. Sem CTA própria (é curta e fica entre duas seções que terminam em CTA).
+### 13.5 Por que a Pôrto (`Differentials`) — removida em 20/10/2026
+AI First, velocidade, qualidade e atendimento já aparecem no hero (prazo de 2 dias úteis), nos projetos e no processo.
 
 ### 13.6 Como funciona (`Process`)
-- **Finalidade:** reduzir a incerteza de quem nunca contratou um site, mostrando a jornada completa (do contato ao site no ar), com prazo, pagamento e ajustes.
-- **Conteúdo [Confirmado: etapas, prazo, pagamento e rodadas · Sugerido: textos]:**
-  - Intro: “Tudo online, com prazo e etapas definidos. Você sabe o que acontece em cada passo.”
-  1. **Você chama no WhatsApp** — “Conte sobre o seu negócio. Se preferir conversar ao vivo, marcamos uma call. É opcional.”
-  2. **Você responde o briefing** — “Um formulário sobre o seu negócio, seus serviços e seu público. É dele que sai o seu site.”
-  3. **Sinal de *50%*** — “Você paga metade do valor via Pix e começamos a produção. A outra metade só na entrega.”
-  4. **Primeira versão *em 2 a 7 dias úteis*** — “Contados a partir do sinal: 2 dias úteis no site de uma página; 5 a 7 no site com até 5 páginas.”
-  5. **Ajustes *2 rodadas*** — “Em cada rodada, você envia de uma vez a lista com tudo o que quer mudar.”
-  6. **Site no ar** — “Você paga os outros 50%, o site é publicado e a manutenção mantém tudo funcionando.”
-- **Por que mudou:** a versão anterior (call obrigatória → apresentação → briefing → desenvolvimento) terminava antes da entrega e não respondia prazo, pagamento nem revisões. Para um produto de R$ 500 com preço público, a call obrigatória era atrito; o modelo atual segue o de serviço com escopo fechado (preço, escopo e prazo definidos).
-- **Composição:** desktop — seis degraus que sobem da esquerda para a direita (eco da base da âncora), número em mono, prazo e rodadas destacados em serifa itálica com sublinhado azul. Mobile/tablet — lista vertical com linha guia.
+- **Finalidade:** mostrar a jornada completa em poucos passos, com prazo e pagamento.
+- **Conteúdo:** intro “Tudo online, em quatro passos.”
+  1. **Você chama no WhatsApp** — “Conte sobre o seu negócio. Se preferir, marcamos uma call.”
+  2. **Briefing e sinal** — “Você responde um formulário sobre o seu negócio e paga 50% via Pix.”
+  3. **Primeira versão *em 2 a 7 dias úteis*** — “2 dias no site de uma página; 5 a 7 no de até 5 páginas.”
+  4. **Ajustes e site no ar** — “2 rodadas de ajuste, você paga os outros 50% e o site é publicado.”
+- **Composição:** desktop — quatro degraus que sobem (eco da base da âncora); mobile — lista com linha guia.
 - **CTA:** “O primeiro passo é uma conversa.” + botão principal (`data-cta="processo"`).
 
 ### 13.7 Preços (`Pricing`)
-- **Finalidade:** responder à objeção de preço com transparência, mostrar as duas opções e levar à conversa.
-- **Conteúdo [Confirmado: valores e condições · Sugerido: textos]:**
-  - `h2`: “Preço claro, *sem surpresa*.” — apoio: “Você sabe quanto vai investir antes da primeira conversa.”
-  - **Faixa de lançamento** (`#lancamento`, cartão escuro; só aparece com `launch.active` e vagas > 0): “Lançamento · ■■■■■ 5 de 5 vagas disponíveis” · “Preço de lançamento para os 5 primeiros clientes” · “Em troca, você nos dá um depoimento e autoriza mostrar o seu site no portfólio da Pôrto. Mesmo prazo, mesmas 2 rodadas de ajuste.” · **Essential R$ 500** (normal R$ 997) · **Premium R$ 997** (normal R$ 1.997) · botão (`data-cta="lancamento"`). As 5 vagas são compartilhadas entre os dois pacotes. **Atualizar `spotsLeft` a cada cliente fechado.**
-  - **Essential** — “Site de uma página” · **R$ 997** · “Tudo o que o seu negócio precisa em uma única página, com o contato a um toque.” · Primeira versão em 2 dias úteis · 2 rodadas de ajuste · Domínio no seu nome, primeiro ano incluso · Para profissionais e pequenos negócios · botão (`data-cta="plano-essential"`).
-  - **Premium** — “Site com até 5 páginas” · **R$ 1.997** · “Uma página para cada assunto: início, sobre, serviços, contato e o que mais o seu negócio precisar.” · Primeira versão em 5 a 7 dias úteis · 2 rodadas de ajuste · Domínio no seu nome, primeiro ano incluso · Para empresas com vários serviços · botão (`data-cta="plano-premium"`).
-  - **Manutenção** — **R$ 49 por mês** · “ou R$ 490 por ano” · “Para o seu site continuar no ar, seguro e atualizado.” · Hospedagem · Certificado SSL (cadeado de segurança) · Backup · 1 rodada de ajustes por mês (não acumula) · “O domínio é seu: o primeiro ano fica por nossa conta, e as renovações, por sua.”
-  - **Condições** — Página extra **R$ 297** · Rodada de ajuste extra **R$ 150** · Pagamento: “Via Pix: 50% de sinal para começar e 50% na entrega. Desistiu em até 7 dias? Devolvemos o sinal.” · Rodada de ajuste: “É uma lista com todos os seus pedidos, enviada de uma vez. Não é uma alteração por mensagem.” · Cancelamento: “Manutenção sem fidelidade. Se cancelar, transferimos o código completo e ajudamos a publicar o site na sua conta, sem custo.”
-- **Composição:** faixa de lançamento em gradiente grafite com contador em quadradinhos azuis e os dois preços lado a lado; os dois planos lado a lado (empilhados no mobile); abaixo, manutenção (2 colunas internas) e condições.
-- **CTA:** um botão por plano e um na faixa de lançamento, cada um com mensagem própria. Sem selo de promoção, sem contador de tempo.
+- **Finalidade:** mostrar o preço com clareza, sem sobrecarregar.
+- **Conteúdo:**
+  - `h2`: “Preço claro, *sem surpresa*.” — apoio: “Pagamento via Pix: metade para começar, metade na entrega.”
+  - **Faixa de lançamento** (`#lancamento`): “Lançamento · ■■■■■ 5 de 5 vagas” · “40% de desconto para os 5 primeiros clientes” · “Em troca, você nos dá um depoimento e autoriza mostrar o seu site no nosso portfólio.” · Essential **R$ 299** (Normal: R$ 499) · Premium **R$ 718** (Normal: R$ 1.197) · botão (`data-cta="lancamento"`). Atualizar `spotsLeft` a cada cliente fechado.
+  - **Essential** — “Site de uma página” · “Para profissionais e pequenos negócios.” · **R$ 499** · Primeira versão em 2 dias úteis · 2 rodadas de ajuste · botão (`data-cta="plano-essential"`).
+  - **Premium** — “Site com até 5 páginas” · “Para empresas com vários serviços.” · **R$ 1.197** · Primeira versão em 5 a 7 dias úteis · 2 rodadas de ajuste · botão (`data-cta="plano-premium"`).
+  - **Linha da manutenção:** “Manutenção: R$ 49/mês ou R$ 490/ano — hospedagem, SSL, backup e 1 rodada de ajustes por mês. Sem fidelidade. Detalhes nas dúvidas.”
+  - Página extra, rodada extra, cancelamento e desistência ficam nas perguntas frequentes.
+- **Composição:** faixa de lançamento em grafite; dois planos lado a lado com nome e preço na mesma linha (preço em tamanho moderado, sem número gigante); manutenção numa linha discreta abaixo.
+- **CTA:** um botão por plano e um na faixa de lançamento. Preço normal mostrado como texto (“Normal: R$ 499”), sem riscado, sem selo e sem contador de tempo.
 
 ### 13.8 Dúvidas (`Faq`)
 - **Finalidade:** responder às dúvidas e objeções informadas.
@@ -259,14 +245,13 @@ Todos os textos finais estão em `src/content/site.ts`. Respostas das perguntas 
 
 | Pergunta | Resposta no site |
 |---|---|
-| Quanto tempo leva para o site ficar pronto? | **[Confirmado]** “O prazo começa a contar quando o sinal é pago. A primeira versão do site de uma página fica pronta em 2 dias úteis; a do site com até 5 páginas, em 5 a 7 dias úteis. Depois vêm as 2 rodadas de ajuste e a publicação.” (prazo conta a partir do sinal pago) |
-| Quanto custa um site? | **[Confirmado]** “O Essential (site de uma página) custa R$ 997 e o Premium (até 5 páginas), R$ 1.997. Cada página extra custa R$ 297. O pagamento é via Pix: 50% de sinal para começarmos e 50% na entrega. Para os 5 primeiros clientes, há preço de lançamento: R$ 500 no Essential e R$ 997 no Premium.” |
-| O que é uma rodada de ajuste? | **[Confirmado]** “É quando você avalia o site e nos envia, de uma vez, a lista com tudo o que quer mudar… Cada projeto tem 2 rodadas, e cada rodada extra custa R$ 150. Mudar a estrutura do site ou acrescentar páginas não conta como ajuste e é orçado à parte.” |
-| Vocês fazem manutenção depois que o site está no ar? | **[Confirmado]** “Sim. R$ 49 por mês ou R$ 490 por ano: hospedagem, SSL, backup e 1 rodada de ajustes por mês… A rodada não acumula. Mudanças maiores, como páginas ou seções novas, são orçadas à parte.” |
-| O domínio fica no nome de quem? | **[Confirmado]** “No seu… O primeiro ano de registro fica por nossa conta; as renovações anuais são pagas por você (um .com.br custa R$ 40 por ano no Registro.br).” |
-| E se eu quiser cancelar a manutenção? | **[Confirmado]** “Você cancela quando quiser, sem fidelidade e sem multa. No plano mensal, o site fica no ar até o fim do mês já pago; no anual, até o fim do ano pago, sem reembolso dos meses restantes. Antes disso, entregamos tudo, sem custo: o código completo do site, as imagens e um passo a passo de publicação, e ajudamos a colocar o site no ar na sua conta ou na de quem você escolher. O domínio já está no seu nome.” |
-| E se eu desistir depois de pagar o sinal? | **[Confirmado]** “Você tem 7 dias a partir da contratação para desistir, e nós devolvemos o sinal integralmente, como prevê o art. 49 do Código de Defesa do Consumidor. Basta avisar pelo mesmo WhatsApp em que você contratou. Depois desse prazo, o sinal não é devolvido, porque paga o trabalho já feito.” |
-| Como funciona o atendimento? | **[Confirmado]** “Todo o atendimento é online. Você chama no WhatsApp e, se preferir, marcamos uma call…” |
+| Quanto tempo leva para o site ficar pronto? | “O prazo começa quando o sinal é pago. A primeira versão do site de uma página fica pronta em 2 dias úteis; a do site com até 5 páginas, em 5 a 7 dias úteis. Depois vêm as 2 rodadas de ajuste e a publicação.” |
+| Quanto custa e como eu pago? | “O Essential (uma página) custa R$ 499 e o Premium (até 5 páginas), R$ 1.197. Cada página extra custa R$ 150. O pagamento é via Pix: 50% de sinal para começar e 50% na entrega. Para os 5 primeiros clientes, há 40% de desconto: R$ 299 e R$ 718.” |
+| O que é uma rodada de ajuste? | “É quando você avalia o site e nos envia, de uma vez, a lista com tudo o que quer mudar… Cada projeto tem 2 rodadas, e cada rodada extra custa R$ 150. Acrescentar páginas ou mudar a estrutura do site é orçado à parte.” |
+| Como funciona a manutenção? E o domínio? | “R$ 49 por mês ou R$ 490 por ano: hospedagem, SSL, backup e 1 rodada de ajustes por mês, que não acumula. Não tem fidelidade: se cancelar, o site fica no ar até o fim do período já pago (no anual, sem reembolso) e nós transferimos o código completo e ajudamos a publicar o site na sua conta, sem custo. O domínio fica por sua conta: você registra no seu nome (um .com.br custa R$ 40 por ano no Registro.br) e nós conectamos ao site.” |
+| E se eu desistir depois de pagar o sinal? | “Você tem 7 dias a partir da contratação para desistir, e nós devolvemos o sinal integralmente, como prevê o art. 49 do Código de Defesa do Consumidor. Basta avisar pelo mesmo WhatsApp. Depois desse prazo, o sinal não é devolvido, porque paga o trabalho já feito.” |
+
+Todas as respostas são **[Confirmado]** pelo cliente; a redação é sugerida.
 
 ## 15. Botões e chamadas para ação
 
@@ -277,8 +262,6 @@ Todos os textos finais estão em `src/content/site.ts`. Respostas das perguntas 
 | `data-cta` | Mensagem |
 |---|---|
 | `header`, `hero`, `contato`, `contato-whatsapp`, `rodape`, `barra-mobile`, `menu-mobile` | “Olá! Vim pelo site da Pôrto e gostaria de fazer o meu site.” |
-| `servico-profissional` | “Olá! Vim pelo site da Pôrto e gostaria de fazer um site profissional.” |
-| `servico-institucional` | “Olá! Vim pelo site da Pôrto e gostaria de fazer um site institucional para a minha empresa.” |
 | `projetos` | “Olá! Vi os projetos no site da Pôrto e gostaria de fazer o meu site.” |
 | `processo` | “Olá! Vim pelo site da Pôrto e gostaria de começar o meu site.” |
 | `plano-essential` | “Olá! Vi os preços no site da Pôrto e quero o Essential (site de uma página).” |
@@ -309,21 +292,18 @@ Todos os textos finais estão em `src/content/site.ts`. Respostas das perguntas 
 - Links externos de projetos abrem em nova aba; âncoras com `scroll-mt` para não ficar sob o cabeçalho fixo.
 - Sem formulário no site: o cliente não pediu e não há destino para os dados. O briefing do Tally é enviado depois do primeiro contato pelo WhatsApp, conforme o processo do cliente.
 
-### 17.1 Animações de entrada das seções (pedido do cliente no chat: “algo bem sofisticado e bonito de se ver”)
+### 17.1 Animações de entrada — revistas em 20/10/2026
 
-Tudo em CSS (`src/app/globals.css`) + um `IntersectionObserver` leve (`src/components/layout/RevealObserver.tsx`), sem biblioteca. Curva `cubic-bezier(0.16, 1, 0.3, 1)` (desaceleração longa e suave), cascata de 110 ms entre elementos.
+A primeira versão animava todas as seções ao rolar (títulos, textos, cartões, ícones). A pedido do cliente, foi reduzida ao que os sites de referência fazem:
+- **Concorrentes diretos (UpSites, Lucas Ferraz):** nenhum efeito de aparecer ao rolar; texto sempre parado.
+- **Agência grande (Instrument):** anima só a grade de trabalhos do portfólio.
+- **Referência de acabamento (Linear):** texto parado; movimento só nas ilustrações do produto.
 
-| Efeito | Onde | Como |
-|---|---|---|
-| **Cortina suave** | Títulos `h1`/`h2` | Máscara em gradiente desce sobre o texto enquanto ele sobe 0,3 em |
-| **Sublinhado que se desenha** | Palavra em serifa itálica dos títulos | Traço azul cresce da esquerda depois que o título aparece |
-| **Traço da marca** | Rótulos (eyebrows) | O traço azul dos braços da âncora cresce da esquerda |
-| **Subida com desfoque** | Textos, cartões, perguntas, passos | Sobem 28 px saindo de um desfoque de 6 px, em cascata |
-| **Capturas em perspectiva** | Molduras de navegador (hero e projetos), cartões de preço | Sobem com leve rotação 3D e escala 0,95 → 1 |
-| **Degraus que se desenham** | Ícone de degraus da âncora (hero, serviços, preço) | Traço SVG desenhado com `stroke-dashoffset` |
-| **Pop** | Marcadores dos passos, ícones dos diferenciais, etiqueta do hero | Escala com leve “overshoot” |
-
-Regras: só o que está na tela anima, uma vez; o que já está na primeira tela entra em sequência ao carregar; `prefers-reduced-motion` desliga tudo; sem JavaScript o conteúdo aparece normalmente (o estado inicial só é ativado por um script no `<head>`, com retorno automático em 3,5 s se o observador não iniciar).
+**Regra atual: texto nunca anima; só imagens de trabalho.**
+- Capturas do hero: sobem levemente e aparecem ao carregar a página (`frame`, `frame-left`), com a etiqueta “Projetos reais publicados pela Pôrto” em `fade`.
+- Cartões de projetos: sobem levemente quando entram na tela (`frame`).
+- Curva `cubic-bezier(0.16, 1, 0.3, 1)`, 1 s, 32 px de deslocamento. `prefers-reduced-motion` desliga tudo; sem JavaScript tudo aparece normalmente.
+- Código: `src/lib/reveal.ts`, `src/components/layout/RevealObserver.tsx`, bloco de animação em `src/app/globals.css`.
 
 ## 18. Responsividade
 
@@ -430,4 +410,14 @@ Decisão: R$ 997 posiciona a Pôrto acima de quem vende template e bem abaixo de
 
 **Prazo:** conta a partir do sinal pago (confirmado pelo cliente).
 
-**Oferta final aprovada pelo cliente (16/10/2026):** **Essential** (site de uma página) **R$ 997**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.997**, primeira versão em 5 a 7 dias úteis · **página extra R$ 297** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula) · **domínio no nome do cliente, com o primeiro ano pago pela Pôrto e as renovações pelo cliente** · **lançamento para os 5 primeiros clientes:** Essential R$ 500 e Premium R$ 997, em troca de depoimento e autorização de portfólio. Referências para o Premium: institucional de 3 a 5 páginas custa R$ 1.500 a R$ 4.000 com freelancer e R$ 2.500 a R$ 6.000 com agência; página extra R$ 150 a R$ 500. Modelo de “site por assinatura sem entrada” (R$ 40 a R$ 100/mês com fidelidade de 12 meses) foi descartado por competir só por preço.
+**Oferta aprovada em 16/10/2026 (substituída na revisão de 20/10):** **Essential** (site de uma página) **R$ 997**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.997**, primeira versão em 5 a 7 dias úteis · **página extra R$ 297** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula) · **domínio registrado e pago pelo cliente, no nome dele; a Pôrto conecta ao site** · **lançamento para os 5 primeiros clientes:** Essential R$ 500 e Premium R$ 997, em troca de depoimento e autorização de portfólio. Referências para o Premium: institucional de 3 a 5 páginas custa R$ 1.500 a R$ 4.000 com freelancer e R$ 2.500 a R$ 6.000 com agência; página extra R$ 150 a R$ 500. Modelo de “site por assinatura sem entrada” (R$ 40 a R$ 100/mês com fidelidade de 12 meses) foi descartado por competir só por preço.
+
+**Revisão de 20/10/2026:** a esposa do cliente achou o site caro e com informação demais. O cliente reduziu os preços (de R$ 997/R$ 1.997 para R$ 597/R$ 1.197; lançamento de R$ 500/R$ 997 para R$ 497/R$ 997) e aprovou o enxugamento: saíram as seções “Para quem é” (serviços, redundante com os planos) e “Por que a Pôrto” (diferenciais, redundante com hero e processo); o processo passou de 6 para 4 passos; preços de 5 para 3 blocos; perguntas frequentes de 8 para 5. A página extra caiu de R$ 297 para R$ 150 para ficar coerente com o Premium (4 páginas a mais por R$ 600). Observação registrada: a esposa do cliente não é o público-alvo; recomendado validar preço e clareza com 3 a 5 pessoas do perfil (profissionais e donos de pequenos negócios sem site).
+
+**Ajuste de 20/10/2026:** desconto de lançamento passou a ser **40%** (R$ 597 → R$ 358; R$ 1.197 → R$ 718, arredondados para baixo).
+
+**Ajuste de 20/10/2026 (2):** Essential passou a **R$ 500** (preço normal); com 40% de lançamento, **R$ 300**. Premium segue R$ 1.197 (lançamento R$ 718).
+
+**Ajuste de 20/10/2026 (3):** Essential a **R$ 499** (preço terminado em 9, pedido do cliente); lançamento com 40%: **R$ 299**.
+
+**Ajuste de 20/10/2026 (4):** o domínio deixou de ser incluso. O cliente registra e paga o domínio no próprio nome; a Pôrto conecta ao site. Saiu dos planos e foi reescrito nas perguntas frequentes.

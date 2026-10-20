@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 const title = `${company.name} · Criação de sites profissionais e institucionais em Brasília (DF)`;
 const description =
-  "A Pôrto cria sites profissionais e institucionais para empresas e profissionais que ainda não estão na internet. Sites a partir de R$ 997, com primeira versão em 2 dias úteis. Atendimento online, sediada em Brasília (DF).";
+  "A Pôrto cria sites profissionais e institucionais para empresas e profissionais que ainda não estão na internet. Sites a partir de R$ 499, com primeira versão em 2 dias úteis. Atendimento online, sediada em Brasília (DF).";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

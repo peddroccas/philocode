@@ -3,7 +3,6 @@ import { whatsappLink } from "@/lib/whatsapp";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
-import { reveal } from "@/lib/reveal";
 import { MailIcon, WhatsAppIcon } from "@/components/ui/Icons";
 
 const cardClass =
@@ -25,10 +24,10 @@ export function Contact() {
             title={contactSection.title}
             intro={contactSection.text}
           />
-          <div {...reveal("up", 3)}>
+          <div>
             <CtaButton location="contato" className="mt-9 w-full sm:w-auto" />
           </div>
-          <ul {...reveal("up", 4)} className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[0.9375rem] text-mist">
+          <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[0.9375rem] text-mist">
             {contactSection.facts.map((fact) => (
               <li key={fact} className="flex items-center gap-2">
                 <span aria-hidden className="size-1.5 rounded-[2px] bg-brand" />
@@ -39,7 +38,7 @@ export function Contact() {
         </div>
 
         <ul className="grid gap-3">
-          <li {...reveal("up", 1)}>
+          <li>
             <a
               href={whatsappLink()}
               target="_blank"
@@ -55,7 +54,7 @@ export function Contact() {
               <span className="sr-only"> (abre em nova aba)</span>
             </a>
           </li>
-          <li {...reveal("up", 2)}>
+          <li>
             <a href={`mailto:${contact.email}`} className={`${cardClass} hover:border-white/25 hover:bg-white/[0.07]`}>
               <MailIcon className="size-6 shrink-0 text-brand" />
               <span className="min-w-0">

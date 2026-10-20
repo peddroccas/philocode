@@ -18,14 +18,13 @@ export function Hero() {
           <Eyebrow>{hero.eyebrow}</Eyebrow>
           <h1
             id="hero-title"
-            {...reveal("mask", 1)}
             className="mt-5 text-[2.25rem] leading-[1.08] font-semibold tracking-tight text-balance text-ink sm:text-5xl lg:text-[3.375rem] xl:text-[3.75rem]"
           >
             <EmphasisText text={hero.title} />
           </h1>
-          <p {...reveal("up", 2)} className="mt-5 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">{hero.subtitle}</p>
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">{hero.subtitle}</p>
 
-          <div {...reveal("up", 3)} className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
             <CtaButton location="hero" className="w-full sm:w-auto" />
             <a
               href={hero.secondaryLink.href}
@@ -35,7 +34,7 @@ export function Hero() {
             </a>
           </div>
 
-          <ul {...reveal("up", 4)} className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-[0.9375rem] text-muted">
+          <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-[0.9375rem] text-muted">
             {hero.trust.map((item) => (
               <li key={item} className="flex items-center gap-2">
                 <span aria-hidden className="size-1.5 rounded-[2px] bg-brand" />
@@ -52,7 +51,7 @@ export function Hero() {
             domain={back.domain}
             sizes="(min-width: 1024px) 40vw, 80vw"
             className="ml-auto w-[82%]"
-            {...reveal("frame", 3)}
+            {...reveal("frame", 1)}
           />
           <BrowserFrame
             src={front.image}
@@ -61,12 +60,12 @@ export function Hero() {
             sizes="(min-width: 1024px) 40vw, 85vw"
             preload
             className="absolute bottom-0 left-0 w-[86%]"
-            {...reveal("frame-left", 5)}
+            {...reveal("frame-left", 3)}
           />
           <p
-            {...reveal("pop", 8)}
+            {...reveal("fade", 6)}
             className="absolute -top-4 left-0 flex items-center gap-2 rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-medium text-ink shadow-card lg:-top-5">
-            <PixelSteps {...reveal("draw", 9)} className="h-2.5 w-7 text-brand" />
+            <PixelSteps className="h-2.5 w-7 text-brand" />
             {hero.visualCaption}
           </p>
         </div>

@@ -3,7 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
 import { PlusIcon } from "@/components/ui/Icons";
-import { reveal } from "@/lib/reveal";
 
 export function Faq() {
   return (
@@ -17,7 +16,6 @@ export function Faq() {
           <SectionHeading id="duvidas-title" eyebrow={faq.eyebrow} title={faq.title} />
 
           <aside
-            {...reveal("up", 2)}
             className="order-last rounded-card border border-line bg-surface p-7 shadow-card lg:sticky lg:top-28 lg:mt-10">
             <h3 className="text-xl font-semibold tracking-tight text-ink">{faq.helpTitle}</h3>
             <p className="mt-2 leading-relaxed text-muted">{faq.helpText}</p>
@@ -26,10 +24,9 @@ export function Faq() {
         </div>
 
         <div className="grid content-start gap-3">
-          {faq.items.map((item, index) => (
+          {faq.items.map((item) => (
             <details
               key={item.question}
-              {...reveal("up", index)}
               className="group rounded-2xl border border-line bg-surface transition-colors open:border-l-4 open:border-l-brand open:shadow-card"
             >
               <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 rounded-2xl px-6 py-4 text-lg font-semibold text-ink">
