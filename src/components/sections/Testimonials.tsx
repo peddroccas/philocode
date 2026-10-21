@@ -12,7 +12,7 @@ export function Testimonials() {
         <SectionHeading
           id="depoimentos-title"
           eyebrow="Depoimentos"
-          title={{ before: "Quem já tem ", emphasis: "site com a Pôrto", after: "." }}
+          title={{ before: "Quem já tem ", emphasis: "site com a PhiloCode", after: "." }}
         />
         <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((item) => (

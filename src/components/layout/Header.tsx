@@ -10,10 +10,10 @@ export function Header() {
       <Container className="flex h-16 items-center justify-between gap-6 lg:h-20">
         <a href="#inicio" className="shrink-0 rounded-md" aria-label={`${company.name} — voltar ao início`}>
           <Image
-            src="/images/porto-logo.png"
+            src="/images/philocode-logo.png"
             alt=""
-            width={291}
-            height={116}
+            width={422}
+            height={108}
             preload
             className="h-9 w-auto lg:h-10"
           />

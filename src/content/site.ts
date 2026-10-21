@@ -1,5 +1,5 @@
 /**
- * Todo o conteúdo do site da Pôrto.
+ * Todo o conteúdo do site da PhiloCode.
  * Fonte: formulário de briefing (Tally, 16/10/2026) + complementos enviados pelo cliente no chat.
  * Dados ausentes usam o marcador visível "[A CONFIRMAR: …]" — ver docs/briefing.md, seção 24.
  */
@@ -11,8 +11,8 @@ export const SITE_URL_NOTE = "[A CONFIRMAR: domínio do site]";
 export type Emphasis = { before: string; emphasis: string; after?: string };
 
 export const company = {
-  name: "Pôrto",
-  legalName: "Porto Studio",
+  name: "PhiloCode",
+  legalName: "PhiloCode",
   cnpj: "[A CONFIRMAR: número do CNPJ]",
   slogan: "Sites que transformam negócios.",
   city: "Brasília",
@@ -36,15 +36,15 @@ export const primaryCta = {
 
 /** Mensagens iniciais do WhatsApp por ponto de entrada (a validar com o cliente). */
 export const whatsappMessages = {
-  default: "Olá! Vim pelo site da Pôrto e gostaria de um orçamento. Meu negócio é: ",
-  process: "Olá! Vim pelo site da Pôrto e gostaria de começar o meu site. Meu negócio é: ",
-  faq: "Olá! Tenho uma dúvida sobre a criação de sites da Pôrto: ",
+  default: "Olá! Vim pelo site da PhiloCode e gostaria de um orçamento. Meu negócio é: ",
+  process: "Olá! Vim pelo site da PhiloCode e gostaria de começar o meu site. Meu negócio é: ",
+  faq: "Olá! Tenho uma dúvida sobre a criação de sites da PhiloCode: ",
 } as const;
 
 /** Mensagem do botão da calculadora de preço, com o número de páginas escolhido. */
 export function pricingMessage(pages: number) {
   const size = pages === 1 ? "uma página" : `${pages} páginas`;
-  return `Olá! Vi os preços no site da Pôrto e gostaria de um orçamento para um site de ${size}. Meu negócio é: `;
+  return `Olá! Vi os preços no site da PhiloCode e gostaria de um orçamento para um site de ${size}. Meu negócio é: `;
 }
 
 export const nav = [
@@ -56,7 +56,7 @@ export const nav = [
 ];
 
 export const hero = {
-  eyebrow: "Pôrto · Criação de sites",
+  eyebrow: "PhiloCode · Criação de sites",
   title: { before: "Sites profissionais, feitos sob medida para o ", emphasis: "seu negócio", after: "." } satisfies Emphasis,
   subtitle:
     "Criamos sites claros e bem acabados para empresas e profissionais apresentarem o que fazem e receberem novos contatos.",
@@ -155,7 +155,7 @@ export const pricing = {
     extraPage: "105",
     firstPageValue: 299,
     extraPageValue: 105,
-    message: "Olá! Vi a oferta de lançamento no site da Pôrto e quero uma das 5 vagas. Meu negócio é: ",
+    message: "Olá! Vi a oferta de lançamento no site da PhiloCode e quero uma das 5 vagas. Meu negócio é: ",
   },
   extraRound: "150",
   maintenance: {

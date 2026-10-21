@@ -1,6 +1,8 @@
-# Briefing — Site institucional da Pôrto
+# Briefing — Site institucional da PhiloCode
 
-> Fonte: formulário “Briefing Site Institucional” (Tally, submissão `e5Geoyk`, 16/10/2026), arquivos de marca enviados (logo e favicons) e complementos enviados pelo cliente no chat entre 16 e 20/10/2026. Oferta atual: **Essential** (site de uma página) **R$ 499**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.197**, primeira versão em 5 a 7 dias úteis · **página extra R$ 150** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula; sem fidelidade) · **domínio registrado e pago pelo cliente, no nome dele; a Pôrto conecta ao site** · **lançamento para os 5 primeiros clientes: 40% de desconto** (Essential R$ 299 e Premium R$ 718), em troca de depoimento e autorização de portfólio. Hospedagem: Vercel Pro.
+> **Nova marca (21/10/2026):** a empresa passou a se chamar **PhiloCode** (antes “Pôrto”, razão social “Porto Studio”). Os textos do site e este documento foram atualizados. Logos novas exportadas do Figma com fundo transparente: `public/images/philocode-logo.png` (âncora + nome em grafite, cabeçalho) e `public/images/philocode-logo-escuro.png` (âncora + nome claros, rodapé e imagem de compartilhamento).
+>
+> Fonte: formulário “Briefing Site Institucional” (Tally, submissão `e5Geoyk`, 16/10/2026), arquivos de marca enviados (logo e favicons) e complementos enviados pelo cliente no chat entre 16 e 20/10/2026. Oferta atual: **Essential** (site de uma página) **R$ 499**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.197**, primeira versão em 5 a 7 dias úteis · **página extra R$ 150** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula; sem fidelidade) · **domínio registrado e pago pelo cliente, no nome dele; a PhiloCode conecta ao site** · **lançamento para os 5 primeiros clientes: 40% de desconto** (Essential R$ 299 e Premium R$ 718), em troca de depoimento e autorização de portfólio. Hospedagem: Vercel Pro.
 >
 > **Revisão de 21/10/2026 (oferta e textos atuais — prevalece sobre o restante deste documento):** preço por página — **primeira página R$ 499 + R$ 175 por página a mais** (2 = R$ 674; 3 = R$ 849; 5 = R$ 1.199); saíram os pacotes Essential/Premium. Lançamento: 40% para os 5 primeiros (R$ 299 + R$ 105 por página a mais), sem contrapartida exibida no site. Manutenção **R$ 59/mês ou R$ 590/ano** (hospedagem, segurança, backup, uma rodada de ajustes por mês, sem fidelidade). Rodada extra R$ 150. Domínio registrado pelo cliente. Textos reescritos em tom profissional e reduzidos: sem prazos de entrega, sem Pix e sem sinal; processo em 3 passos (Conversa, Criação, Publicação); 5 perguntas frequentes. Saíram a barra fixa de WhatsApp no celular, o título “…que ainda não estão na internet” (agora “Sites profissionais, feitos sob medida para o seu negócio.”) e o sinal “3 sites publicados”.
 >
@@ -8,34 +10,34 @@
 >
 > **Volta ao tema claro (21/10/2026):** a pedido do cliente, o site inteiro ficou claro de novo. Hero, cabeçalho, menu mobile, “Como funciona”, contato e rodapé claros; a maré de pixels continua no hero, com pontos em grafite que acendem em azul perto do cursor. Só a barra de anúncio e o cartão da oferta de lançamento seguem escuros, como destaque da promoção.
 >
-> **Hero e ritmo visual (21/10/2026):** depois de comparar quatro direções (página de opções publicada), o cliente escolheu a **“Maré de pixels”**: hero escuro com uma grade de pontos em canvas que ondula devagar e acende em azul perto do cursor (pausa fora da tela e com a aba oculta; fica parada com “reduzir movimento”). O cartão “Seu site Pôrto” saiu. Cabeçalho e menu mobile passaram a ser escuros (logo escura original) para o topo formar um bloco só; “Como funciona” também ficou escura. Ritmo da página: escuro (topo) · claro (projetos) · escuro (processo) · claro (valores e dúvidas) · escuro (contato e rodapé). A faixa de lançamento ganhou o próprio seletor de páginas, sincronizado com a calculadora (os dois mostram o mesmo total, com um destaque curto quando o valor muda). Padding das seções no celular reduzido para 48 px. `overflow-x: clip` no body evita rolagem lateral.
+> **Hero e ritmo visual (21/10/2026):** depois de comparar quatro direções (página de opções publicada), o cliente escolheu a **“Maré de pixels”**: hero escuro com uma grade de pontos em canvas que ondula devagar e acende em azul perto do cursor (pausa fora da tela e com a aba oculta; fica parada com “reduzir movimento”). O cartão “Seu site PhiloCode” saiu. Cabeçalho e menu mobile passaram a ser escuros (logo escura original) para o topo formar um bloco só; “Como funciona” também ficou escura. Ritmo da página: escuro (topo) · claro (projetos) · escuro (processo) · claro (valores e dúvidas) · escuro (contato e rodapé). A faixa de lançamento ganhou o próprio seletor de páginas, sincronizado com a calculadora (os dois mostram o mesmo total, com um destaque curto quando o valor muda). Padding das seções no celular reduzido para 48 px. `overflow-x: clip` no body evita rolagem lateral.
 >
-> **Ajustes finais de 21/10/2026:** hero com um **cartão “Seu site Pôrto”** (âncora pequena + o que vem no site: apresentação do negócio, serviços explicados com clareza, botão direto para o WhatsApp, publicado no seu domínio; rodapé “Duas rodadas de ajustes incluídas”), no lugar da âncora grande; sinais do hero: “Design exclusivo, sem templates · Pensado para gerar contatos · Pronto para celular e Google”; saiu o link “Ver projetos”; seção “Preços” renomeada para **“Valores”** (`#valores`); carrossel de projetos sem barra de rolagem; resposta sobre domínio sem citar preço.
+> **Ajustes finais de 21/10/2026:** hero com um **cartão “Seu site PhiloCode”** (âncora pequena + o que vem no site: apresentação do negócio, serviços explicados com clareza, botão direto para o WhatsApp, publicado no seu domínio; rodapé “Duas rodadas de ajustes incluídas”), no lugar da âncora grande; sinais do hero: “Design exclusivo, sem templates · Pensado para gerar contatos · Pronto para celular e Google”; saiu o link “Ver projetos”; seção “Preços” renomeada para **“Valores”** (`#valores`); carrossel de projetos sem barra de rolagem; resposta sobre domínio sem citar preço.
 >
 > **Análise de conversão de 21/10/2026 (aplicada):** botão principal “Solicitar orçamento” (ícone do WhatsApp mantido); hero sem capturas de projetos (duplicavam o portfólio): no lugar, a âncora da marca em vetor, desenhada com a geometria do favicon; sinais do hero “Design sob medida · Preparado para o Google”; “Atendimento online” e “Atendimento direto…” removidos; projetos em carrossel no celular e grade 2 × 2 no computador, com o novo projeto **Jaqueline Trigueiro** (design de sobrancelhas, Ceilândia/DF); tabela de exemplos trocada por **calculadora** de 1 a 6 páginas (total + total com lançamento; o botão envia o número de páginas na mensagem); mensagens do WhatsApp terminam com “Meu negócio é: ”. Recusadas pelo cliente: preço no hero, pergunta sobre prazo, linha de garantia de 7 dias perto do preço, esconder o CNPJ pendente. Pendente: pedir depoimentos aos clientes do portfólio.
 >
-> **Revisão de 20/10/2026:** a esposa do cliente achou o site caro e com informação demais. O cliente reduziu os preços (de R$ 997/R$ 1.997 para R$ 597/R$ 1.197; lançamento de R$ 500/R$ 997 para R$ 497/R$ 997) e aprovou o enxugamento: saíram as seções “Para quem é” (serviços, redundante com os planos) e “Por que a Pôrto” (diferenciais, redundante com hero e processo); o processo passou de 6 para 4 passos; preços de 5 para 3 blocos; perguntas frequentes de 8 para 5. A página extra caiu de R$ 297 para R$ 150 para ficar coerente com o Premium (4 páginas a mais por R$ 600).
+> **Revisão de 20/10/2026:** a esposa do cliente achou o site caro e com informação demais. O cliente reduziu os preços (de R$ 997/R$ 1.997 para R$ 597/R$ 1.197; lançamento de R$ 500/R$ 997 para R$ 497/R$ 997) e aprovou o enxugamento: saíram as seções “Para quem é” (serviços, redundante com os planos) e “Por que a PhiloCode” (diferenciais, redundante com hero e processo); o processo passou de 6 para 4 passos; preços de 5 para 3 blocos; perguntas frequentes de 8 para 5. A página extra caiu de R$ 297 para R$ 150 para ficar coerente com o Premium (4 páginas a mais por R$ 600).
 > Legenda: **[Confirmado]** = informado pelo cliente · **[Sugerido]** = direção criativa ou texto proposto a partir da análise · **[Pendente]** = dado ausente, inconsistente ou a confirmar.
 
 ---
 
 ## 1. Título do projeto
 
-**Pôrto — site institucional** (one-page em Next.js + Tailwind CSS).
+**PhiloCode — site institucional** (one-page em Next.js + Tailwind CSS).
 
 ## 2. Objetivo do site
 
 - **[Confirmado]** Receber mais contatos.
 - **[Confirmado]** Ação principal: o visitante agendar um atendimento — “chamar no WhatsApp / book a call”.
-- **[Confirmado]** Resultado que a Pôrto busca para o cliente: aumentar o faturamento de pessoas e empresas.
-- **[Sugerido]** O site também funciona como **amostra do produto**: é o primeiro “site da Pôrto” que o visitante vê, então o acabamento, a velocidade e a clareza dele são argumentos de venda.
+- **[Confirmado]** Resultado que a PhiloCode busca para o cliente: aumentar o faturamento de pessoas e empresas.
+- **[Sugerido]** O site também funciona como **amostra do produto**: é o primeiro “site da PhiloCode” que o visitante vê, então o acabamento, a velocidade e a clareza dele são argumentos de venda.
 
 ## 3. Perfil do cliente e do negócio
 
 | Campo | Dado | Status |
 |---|---|---|
-| Razão social | Porto Studio (como escrito no formulário; confirmar se a razão social também leva acento) | Confirmado / **Pendente** |
-| Nome no site | **Pôrto** (com acento — atualizado pelo cliente junto com as novas logos; o formulário dizia “Porto”) | Confirmado |
+| Razão social | PhiloCode (antes “Porto Studio”; confirmar a razão social registrada) | **Pendente** |
+| Nome no site | **PhiloCode** (nova marca em 21/10/2026; antes “Pôrto”) | Confirmado |
 | Ramo | Criação de sites | Confirmado |
 | Como explica o negócio | “Nós criamos sites, basicamente criamos sua presença na internet.” | Confirmado |
 | Tempo de mercado | Empresa sendo aberta agora | Confirmado |
@@ -52,7 +54,7 @@
 
 - **[Confirmado]** Pessoas e empresas que **não possuem site** e se beneficiariam de ter um.
 - **[Confirmado]** Motivação: **falta de presença na internet**.
-- **[Sugerido, com base no portfólio enviado]** Duas situações concretas em que o público procura a Pôrto:
+- **[Sugerido, com base no portfólio enviado]** Duas situações concretas em que o público procura a PhiloCode:
   1. **Profissional que atende clientes** (psicologia, advocacia, farmácia clínica — os três projetos publicados são desse tipo) e precisa de uma página que apresente a pessoa e facilite o contato.
   2. **Empresa** que precisa de um **site institucional** para apresentar quem é, o que oferece e como falar com ela.
 
@@ -61,9 +63,9 @@
 - **[Confirmado]** Serviço único: **criação de sites profissionais e institucionais (para empresas)**. É o que a empresa tem hoje e o que deve ser destacado.
 - **[Confirmado]** Diferenciais: **AI First, velocidade e qualidade do produto**.
 - **[Confirmado]** O que os clientes mais valorizam: **atendimento e qualidade do serviço**.
-- **[Confirmado — complemento do cliente]** Oferta: **Essential** (site de uma página) **R$ 499**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.197**, primeira versão em 5 a 7 dias úteis · **página extra R$ 150** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula; sem fidelidade) · **domínio registrado e pago pelo cliente, no nome dele; a Pôrto conecta ao site** · **lançamento para os 5 primeiros clientes: 40% de desconto** (Essential R$ 299 e Premium R$ 718), em troca de depoimento e autorização de portfólio. Nomes dos pacotes escolhidos pelo cliente (em inglês; “Signature” foi descartado por lembrar “assinatura”/mensalidade). O valor da rodada extra (R$ 150) foi sugerido e o cliente delegou a decisão. Histórico de preços na seção 26.
+- **[Confirmado — complemento do cliente]** Oferta: **Essential** (site de uma página) **R$ 499**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.197**, primeira versão em 5 a 7 dias úteis · **página extra R$ 150** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula; sem fidelidade) · **domínio registrado e pago pelo cliente, no nome dele; a PhiloCode conecta ao site** · **lançamento para os 5 primeiros clientes: 40% de desconto** (Essential R$ 299 e Premium R$ 718), em troca de depoimento e autorização de portfólio. Nomes dos pacotes escolhidos pelo cliente (em inglês; “Signature” foi descartado por lembrar “assinatura”/mensalidade). O valor da rodada extra (R$ 150) foi sugerido e o cliente delegou a decisão. Histórico de preços na seção 26.
 - **[Confirmado — complemento do cliente]** Processo comercial: **call opcional**; **pagamento via Pix, 50% de sinal e 50% na entrega**; **2 rodadas de ajuste**; primeira versão em **2 dias úteis** (Essential) ou **5 a 7 dias úteis** (Premium).
-- **[Sugerido]** Proposta de valor: *a Pôrto cria sua presença na internet com um site claro e bem acabado, feito para que as pessoas entendam o que você faz e entrem em contato.*
+- **[Sugerido]** Proposta de valor: *a PhiloCode cria sua presença na internet com um site claro e bem acabado, feito para que as pessoas entendam o que você faz e entrem em contato.*
 - Termos do cliente que precisam aparecer no site: “presença na internet”, “sites profissionais”, “sites institucionais”, “AI First”, “velocidade”, “qualidade”, “call”, “agendar”.
 
 ## 6. Conversão e principal barreira
@@ -76,7 +78,7 @@
 
 ## 7. Direção de arte e conceito criativo
 
-**Conceito [Sugerido]: “Ancoragem”.** Pôrto é o lugar onde o barco atraca; o site é o lugar onde o negócio passa a existir na internet. A âncora da logo é desenhada em degraus de pixel, unindo o porto (calma, segurança) ao código (precisão). O site traduz isso em uma interface **clara e calma**, com um único sinal azul (o mesmo azul dos “braços” da âncora) guiando o olhar até a ação.
+**Conceito [Sugerido]: “Ancoragem”.** O porto é o lugar onde o barco atraca; o site é o lugar onde o negócio passa a existir na internet. A âncora da logo é desenhada em degraus de pixel, unindo o porto (calma, segurança) ao código (precisão). O site traduz isso em uma interface **clara e calma**, com um único sinal azul (o mesmo azul dos “braços” da âncora) guiando o olhar até a ação.
 
 **Personalidade [Confirmado]:** profissional, confiável, premium, elegante, minimalista. Em uma frase do cliente: **“clean e aconchegante”** — “bonito, clean, sem cores muito fortes, tema mais claro”.
 
@@ -88,7 +90,7 @@
 
 ## 8. Identidade visual e paleta
 
-- **[Confirmado]** Logotipo existe (âncora em pixel + “Pôrto”), versões clara e escura, horizontal e vertical, e favicons.
+- **[Confirmado]** Logotipo existe (âncora em pixel + “PhiloCode”), versões clara e escura, horizontal e vertical, e favicons.
 - **[Confirmado]** Identidade “parcialmente” definida. Cores informadas: **gradiente #2c3037 → #20242b** e **slate 50**. Cor a evitar: **rosa**.
 - **[Confirmado pelos arquivos]** O azul dos braços da âncora é **#2389f8**; o fundo das versões escuras é **#020618**.
 
@@ -112,7 +114,7 @@ O azul da logo (#2389f8) com texto branco tem contraste 3,7:1 e não passa AA pa
 
 | Uso | Família | Peso | Mobile → Desktop |
 |---|---|---|---|
-| Títulos (`h1`, `h2`, `h3`) | **Figtree** (sans geométrica próxima do lettering “Pôrto”) | 600 | h1 36 → 64 px · h2 30 → 44 px · h3 20 → 22 px |
+| Títulos (`h1`, `h2`, `h3`) | **Figtree** (sans geométrica próxima do lettering “PhiloCode”) | 600 | h1 36 → 64 px · h2 30 → 44 px · h3 20 → 22 px |
 | Palavra-chave em títulos | **Instrument Serif** itálico | 400 | mesmo tamanho do título |
 | Texto corrido | Figtree | 400 | 16 → 18 px (lead 18 → 20 px), entrelinha 1,6 |
 | Navegação e botões | Figtree | 500 / 600 | 15–16 px |
@@ -123,7 +125,7 @@ Carregadas com `next/font/google`, `display: "swap"`, apenas os pesos acima. A f
 ## 10. Direção de imagens
 
 - **[Confirmado]** Não há fotos profissionais, fotos de espaço nem vídeos.
-- **[Sugerido]** A imagem real mais forte que a Pôrto tem é **o próprio trabalho**. O site usa **capturas de tela dos três sites publicados** (capturadas em 1440 × 900, 2×, em 16/10/2026), apresentadas em molduras de navegador desenhadas em CSS.
+- **[Sugerido]** A imagem real mais forte que a PhiloCode tem é **o próprio trabalho**. O site usa **capturas de tela dos três sites publicados** (capturadas em 1440 × 900, 2×, em 16/10/2026), apresentadas em molduras de navegador desenhadas em CSS.
 - Nada de banco de imagens, mockups 3D genéricos ou ilustrações de “equipe”.
 - Formas gráficas apenas em CSS/SVG inline: degraus em pixel e traço azul.
 
@@ -131,14 +133,14 @@ Carregadas com `next/font/google`, `display: "swap"`, apenas os pesos acima. A f
 
 | Arquivo | Conteúdo verificado | Uso |
 |---|---|---|
-| `Logo.png` (420 × 275) | Âncora + “Pôrto”, fundo branco | Recortado (versão nova, com acento) → `public/images/porto-logo.png` (cabeçalho) |
-| `… Layout escuro — Com fundo-1.png` | Âncora + “Pôrto” claro, fundo #020618 | Recortado → `public/images/porto-logo-escuro.png` (rodapé) |
-| `… Layout claro/escuro — Com fundo.png` (horizontal) | Apenas a palavra “Pôrto” | Não usado |
-| `… Logo vertical …` (claro e escuro) | Âncora sobre “Pôrto” | Não usado (reserva para redes/OG) |
+| `… Logo horizontal (âncora) — Layout claro — Sem fundo.png` (540 × 275) | Âncora + “PhiloCode” em grafite, fundo transparente | Recortado → `public/images/philocode-logo.png` (cabeçalho) |
+| `… Logo horizontal — Layout escuro — Sem fundo.png` (554 × 275) | Âncora + “PhiloCode” claros, fundo transparente | Recortado → `public/images/philocode-logo-escuro.png` (rodapé e imagem de compartilhamento) |
+| `… Logo horizontal — Layout claro/escuro` (com e sem fundo) | Apenas a palavra “PhiloCode” | Não usado |
+| `… Logo vertical …` (claro e escuro) | Âncora sobre “PhiloCode” | Não usado (reserva para redes/OG) |
 | `Favicon - escuro.png` / `Favicon - claro.png` | Âncora isolada, fundo transparente | Escuro → `src/app/icon.png` |
 | Sites do portfólio | laura-antunes.vercel.app, adv-mateus-marques.vercel.app, farmarafaelaantunes.com | Capturas em `public/images/projetos/` |
 
-Observações: as logos foram **atualizadas pelo cliente** (`Downloads/Porto.zip`, 16/10/2026) e agora mostram **“Pôrto”, com acento**; o pacote novo traz também dois banners 1584 × 396 (um com o slogan “Sites que transformam negócios.”), usados como referência de slogan e não exibidos no site. Os nomes dos arquivos começam com “PhiloCode”, mas todos mostram a marca **Pôrto**. Os PNG têm baixa resolução (≈ 290 px de largura útil); funcionam no cabeçalho, mas a **logo em SVG** deve ser solicitada. Os links do Tally são privados e temporários; foi usada a cópia local (`Downloads/Porto (1)` e, depois, a versão atualizada `Downloads/Porto.zip`).
+Observações: as logos vêm do Figma da marca (21/10/2026), já com o nome **PhiloCode** e exportadas com fundo transparente; o arquivo também tem dois banners 1584 × 396 (um com o slogan “Sites que transformam negócios.”), não exibidos no site. Os PNG têm ≈ 420 px de largura útil; funcionam no cabeçalho e no rodapé, mas uma **logo em SVG** continua recomendada. Os links do Tally são privados e temporários; foi usada a cópia local do formulário.
 
 ## 12. Estrutura de páginas
 
@@ -157,7 +159,7 @@ Seções solicitadas **[Confirmado]** e onde estão:
 
 | Preços (pedido no complemento do chat) | `#precos` |
 
-Também incluído **[Sugerido]**: “Como funciona” (processo descrito pelo cliente). “Por que a Pôrto” existiu até 20/10 e saiu na revisão. Não incluídos: Sobre/história (cliente respondeu “Não”), Localização (atendimento só online).
+Também incluído **[Sugerido]**: “Como funciona” (processo descrito pelo cliente). “Por que a PhiloCode” existiu até 20/10 e saiu na revisão. Não incluídos: Sobre/história (cliente respondeu “Não”), Localização (atendimento só online).
 
 Ordem: Barra de anúncio → Cabeçalho → Hero → Projetos → Como funciona → Preços → Dúvidas → Contato → Rodapé, + barra fixa mobile. O visitante vê quem já é atendido, entende o processo e só então vê o preço.
 
@@ -179,12 +181,12 @@ Ordem: Barra de anúncio → Cabeçalho → Hero → Projetos → Como funciona 
 ### 13.2 Hero (`Hero`)
 - **Finalidade:** dizer em segundos o que é, para quem, e oferecer a call.
 - **Conteúdo [Sugerido, baseado no formulário]:**
-  - Rótulo: “Pôrto · Criação de sites”
+  - Rótulo: “PhiloCode · Criação de sites”
   - `h1`: “Sites profissionais para empresas e profissionais que *ainda não estão na internet*.”
-  - Subtítulo: “A Pôrto cria a sua presença na internet: um site claro, bem acabado e pensado para que as pessoas entendam o que você faz e entrem em contato.”
+  - Subtítulo: “A PhiloCode cria a sua presença na internet: um site claro, bem acabado e pensado para que as pessoas entendam o que você faz e entrem em contato.”
   - Botão principal + link secundário “Ver projetos”.
   - Sinais de confiança **[Confirmado]**: “Site de uma página em 2 dias úteis” · “Atendimento online · Brasília (DF)” · “3 sites publicados”.
-- **Composição:** desktop 2 colunas (texto à esquerda, ~55%; à direita duas molduras de navegador sobrepostas com capturas reais de projetos e etiqueta “Projetos reais da Pôrto”). Fundo `canvas` com grade de pixels muito sutil.
+- **Composição:** desktop 2 colunas (texto à esquerda, ~55%; à direita duas molduras de navegador sobrepostas com capturas reais de projetos e etiqueta “Projetos reais da PhiloCode”). Fundo `canvas` com grade de pixels muito sutil.
 - **Mobile:** rótulo → título → subtítulo → botão (largura total) → link → sinais → imagem (abaixo da dobra, sem empurrar o botão).
 - **CTA:** `data-cta="hero"`.
 
@@ -201,7 +203,7 @@ Repetia o que os planos já dizem (site profissional = Essential; site instituci
 - **Composição:** o primeiro projeto em destaque (largura total, captura à esquerda, texto à direita); os outros dois lado a lado. Capturas em moldura de navegador com o domínio em mono. Link “Ver site no ar ↗” (nova aba).
 - **Fecho:** “Mais dois projetos em desenvolvimento.” + botão principal (`data-cta="projetos"`).
 
-### 13.5 Por que a Pôrto (`Differentials`) — removida em 20/10/2026
+### 13.5 Por que a PhiloCode (`Differentials`) — removida em 20/10/2026
 AI First, velocidade, qualidade e atendimento já aparecem no hero (prazo de 2 dias úteis), nos projetos e no processo.
 
 ### 13.6 Como funciona (`Process`)
@@ -230,7 +232,7 @@ AI First, velocidade, qualidade e atendimento já aparecem no hero (prazo de 2 d
 - **CTA:** `data-cta="contato"`.
 
 ### 13.10 Rodapé (`Footer`)
-- Fundo `night` (#020618) com a logo escura original, slogan “Sites que transformam negócios.”, navegação, contatos clicáveis, “Porto Studio · CNPJ [A CONFIRMAR]”.
+- Fundo `night` (#020618) com a logo escura original, slogan “Sites que transformam negócios.”, navegação, contatos clicáveis, “PhiloCode · CNPJ [A CONFIRMAR]”.
 
 ### 13.11 Barra fixa mobile (`MobileCtaBar`)
 - Abaixo de `md`: barra branca fixa no rodapé da tela com o botão principal (largura total, 48 px+), respeitando `safe-area-inset-bottom`; a página ganha espaço inferior equivalente para não cobrir o rodapé. `data-cta="barra-mobile"`.
@@ -264,14 +266,14 @@ Todas as respostas são **[Confirmado]** pelo cliente; a redação é sugerida.
 
 | `data-cta` | Mensagem |
 |---|---|
-| `header`, `hero`, `contato`, `contato-whatsapp`, `rodape`, `barra-mobile`, `menu-mobile` | “Olá! Vim pelo site da Pôrto e gostaria de fazer o meu site.” |
-| `projetos` | “Olá! Vi os projetos no site da Pôrto e gostaria de fazer o meu site.” |
-| `processo` | “Olá! Vim pelo site da Pôrto e gostaria de começar o meu site.” |
-| `plano-essential` | “Olá! Vi os preços no site da Pôrto e quero o Essential (site de uma página).” |
-| `plano-premium` | “Olá! Vi os preços no site da Pôrto e quero o Premium (site com até 5 páginas).” |
-| `lancamento` | “Olá! Vi no site da Pôrto a oferta de lançamento e quero uma das 5 vagas.” |
+| `header`, `hero`, `contato`, `contato-whatsapp`, `rodape`, `barra-mobile`, `menu-mobile` | “Olá! Vim pelo site da PhiloCode e gostaria de fazer o meu site.” |
+| `projetos` | “Olá! Vi os projetos no site da PhiloCode e gostaria de fazer o meu site.” |
+| `processo` | “Olá! Vim pelo site da PhiloCode e gostaria de começar o meu site.” |
+| `plano-essential` | “Olá! Vi os preços no site da PhiloCode e quero o Essential (site de uma página).” |
+| `plano-premium` | “Olá! Vi os preços no site da PhiloCode e quero o Premium (site com até 5 páginas).” |
+| `lancamento` | “Olá! Vi no site da PhiloCode a oferta de lançamento e quero uma das 5 vagas.” |
 | `barra-anuncio` | Link interno para `#lancamento` (não abre o WhatsApp). |
-| `duvidas` | “Olá! Tenho uma dúvida sobre a criação de sites da Pôrto.” |
+| `duvidas` | “Olá! Tenho uma dúvida sobre a criação de sites da PhiloCode.” |
 
 ## 16. Dados reais
 
@@ -282,7 +284,7 @@ Todas as respostas são **[Confirmado]** pelo cliente; a redação é sugerida.
 | E-mail | pedroabernardes11@gmail.com | Confirmado (informado como e-mail profissional) |
 | Instagram / LinkedIn / outras redes | O formulário traz apenas `https://www.instagram.com/` (página inicial, sem perfil) | **Pendente** — não exibido |
 | Perfil no Google | Não possui | Confirmado |
-| Domínio | A Pôrto ainda não tem domínio próprio. **Política para clientes:** domínio registrado no nome do cliente | **Pendente** (domínio da Pôrto) / Confirmado (política) |
+| Domínio | A PhiloCode ainda não tem domínio próprio. **Política para clientes:** domínio registrado no nome do cliente | **Pendente** (domínio da PhiloCode) / Confirmado (política) |
 | Hospedagem | Possui | Confirmado (qual não foi informado) |
 | Site atual | Não possui | Confirmado |
 | Horários | Não há horários a informar | Confirmado |
@@ -303,7 +305,7 @@ A primeira versão animava todas as seções ao rolar (títulos, textos, cartõe
 - **Referência de acabamento (Linear):** texto parado; movimento só nas ilustrações do produto.
 
 **Regra atual: texto nunca anima; só imagens de trabalho.**
-- Capturas do hero: sobem levemente e aparecem ao carregar a página (`frame`, `frame-left`), com a etiqueta “Projetos reais publicados pela Pôrto” em `fade`.
+- Capturas do hero: sobem levemente e aparecem ao carregar a página (`frame`, `frame-left`), com a etiqueta “Projetos reais publicados pela PhiloCode” em `fade`.
 - Cartões de projetos: sobem levemente quando entram na tela (`frame`).
 - Curva `cubic-bezier(0.16, 1, 0.3, 1)`, 1 s, 32 px de deslocamento. `prefers-reduced-motion` desliga tudo; sem JavaScript tudo aparece normalmente.
 - Código: `src/lib/reveal.ts`, `src/components/layout/RevealObserver.tsx`, bloco de animação em `src/app/globals.css`.
@@ -345,7 +347,7 @@ Mobile-first, breakpoints Tailwind; referência 1440 / 768 / 390 / 360 px; conte
 ## 22. Requisitos específicos do negócio
 
 - O site é vitrine do próprio produto: deve carregar rápido, ser impecável no mobile e ter boa nota de acessibilidade.
-- **Uso do portfólio:** os sites são de clientes reais da Pôrto. Antes de publicar, confirmar a autorização de cada cliente para exibir nome, segmento e captura (ver pendências).
+- **Uso do portfólio:** os sites são de clientes reais da PhiloCode. Antes de publicar, confirmar a autorização de cada cliente para exibir nome, segmento e captura (ver pendências).
 
 ## 23. Decisões técnicas
 
@@ -370,7 +372,7 @@ Mobile-first, breakpoints Tailwind; referência 1440 / 768 / 390 / 360 px; conte
 | 7 | Depoimentos: o cliente diz que tem, mas não enviou | `src/content/site.ts` → `testimonials` (vazio → seção oculta) |
 | 8 | Área de atendimento: “Atende outras cidades? Não”, mas “Brasil inteiro” como região principal; o site diz apenas “atendimento online” | Briefing (decidir antes de usar “todo o Brasil” em textos e SEO) |
 | 9 | Autorização dos clientes do portfólio para exibir nome e captura | `src/content/site.ts` → `projects` |
-| 10 | Logo em SVG (PNG atual tem ≈ 290 px de largura) | `public/images/porto-logo*.png` |
+| 10 | Logo em SVG (PNG atual tem ≈ 420 px de largura) | `public/images/philocode-logo*.png` |
 | 11 | Validar textos de apoio dos diferenciais, dos passos do processo e mensagens pré-preenchidas do WhatsApp;  | `src/content/site.ts` → `differentials`, `whatsappMessages` |
 | 12 | E-mail em domínio próprio (hoje é Gmail pessoal) — opcional | `src/content/site.ts` → `contact.email` |
 | 13 | Validar com advogado ou contador as políticas (arrependimento, cancelamento, transferência) e formalizá-las em contrato | Fora do código |
@@ -409,13 +411,13 @@ Faixas tiradas de páginas de agências e fornecedores (têm interesse comercial
 - **Manutenção com alterações incluídas:** R$ 200 a R$ 700/mês.
 - **Domínio .com.br:** R$ 40/ano no Registro.br.
 
-Decisão: R$ 997 posiciona a Pôrto acima de quem vende template e bem abaixo de agência, com o prazo de 2 dias úteis e o design sob medida como diferenciais. A manutenção de R$ 49/mês fica na faixa dos pacotes simples, com uma alteração mensal incluída.
+Decisão: R$ 997 posiciona a PhiloCode acima de quem vende template e bem abaixo de agência, com o prazo de 2 dias úteis e o design sob medida como diferenciais. A manutenção de R$ 49/mês fica na faixa dos pacotes simples, com uma alteração mensal incluída.
 
 **Prazo:** conta a partir do sinal pago (confirmado pelo cliente).
 
-**Oferta aprovada em 16/10/2026 (substituída na revisão de 20/10):** **Essential** (site de uma página) **R$ 997**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.997**, primeira versão em 5 a 7 dias úteis · **página extra R$ 297** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula) · **domínio registrado e pago pelo cliente, no nome dele; a Pôrto conecta ao site** · **lançamento para os 5 primeiros clientes:** Essential R$ 500 e Premium R$ 997, em troca de depoimento e autorização de portfólio. Referências para o Premium: institucional de 3 a 5 páginas custa R$ 1.500 a R$ 4.000 com freelancer e R$ 2.500 a R$ 6.000 com agência; página extra R$ 150 a R$ 500. Modelo de “site por assinatura sem entrada” (R$ 40 a R$ 100/mês com fidelidade de 12 meses) foi descartado por competir só por preço.
+**Oferta aprovada em 16/10/2026 (substituída na revisão de 20/10):** **Essential** (site de uma página) **R$ 997**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.997**, primeira versão em 5 a 7 dias úteis · **página extra R$ 297** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula) · **domínio registrado e pago pelo cliente, no nome dele; a PhiloCode conecta ao site** · **lançamento para os 5 primeiros clientes:** Essential R$ 500 e Premium R$ 997, em troca de depoimento e autorização de portfólio. Referências para o Premium: institucional de 3 a 5 páginas custa R$ 1.500 a R$ 4.000 com freelancer e R$ 2.500 a R$ 6.000 com agência; página extra R$ 150 a R$ 500. Modelo de “site por assinatura sem entrada” (R$ 40 a R$ 100/mês com fidelidade de 12 meses) foi descartado por competir só por preço.
 
-**Revisão de 20/10/2026:** a esposa do cliente achou o site caro e com informação demais. O cliente reduziu os preços (de R$ 997/R$ 1.997 para R$ 597/R$ 1.197; lançamento de R$ 500/R$ 997 para R$ 497/R$ 997) e aprovou o enxugamento: saíram as seções “Para quem é” (serviços, redundante com os planos) e “Por que a Pôrto” (diferenciais, redundante com hero e processo); o processo passou de 6 para 4 passos; preços de 5 para 3 blocos; perguntas frequentes de 8 para 5. A página extra caiu de R$ 297 para R$ 150 para ficar coerente com o Premium (4 páginas a mais por R$ 600). Observação registrada: a esposa do cliente não é o público-alvo; recomendado validar preço e clareza com 3 a 5 pessoas do perfil (profissionais e donos de pequenos negócios sem site).
+**Revisão de 20/10/2026:** a esposa do cliente achou o site caro e com informação demais. O cliente reduziu os preços (de R$ 997/R$ 1.997 para R$ 597/R$ 1.197; lançamento de R$ 500/R$ 997 para R$ 497/R$ 997) e aprovou o enxugamento: saíram as seções “Para quem é” (serviços, redundante com os planos) e “Por que a PhiloCode” (diferenciais, redundante com hero e processo); o processo passou de 6 para 4 passos; preços de 5 para 3 blocos; perguntas frequentes de 8 para 5. A página extra caiu de R$ 297 para R$ 150 para ficar coerente com o Premium (4 páginas a mais por R$ 600). Observação registrada: a esposa do cliente não é o público-alvo; recomendado validar preço e clareza com 3 a 5 pessoas do perfil (profissionais e donos de pequenos negócios sem site).
 
 **Ajuste de 20/10/2026:** desconto de lançamento passou a ser **40%** (R$ 597 → R$ 358; R$ 1.197 → R$ 718, arredondados para baixo).
 
@@ -423,4 +425,4 @@ Decisão: R$ 997 posiciona a Pôrto acima de quem vende template e bem abaixo de
 
 **Ajuste de 20/10/2026 (3):** Essential a **R$ 499** (preço terminado em 9, pedido do cliente); lançamento com 40%: **R$ 299**.
 
-**Ajuste de 20/10/2026 (4):** o domínio deixou de ser incluso. O cliente registra e paga o domínio no próprio nome; a Pôrto conecta ao site. Saiu dos planos e foi reescrito nas perguntas frequentes.
+**Ajuste de 20/10/2026 (4):** o domínio deixou de ser incluso. O cliente registra e paga o domínio no próprio nome; a PhiloCode conecta ao site. Saiu dos planos e foi reescrito nas perguntas frequentes.

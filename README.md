@@ -1,6 +1,6 @@
-# Pôrto — site institucional
+# PhiloCode — site institucional
 
-Site one-page da Pôrto (criação de sites), em Next.js 16 + Tailwind CSS v4.
+Site one-page da PhiloCode (criação de sites), em Next.js 16 + Tailwind CSS v4.
 
 - Briefing completo, decisões e pendências: [`docs/briefing.md`](docs/briefing.md)
 - Todo o conteúdo (textos, preços, contatos, mensagens do WhatsApp): [`src/content/site.ts`](src/content/site.ts)

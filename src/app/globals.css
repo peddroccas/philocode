@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Tokens da marca Pôrto — ver docs/briefing.md, seção 8 */
+/* Tokens da marca PhiloCode — ver docs/briefing.md, seção 8 */
 @theme {
   --color-canvas: #f8fafc;
   --color-surface: #ffffff;

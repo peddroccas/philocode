@@ -8,7 +8,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OpengraphImage() {
-  const logo = await readFile(join(process.cwd(), "public/images/porto-logo-escuro.png"), "base64");
+  const logo = await readFile(join(process.cwd(), "public/images/philocode-logo-escuro.png"), "base64");
 
   return new ImageResponse(
     (
@@ -25,7 +25,7 @@ export default async function OpengraphImage() {
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`data:image/png;base64,${logo}`} alt="" width={296} height={145} />
+        <img src={`data:image/png;base64,${logo}`} alt="" width={427} height={137} />
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ fontSize: 72, fontWeight: 600, letterSpacing: -2, lineHeight: 1.05 }}>{company.slogan}</div>
           <div style={{ fontSize: 30, color: "#aab2bf" }}>

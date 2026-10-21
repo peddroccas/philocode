@@ -10,7 +10,7 @@ export function JsonLd() {
     slogan: company.slogan,
     description: "Criação de sites profissionais e institucionais para empresas e profissionais.",
     url: SITE_URL,
-    logo: `${SITE_URL}/images/porto-logo.png`,
+    logo: `${SITE_URL}/images/philocode-logo.png`,
     telephone: `+${contact.whatsappDigits}`,
     email: contact.email,
     address: {

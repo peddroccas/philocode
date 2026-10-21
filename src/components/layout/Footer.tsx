@@ -11,10 +11,10 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <Image
-              src="/images/porto-logo-escuro.png"
+              src="/images/philocode-logo-escuro.png"
               alt={company.name}
-              width={296}
-              height={145}
+              width={427}
+              height={137}
               className="h-14 w-auto"
             />
             <p className="mt-5 max-w-xs text-lg text-snow">{company.slogan}</p>

@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 const title = `${company.name} · Criação de sites profissionais e institucionais em Brasília (DF)`;
 const description =
-  "A Pôrto cria sites profissionais sob medida para empresas e profissionais. A partir de R$ 499. Atendimento online, Brasília (DF).";
+  "A PhiloCode cria sites profissionais sob medida para empresas e profissionais. A partir de R$ 499. Atendimento online, Brasília (DF).";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
