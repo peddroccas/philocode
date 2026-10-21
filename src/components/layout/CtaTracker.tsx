@@ -5,7 +5,7 @@ import { track } from "@vercel/analytics";
 
 /**
  * Envia um evento "cta_click" ao Vercel Analytics em cada clique num elemento com data-cta,
- * com o local do clique (hero, plano-essential, barra-mobile…).
+ * com o local do clique (hero, precos, lancamento…).
  * Eventos personalizados exigem plano pago na Vercel; no plano gratuito são ignorados.
  */
 export function CtaTracker() {

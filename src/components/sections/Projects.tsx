@@ -1,5 +1,4 @@
-import clsx from "clsx";
-import { projects, whatsappMessages, type Project } from "@/content/site";
+import { projects, type Project } from "@/content/site";
 import { BrowserFrame } from "@/components/ui/BrowserFrame";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
@@ -7,27 +6,22 @@ import { SectionHeading } from "@/components/ui/Heading";
 import { ArrowUpRightIcon } from "@/components/ui/Icons";
 import { reveal } from "@/lib/reveal";
 
-function ProjectCard({ project, featured, index }: { project: Project; featured?: boolean; index: number }) {
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <li
       {...reveal("frame", index)}
-      className={clsx(
-        "grid gap-6 rounded-card border border-line bg-surface p-4 shadow-card sm:p-5",
-        featured && "md:col-span-2 lg:grid-cols-[1.35fr_1fr] lg:items-center lg:gap-10 lg:p-6",
-      )}
+      className="grid w-[85%] shrink-0 snap-start content-start gap-6 rounded-card border border-line bg-surface p-4 shadow-card sm:w-[60%] sm:p-5 md:w-auto"
     >
       <BrowserFrame
         src={project.image}
         alt={project.alt}
         domain={project.domain}
-        sizes={featured ? "(min-width: 1024px) 680px, 92vw" : "(min-width: 768px) 46vw, 92vw"}
+        sizes="(min-width: 768px) 46vw, 85vw"
         className="shadow-none"
       />
-      <div className={clsx("px-2 pb-2", featured && "lg:pr-6")}>
+      <div className="px-2 pb-2">
         <p className="font-mono text-xs tracking-[0.08em] text-muted uppercase">{project.segment}</p>
-        <h3 className={clsx("mt-2 font-semibold tracking-tight text-ink", featured ? "text-2xl lg:text-3xl" : "text-xl")}>
-          {project.name}
-        </h3>
+        <h3 className="mt-2 text-xl font-semibold tracking-tight text-ink">{project.name}</h3>
         <p className="mt-2 leading-relaxed text-muted">{project.description}</p>
         <a
           href={project.url}
@@ -45,33 +39,28 @@ function ProjectCard({ project, featured, index }: { project: Project; featured?
 }
 
 export function Projects() {
-  const [featured, ...rest] = projects.items;
-
   return (
     <section
       id="projetos"
       aria-labelledby="projetos-title"
-      className="scroll-mt-20 border-y border-line bg-surface/60 py-20 lg:py-28"
+      className="scroll-mt-20 bg-surface/60 py-12 md:py-20 lg:py-28"
     >
       <Container>
         <SectionHeading id="projetos-title" eyebrow={projects.eyebrow} title={projects.title} intro={projects.intro} />
 
-        <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:gap-6">
-          <ProjectCard project={featured} featured index={0} />
-          {rest.map((project, index) => (
-            <ProjectCard key={project.url} project={project} index={index + 1} />
+        {/* Celular: carrossel com rolagem lateral. A partir de md: grade 2 × 2. */}
+        <ul
+          aria-label="Projetos"
+          className="mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] md:mt-12 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 lg:gap-6 [&::-webkit-scrollbar]:hidden"
+        >
+          {projects.items.map((project, index) => (
+            <ProjectCard key={project.url} project={project} index={index % 2} />
           ))}
         </ul>
+        <p className="mt-2 text-sm text-muted md:hidden">Arraste para o lado para ver mais.</p>
 
-        <div className="mt-10 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="flex items-center gap-3 text-muted">
-            <span aria-hidden className="relative flex size-2.5">
-              <span className="absolute inset-0 rounded-full bg-brand/40 motion-safe:animate-ping" />
-              <span className="relative size-2.5 rounded-full bg-brand" />
-            </span>
-            {projects.footnote}
-          </p>
-          <CtaButton location="projetos" message={whatsappMessages.projects} className="w-full sm:w-auto" />
+        <div className="mt-10 flex justify-center">
+          <CtaButton location="projetos" className="w-full sm:w-auto" />
         </div>
       </Container>
     </section>

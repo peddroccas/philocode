@@ -44,7 +44,7 @@ export function SectionHeading({ eyebrow, title, intro, id, tone = "light", clas
         id={id}
         className={clsx(
           "mt-4 text-3xl leading-[1.12] font-semibold tracking-tight text-balance sm:text-4xl lg:text-[2.75rem]",
-          tone === "light" ? "text-ink" : "text-canvas",
+          tone === "light" ? "text-ink" : "text-snow",
         )}
       >
         <EmphasisText text={title} />

@@ -31,37 +31,36 @@ export const contact = {
 };
 
 export const primaryCta = {
-  label: "Chamar no WhatsApp",
+  label: "Solicitar orçamento",
 };
 
 /** Mensagens iniciais do WhatsApp por ponto de entrada (a validar com o cliente). */
 export const whatsappMessages = {
-  default: "Olá! Vim pelo site da Pôrto e gostaria de fazer o meu site.",
-  projects: "Olá! Vi os projetos no site da Pôrto e gostaria de fazer o meu site.",
-  process: "Olá! Vim pelo site da Pôrto e gostaria de começar o meu site.",
-  faq: "Olá! Tenho uma dúvida sobre a criação de sites da Pôrto.",
+  default: "Olá! Vim pelo site da Pôrto e gostaria de um orçamento. Meu negócio é: ",
+  process: "Olá! Vim pelo site da Pôrto e gostaria de começar o meu site. Meu negócio é: ",
+  faq: "Olá! Tenho uma dúvida sobre a criação de sites da Pôrto: ",
 } as const;
+
+/** Mensagem do botão da calculadora de preço, com o número de páginas escolhido. */
+export function pricingMessage(pages: number) {
+  const size = pages === 1 ? "uma página" : `${pages} páginas`;
+  return `Olá! Vi os preços no site da Pôrto e gostaria de um orçamento para um site de ${size}. Meu negócio é: `;
+}
 
 export const nav = [
   { label: "Projetos", href: "#projetos" },
   { label: "Como funciona", href: "#como-funciona" },
-  { label: "Preços", href: "#precos" },
+  { label: "Valores", href: "#valores" },
   { label: "Dúvidas", href: "#duvidas" },
   { label: "Contato", href: "#contato" },
 ];
 
 export const hero = {
   eyebrow: "Pôrto · Criação de sites",
-  title: {
-    before: "Sites profissionais para empresas e profissionais que ",
-    emphasis: "ainda não estão na internet",
-    after: ".",
-  } satisfies Emphasis,
+  title: { before: "Sites profissionais, feitos sob medida para o ", emphasis: "seu negócio", after: "." } satisfies Emphasis,
   subtitle:
-    "A Pôrto cria a sua presença na internet: um site claro, bem acabado e pensado para que as pessoas entendam o que você faz e entrem em contato.",
-  secondaryLink: { label: "Ver projetos", href: "#projetos" },
-  trust: ["Site de uma página em 2 dias úteis", "Atendimento online · Brasília (DF)", "3 sites publicados"],
-  visualCaption: "Projetos reais publicados pela Pôrto",
+    "Criamos sites claros e bem acabados para empresas e profissionais apresentarem o que fazem e receberem novos contatos.",
+  trust: ["Design exclusivo, sem templates", "Pensado para gerar contatos", "Pronto para celular e Google"],
 };
 
 export type Project = {
@@ -78,13 +77,12 @@ export type Project = {
 export const projects = {
   eyebrow: "Projetos",
   title: { before: "Sites que ", emphasis: "já estão no ar", after: "." } satisfies Emphasis,
-  intro: "Profissionais que agora têm um site para mostrar o que fazem. Clique para ver cada um funcionando.",
+  intro: "Alguns dos nossos trabalhos mais recentes.",
   items: [
     {
       name: "Mateus Marques Rosa",
       segment: "Advocacia criminal · Brasília (DF)",
-      description:
-        "Página de apresentação com áreas de atuação, como funciona o atendimento e agendamento pelo WhatsApp.",
+      description: "Site com áreas de atuação, forma de atendimento e contato direto pelo WhatsApp.",
       url: "https://adv-mateus-marques.vercel.app/",
       domain: "adv-mateus-marques.vercel.app",
       image: "/images/projetos/mateus.webp",
@@ -93,67 +91,56 @@ export const projects = {
     {
       name: "Laura Antunes",
       segment: "Psicologia · Psicoterapia on-line",
-      description:
-        "Página de apresentação com atendimentos, como funciona, dúvidas frequentes e agendamento de conversa.",
+      description: "Site com atendimentos, perguntas frequentes e agendamento de conversa.",
       url: "https://laura-antunes.vercel.app/",
       domain: "laura-antunes.vercel.app",
       image: "/images/projetos/laura.webp",
       alt: "Primeira tela do site da psicóloga Laura Antunes: título em serifa sobre cuidado em meio às perdas e imagem de um arranjo de flores.",
     },
     {
+      name: "Jaqueline Trigueiro",
+      segment: "Design de sobrancelhas · Ceilândia (DF)",
+      description: "Site com serviços, antes e depois, o espaço de atendimento e agendamento pelo WhatsApp.",
+      url: "https://jaqueline-trigueiro.vercel.app/",
+      domain: "jaqueline-trigueiro.vercel.app",
+      image: "/images/projetos/jaqueline.webp",
+      alt: "Primeira tela do site de Jaqueline Trigueiro: título sobre design de sobrancelhas e micropigmentação em Ceilândia, botão de agendamento pelo WhatsApp e foto da profissional.",
+    },
+    {
       name: "Rafaela Antunes",
       segment: "Farmacêutica clínica · Saúde e performance",
-      description: "Página de apresentação com a trajetória da profissional e o método que ela oferece.",
+      description: "Site com a trajetória da profissional e o método que ela oferece.",
       url: "https://www.farmarafaelaantunes.com/",
       domain: "farmarafaelaantunes.com",
       image: "/images/projetos/farma.webp",
       alt: "Seção “Quem sou eu?” do site da farmacêutica clínica Rafaela Antunes, com retrato da profissional.",
     },
   ] satisfies Project[],
-  footnote: "Mais dois projetos em desenvolvimento.",
 };
 
 export const howItWorks = {
   eyebrow: "Como funciona",
-  title: { before: "Do primeiro contato ao ", emphasis: "site pronto", after: "." } satisfies Emphasis,
-  intro: "Tudo online, em quatro passos.",
+  title: { before: "Simples, do início ", emphasis: "ao fim", after: "." } satisfies Emphasis,
   steps: [
-    {
-      title: "Você chama no WhatsApp",
-      text: "Conte sobre o seu negócio. Se preferir, marcamos uma call.",
-    },
-    {
-      title: "Briefing e sinal",
-      text: "Você responde um formulário sobre o seu negócio e paga 50% via Pix.",
-    },
-    {
-      title: "Primeira versão",
-      highlight: "em 2 a 7 dias úteis",
-      text: "2 dias no site de uma página; 5 a 7 no de até 5 páginas.",
-    },
-    {
-      title: "Ajustes e site no ar",
-      text: "2 rodadas de ajuste, você paga os outros 50% e o site é publicado.",
-    },
-  ] as { title: string; highlight?: string; text: string }[],
-};
-
-export type Plan = {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  highlights: string[];
-  message: string;
+    { title: "Conversa", text: "Você conta sobre o seu negócio e o que espera do site." },
+    { title: "Criação", text: "Desenvolvemos o site e fazemos os ajustes que você pedir." },
+    { title: "Publicação", text: "O site vai ao ar no seu domínio, pronto para receber contatos." },
+  ],
 };
 
 export const pricing = {
-  eyebrow: "Preços",
+  eyebrow: "Valores",
   title: { before: "Preço claro, ", emphasis: "sem surpresa", after: "." } satisfies Emphasis,
-  intro: "Pagamento via Pix: metade para começar, metade na entrega.",
+  intro: "Você paga pelo número de páginas que o seu site precisa.",
+  firstPage: "499",
+  extraPage: "175",
+  /** Valores numéricos usados pela calculadora. */
+  firstPageValue: 499,
+  extraPageValue: 175,
+  maxPages: 6,
+  includes: ["Design feito para o seu negócio", "Funciona no celular e no computador", "Duas rodadas de ajustes", "Publicação no seu domínio"],
   /**
-   * Oferta de lançamento real e limitada (5 vagas no total, valendo para os dois pacotes).
+   * Oferta de lançamento real e limitada (5 vagas no total).
    * Atualize spotsLeft a cada cliente fechado e mude active para false quando as vagas
    * acabarem (a faixa e a barra do topo somem do site).
    */
@@ -164,42 +151,18 @@ export const pricing = {
     eyebrow: "Lançamento",
     announcement: "40% de desconto para os 5 primeiros clientes",
     title: "40% de desconto para os 5 primeiros clientes",
-    text: "Em troca, você nos dá um depoimento e autoriza mostrar o seu site no nosso portfólio.",
-    prices: [
-      { plan: "Essential", tagline: "Uma página", price: "299", regularPrice: "499" },
-      { plan: "Premium", tagline: "Até 5 páginas", price: "718", regularPrice: "1.197" },
-    ],
-    message: "Olá! Vi no site da Pôrto a oferta de lançamento e quero uma das 5 vagas.",
+    firstPage: "299",
+    extraPage: "105",
+    firstPageValue: 299,
+    extraPageValue: 105,
+    message: "Olá! Vi a oferta de lançamento no site da Pôrto e quero uma das 5 vagas. Meu negócio é: ",
   },
-  plans: [
-    {
-      id: "essential",
-      name: "Essential",
-      tagline: "Site de uma página",
-      price: "499",
-      description: "Para profissionais e pequenos negócios.",
-      highlights: ["Primeira versão em 2 dias úteis", "2 rodadas de ajuste"],
-      message: "Olá! Vi os preços no site da Pôrto e quero o Essential (site de uma página).",
-    },
-    {
-      id: "premium",
-      name: "Premium",
-      tagline: "Site com até 5 páginas",
-      price: "1.197",
-      description: "Para empresas com vários serviços.",
-      highlights: ["Primeira versão em 5 a 7 dias úteis", "2 rodadas de ajuste"],
-      message: "Olá! Vi os preços no site da Pôrto e quero o Premium (site com até 5 páginas).",
-    },
-  ] satisfies Plan[],
-  extras: [
-    { label: "Página extra", price: "150" },
-    { label: "Rodada de ajuste extra", price: "150" },
-  ],
+  extraRound: "150",
   maintenance: {
     name: "Manutenção",
-    price: "49",
-    annualPrice: "490",
-    summary: "hospedagem, SSL, backup e 1 rodada de ajustes por mês. Sem fidelidade.",
+    price: "59",
+    annualPrice: "590",
+    summary: "hospedagem, segurança, backup e uma rodada de ajustes por mês. Sem fidelidade.",
   },
 };
 
@@ -208,40 +171,38 @@ export const faq = {
   title: { before: "Perguntas ", emphasis: "frequentes", after: "." } satisfies Emphasis,
   items: [
     {
-      question: "Quanto tempo leva para o site ficar pronto?",
+      question: "Quantas páginas o meu site precisa?",
       answer:
-        "O prazo começa quando o sinal é pago. A primeira versão do site de uma página fica pronta em 2 dias úteis; a do site com até 5 páginas, em 5 a 7 dias úteis. Depois vêm as 2 rodadas de ajuste e a publicação.",
+        "A maioria dos profissionais começa com uma página, que reúne apresentação, serviços e contato. Empresas com vários serviços costumam precisar de mais. Na conversa, indicamos o formato ideal para o seu caso.",
     },
     {
-      question: "Quanto custa e como eu pago?",
+      question: "O que é uma rodada de ajustes?",
       answer:
-        "O Essential (uma página) custa R$ 499 e o Premium (até 5 páginas), R$ 1.197. Cada página extra custa R$ 150. O pagamento é via Pix: 50% de sinal para começar e 50% na entrega. Para os 5 primeiros clientes, há 40% de desconto: R$ 299 e R$ 718.",
+        "É a lista com tudo o que você quer mudar no site, enviada de uma vez. Cada projeto inclui duas rodadas; rodadas extras custam R$ 150.",
     },
     {
-      question: "O que é uma rodada de ajuste?",
+      question: "Como funciona a manutenção?",
       answer:
-        "É quando você avalia o site e nos envia, de uma vez, a lista com tudo o que quer mudar: textos, fotos, cores, ordem das seções. Cada projeto tem 2 rodadas, e cada rodada extra custa R$ 150. Acrescentar páginas ou mudar a estrutura do site é orçado à parte.",
+        "Custa R$ 59 por mês ou R$ 590 por ano e inclui hospedagem, segurança (SSL), backup e uma rodada de ajustes por mês. Não há fidelidade: se cancelar, entregamos o código do site e ajudamos a publicá-lo onde você preferir.",
     },
     {
-      question: "Como funciona a manutenção? E o domínio?",
-      answer:
-        "A manutenção custa R$ 49 por mês ou R$ 490 por ano: hospedagem, certificado SSL, backup e 1 rodada de ajustes por mês, que não acumula. Não tem fidelidade: se cancelar, o site fica no ar até o fim do período já pago (no anual, sem reembolso dos meses restantes) e nós transferimos o código completo e ajudamos a publicar o site na sua conta, sem custo. O domínio fica por sua conta: você registra no seu nome (um .com.br custa R$ 40 por ano no Registro.br) e nós conectamos ao site.",
+      question: "Quem registra o domínio?",
+      answer: "Você registra o domínio no seu nome, e nós cuidamos de conectá-lo ao site.",
     },
     {
-      question: "E se eu desistir depois de pagar o sinal?",
-      answer:
-        "Você tem 7 dias a partir da contratação para desistir, e nós devolvemos o sinal integralmente, como prevê o art. 49 do Código de Defesa do Consumidor. Basta avisar pelo mesmo WhatsApp. Depois desse prazo, o sinal não é devolvido, porque paga o trabalho já feito.",
+      question: "Posso desistir depois de contratar?",
+      answer: "Sim. Em até 7 dias após a contratação, devolvemos integralmente o valor pago.",
     },
   ],
-  helpTitle: "Não encontrou sua dúvida?",
-  helpText: "Fale com a gente pelo WhatsApp. A resposta vem de quem desenvolve o seu site.",
+  helpTitle: "Ainda tem dúvidas?",
+  helpText: "Fale com a gente pelo WhatsApp.",
 };
 
 export const contactSection = {
   eyebrow: "Contato",
-  title: { before: "Vamos colocar seu negócio ", emphasis: "na internet", after: "?" } satisfies Emphasis,
-  text: "Chame no WhatsApp e conte sobre o seu negócio. Se preferir conversar ao vivo, marcamos uma call.",
-  facts: ["Atendimento online", "Sediada em Brasília (DF)"],
+  title: { before: "Vamos conversar sobre o ", emphasis: "seu site", after: "?" } satisfies Emphasis,
+  text: "Conte sobre o seu negócio pelo WhatsApp. Respondemos pessoalmente.",
+  facts: ["Sediada em Brasília (DF)"],
 };
 
 export type Testimonial = { quote: string; author: string; role: string };

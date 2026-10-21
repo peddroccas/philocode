@@ -2,6 +2,18 @@
 
 > Fonte: formulário “Briefing Site Institucional” (Tally, submissão `e5Geoyk`, 16/10/2026), arquivos de marca enviados (logo e favicons) e complementos enviados pelo cliente no chat entre 16 e 20/10/2026. Oferta atual: **Essential** (site de uma página) **R$ 499**, primeira versão em 2 dias úteis · **Premium** (até 5 páginas) **R$ 1.197**, primeira versão em 5 a 7 dias úteis · **página extra R$ 150** · **2 rodadas de ajuste** (rodada = lista de pedidos enviada de uma vez) · **rodada extra R$ 150** · **pagamento via Pix: 50% de sinal e 50% na entrega** · **manutenção R$ 49/mês ou R$ 490/ano** (hospedagem, SSL, backup, 1 rodada de ajustes por mês, que não acumula; sem fidelidade) · **domínio registrado e pago pelo cliente, no nome dele; a Pôrto conecta ao site** · **lançamento para os 5 primeiros clientes: 40% de desconto** (Essential R$ 299 e Premium R$ 718), em troca de depoimento e autorização de portfólio. Hospedagem: Vercel Pro.
 >
+> **Revisão de 21/10/2026 (oferta e textos atuais — prevalece sobre o restante deste documento):** preço por página — **primeira página R$ 499 + R$ 175 por página a mais** (2 = R$ 674; 3 = R$ 849; 5 = R$ 1.199); saíram os pacotes Essential/Premium. Lançamento: 40% para os 5 primeiros (R$ 299 + R$ 105 por página a mais), sem contrapartida exibida no site. Manutenção **R$ 59/mês ou R$ 590/ano** (hospedagem, segurança, backup, uma rodada de ajustes por mês, sem fidelidade). Rodada extra R$ 150. Domínio registrado pelo cliente. Textos reescritos em tom profissional e reduzidos: sem prazos de entrega, sem Pix e sem sinal; processo em 3 passos (Conversa, Criação, Publicação); 5 perguntas frequentes. Saíram a barra fixa de WhatsApp no celular, o título “…que ainda não estão na internet” (agora “Sites profissionais, feitos sob medida para o seu negócio.”) e o sinal “3 sites publicados”.
+>
+> **Cores finais (21/10/2026):** o botão de tema claro/escuro foi testado e **removido** a pedido do cliente. Valem as cores originais com o hero escuro: barra de anúncio escura, cabeçalho branco, **hero escuro com a maré de pixels**, projetos, como funciona, valores e dúvidas claros, contato em grafite e rodapé escuro.
+>
+> **Volta ao tema claro (21/10/2026):** a pedido do cliente, o site inteiro ficou claro de novo. Hero, cabeçalho, menu mobile, “Como funciona”, contato e rodapé claros; a maré de pixels continua no hero, com pontos em grafite que acendem em azul perto do cursor. Só a barra de anúncio e o cartão da oferta de lançamento seguem escuros, como destaque da promoção.
+>
+> **Hero e ritmo visual (21/10/2026):** depois de comparar quatro direções (página de opções publicada), o cliente escolheu a **“Maré de pixels”**: hero escuro com uma grade de pontos em canvas que ondula devagar e acende em azul perto do cursor (pausa fora da tela e com a aba oculta; fica parada com “reduzir movimento”). O cartão “Seu site Pôrto” saiu. Cabeçalho e menu mobile passaram a ser escuros (logo escura original) para o topo formar um bloco só; “Como funciona” também ficou escura. Ritmo da página: escuro (topo) · claro (projetos) · escuro (processo) · claro (valores e dúvidas) · escuro (contato e rodapé). A faixa de lançamento ganhou o próprio seletor de páginas, sincronizado com a calculadora (os dois mostram o mesmo total, com um destaque curto quando o valor muda). Padding das seções no celular reduzido para 48 px. `overflow-x: clip` no body evita rolagem lateral.
+>
+> **Ajustes finais de 21/10/2026:** hero com um **cartão “Seu site Pôrto”** (âncora pequena + o que vem no site: apresentação do negócio, serviços explicados com clareza, botão direto para o WhatsApp, publicado no seu domínio; rodapé “Duas rodadas de ajustes incluídas”), no lugar da âncora grande; sinais do hero: “Design exclusivo, sem templates · Pensado para gerar contatos · Pronto para celular e Google”; saiu o link “Ver projetos”; seção “Preços” renomeada para **“Valores”** (`#valores`); carrossel de projetos sem barra de rolagem; resposta sobre domínio sem citar preço.
+>
+> **Análise de conversão de 21/10/2026 (aplicada):** botão principal “Solicitar orçamento” (ícone do WhatsApp mantido); hero sem capturas de projetos (duplicavam o portfólio): no lugar, a âncora da marca em vetor, desenhada com a geometria do favicon; sinais do hero “Design sob medida · Preparado para o Google”; “Atendimento online” e “Atendimento direto…” removidos; projetos em carrossel no celular e grade 2 × 2 no computador, com o novo projeto **Jaqueline Trigueiro** (design de sobrancelhas, Ceilândia/DF); tabela de exemplos trocada por **calculadora** de 1 a 6 páginas (total + total com lançamento; o botão envia o número de páginas na mensagem); mensagens do WhatsApp terminam com “Meu negócio é: ”. Recusadas pelo cliente: preço no hero, pergunta sobre prazo, linha de garantia de 7 dias perto do preço, esconder o CNPJ pendente. Pendente: pedir depoimentos aos clientes do portfólio.
+>
 > **Revisão de 20/10/2026:** a esposa do cliente achou o site caro e com informação demais. O cliente reduziu os preços (de R$ 997/R$ 1.997 para R$ 597/R$ 1.197; lançamento de R$ 500/R$ 997 para R$ 497/R$ 997) e aprovou o enxugamento: saíram as seções “Para quem é” (serviços, redundante com os planos) e “Por que a Pôrto” (diferenciais, redundante com hero e processo); o processo passou de 6 para 4 passos; preços de 5 para 3 blocos; perguntas frequentes de 8 para 5. A página extra caiu de R$ 297 para R$ 150 para ficar coerente com o Premium (4 páginas a mais por R$ 600).
 > Legenda: **[Confirmado]** = informado pelo cliente · **[Sugerido]** = direção criativa ou texto proposto a partir da análise · **[Pendente]** = dado ausente, inconsistente ou a confirmar.
 
@@ -193,26 +205,17 @@ Repetia o que os planos já dizem (site profissional = Essential; site instituci
 AI First, velocidade, qualidade e atendimento já aparecem no hero (prazo de 2 dias úteis), nos projetos e no processo.
 
 ### 13.6 Como funciona (`Process`)
-- **Finalidade:** mostrar a jornada completa em poucos passos, com prazo e pagamento.
-- **Conteúdo:** intro “Tudo online, em quatro passos.”
-  1. **Você chama no WhatsApp** — “Conte sobre o seu negócio. Se preferir, marcamos uma call.”
-  2. **Briefing e sinal** — “Você responde um formulário sobre o seu negócio e paga 50% via Pix.”
-  3. **Primeira versão *em 2 a 7 dias úteis*** — “2 dias no site de uma página; 5 a 7 no de até 5 páginas.”
-  4. **Ajustes e site no ar** — “2 rodadas de ajuste, você paga os outros 50% e o site é publicado.”
-- **Composição:** desktop — quatro degraus que sobem (eco da base da âncora); mobile — lista com linha guia.
-- **CTA:** “O primeiro passo é uma conversa.” + botão principal (`data-cta="processo"`).
+- `h2`: “Simples, do início *ao fim*.”
+  1. **Conversa** — “Você conta sobre o seu negócio e o que espera do site.”
+  2. **Criação** — “Desenvolvemos o site e fazemos os ajustes que você pedir.”
+  3. **Publicação** — “O site vai ao ar no seu domínio, pronto para receber contatos.”
+- Desktop: três degraus; mobile: lista com linha guia. CTA “O primeiro passo é uma conversa.” (`data-cta="processo"`).
 
 ### 13.7 Preços (`Pricing`)
-- **Finalidade:** mostrar o preço com clareza, sem sobrecarregar.
-- **Conteúdo:**
-  - `h2`: “Preço claro, *sem surpresa*.” — apoio: “Pagamento via Pix: metade para começar, metade na entrega.”
-  - **Faixa de lançamento** (`#lancamento`): “Lançamento · ■■■■■ 5 de 5 vagas” · “40% de desconto para os 5 primeiros clientes” · “Em troca, você nos dá um depoimento e autoriza mostrar o seu site no nosso portfólio.” · Essential **R$ 299** (Normal: R$ 499) · Premium **R$ 718** (Normal: R$ 1.197) · botão (`data-cta="lancamento"`). Atualizar `spotsLeft` a cada cliente fechado.
-  - **Essential** — “Site de uma página” · “Para profissionais e pequenos negócios.” · **R$ 499** · Primeira versão em 2 dias úteis · 2 rodadas de ajuste · botão (`data-cta="plano-essential"`).
-  - **Premium** — “Site com até 5 páginas” · “Para empresas com vários serviços.” · **R$ 1.197** · Primeira versão em 5 a 7 dias úteis · 2 rodadas de ajuste · botão (`data-cta="plano-premium"`).
-  - **Linha da manutenção:** “Manutenção: R$ 49/mês ou R$ 490/ano — hospedagem, SSL, backup e 1 rodada de ajustes por mês. Sem fidelidade. Detalhes nas dúvidas.”
-  - Página extra, rodada extra, cancelamento e desistência ficam nas perguntas frequentes.
-- **Composição:** faixa de lançamento em grafite; dois planos lado a lado com nome e preço na mesma linha (preço em tamanho moderado, sem número gigante); manutenção numa linha discreta abaixo.
-- **CTA:** um botão por plano e um na faixa de lançamento. Preço normal mostrado como texto (“Normal: R$ 499”), sem riscado, sem selo e sem contador de tempo.
+- `h2`: “Preço claro, *sem surpresa*.” — apoio: “Você paga pelo número de páginas que o seu site precisa.”
+- **Faixa de lançamento** (`#lancamento`): “40% de desconto para os 5 primeiros clientes” · vagas em quadradinhos · Primeira página **R$ 299** (normal R$ 499) · Cada página a mais **R$ 105** (normal R$ 175) · botão (`data-cta="lancamento"`).
+- **Site sob medida**: Primeira página **R$ 499** · Cada página a mais **R$ 175** · inclui: design feito para o seu negócio, funciona no celular e no computador, duas rodadas de ajustes, publicação no seu domínio · botão (`data-cta="precos"`) · tabela de exemplos (1, 2, 3 e 5 páginas).
+- **Linha da manutenção:** “Manutenção: R$ 59/mês ou R$ 590/ano — hospedagem, segurança, backup e uma rodada de ajustes por mês. Sem fidelidade.”
 
 ### 13.8 Dúvidas (`Faq`)
 - **Finalidade:** responder às dúvidas e objeções informadas.
@@ -245,11 +248,11 @@ Todos os textos finais estão em `src/content/site.ts`. Respostas das perguntas 
 
 | Pergunta | Resposta no site |
 |---|---|
-| Quanto tempo leva para o site ficar pronto? | “O prazo começa quando o sinal é pago. A primeira versão do site de uma página fica pronta em 2 dias úteis; a do site com até 5 páginas, em 5 a 7 dias úteis. Depois vêm as 2 rodadas de ajuste e a publicação.” |
-| Quanto custa e como eu pago? | “O Essential (uma página) custa R$ 499 e o Premium (até 5 páginas), R$ 1.197. Cada página extra custa R$ 150. O pagamento é via Pix: 50% de sinal para começar e 50% na entrega. Para os 5 primeiros clientes, há 40% de desconto: R$ 299 e R$ 718.” |
-| O que é uma rodada de ajuste? | “É quando você avalia o site e nos envia, de uma vez, a lista com tudo o que quer mudar… Cada projeto tem 2 rodadas, e cada rodada extra custa R$ 150. Acrescentar páginas ou mudar a estrutura do site é orçado à parte.” |
-| Como funciona a manutenção? E o domínio? | “R$ 49 por mês ou R$ 490 por ano: hospedagem, SSL, backup e 1 rodada de ajustes por mês, que não acumula. Não tem fidelidade: se cancelar, o site fica no ar até o fim do período já pago (no anual, sem reembolso) e nós transferimos o código completo e ajudamos a publicar o site na sua conta, sem custo. O domínio fica por sua conta: você registra no seu nome (um .com.br custa R$ 40 por ano no Registro.br) e nós conectamos ao site.” |
-| E se eu desistir depois de pagar o sinal? | “Você tem 7 dias a partir da contratação para desistir, e nós devolvemos o sinal integralmente, como prevê o art. 49 do Código de Defesa do Consumidor. Basta avisar pelo mesmo WhatsApp. Depois desse prazo, o sinal não é devolvido, porque paga o trabalho já feito.” |
+| Quantas páginas o meu site precisa? | “A maioria dos profissionais começa com uma página, que reúne apresentação, serviços e contato. Empresas com vários serviços costumam precisar de mais. Na conversa, indicamos o formato ideal para o seu caso.” |
+| O que é uma rodada de ajustes? | “É a lista com tudo o que você quer mudar no site, enviada de uma vez. Cada projeto inclui duas rodadas; rodadas extras custam R$ 150.” |
+| Como funciona a manutenção? | “Custa R$ 59 por mês ou R$ 590 por ano e inclui hospedagem, segurança (SSL), backup e uma rodada de ajustes por mês. Não há fidelidade: se cancelar, entregamos o código do site e ajudamos a publicá-lo onde você preferir.” |
+| Quem registra o domínio? | “Você, no seu nome. Um domínio .com.br custa R$ 40 por ano no Registro.br. Nós conectamos o domínio ao site.” |
+| Posso desistir depois de contratar? | “Sim. Em até 7 dias após a contratação, devolvemos integralmente o valor pago.” (direito de arrependimento, art. 49 do CDC; mantido por exigência legal) |
 
 Todas as respostas são **[Confirmado]** pelo cliente; a redação é sugerida.
 

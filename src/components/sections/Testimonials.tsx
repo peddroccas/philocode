@@ -7,7 +7,7 @@ export function Testimonials() {
   if (testimonials.length === 0) return null;
 
   return (
-    <section aria-labelledby="depoimentos-title" className="py-20 lg:py-28">
+    <section aria-labelledby="depoimentos-title" className="py-12 md:py-20 lg:py-28">
       <Container>
         <SectionHeading
           id="depoimentos-title"

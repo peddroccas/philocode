@@ -20,19 +20,9 @@ export function JsonLd() {
       addressCountry: "BR",
     },
     makesOffer: [
-      ...pricing.plans.map((plan) => ({
-        "@type": "Offer",
-        name: `${plan.name} — ${plan.tagline}`,
-        // schema.org espera o número sem separador de milhar ("1997", não "1.997")
-        price: plan.price.replace(".", ""),
-        priceCurrency: "BRL",
-      })),
-      ...pricing.extras.map((extra) => ({
-        "@type": "Offer",
-        name: extra.label,
-        price: extra.price,
-        priceCurrency: "BRL",
-      })),
+      { "@type": "Offer", name: "Site sob medida — primeira página", price: pricing.firstPage, priceCurrency: "BRL" },
+      { "@type": "Offer", name: "Página adicional", price: pricing.extraPage, priceCurrency: "BRL" },
+      { "@type": "Offer", name: "Rodada de ajustes extra", price: pricing.extraRound, priceCurrency: "BRL" },
       {
         "@type": "Offer",
         name: pricing.maintenance.name,

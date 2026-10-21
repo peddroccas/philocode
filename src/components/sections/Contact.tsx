@@ -13,7 +13,7 @@ export function Contact() {
     <section
       id="contato"
       aria-labelledby="contato-title"
-      className="scroll-mt-20 bg-linear-to-b from-graphite to-ink py-20 text-canvas lg:py-28"
+      className="scroll-mt-20 bg-linear-to-b from-graphite to-ink py-12 text-snow md:py-20 lg:py-28"
     >
       <Container className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16">
         <div>

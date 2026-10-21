@@ -34,11 +34,12 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="hidden lg:block">
-          <CtaButton location="header" size="md" />
+        <div className="flex items-center gap-3">
+          <div className="hidden lg:block">
+            <CtaButton location="header" size="md" />
+          </div>
+          <MobileMenu />
         </div>
-
-        <MobileMenu />
       </Container>
     </header>
   );

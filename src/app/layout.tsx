@@ -30,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 const title = `${company.name} · Criação de sites profissionais e institucionais em Brasília (DF)`;
 const description =
-  "A Pôrto cria sites profissionais e institucionais para empresas e profissionais que ainda não estão na internet. Sites a partir de R$ 499, com primeira versão em 2 dias úteis. Atendimento online, sediada em Brasília (DF).";
+  "A Pôrto cria sites profissionais sob medida para empresas e profissionais. A partir de R$ 499. Atendimento online, Brasília (DF).";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: revealBootScript }} />
       </head>
-      <body className="min-h-dvh">
+      <body className="min-h-dvh overflow-x-clip">
         {children}
         <Analytics />
         <CtaTracker />

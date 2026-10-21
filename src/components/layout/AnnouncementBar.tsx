@@ -10,7 +10,7 @@ export function AnnouncementBar() {
     <a
       href="#lancamento"
       data-cta="barra-anuncio"
-      className="group block bg-night text-canvas transition-colors hover:bg-ink"
+      className="group block bg-night text-snow"
     >
       <span className="mx-auto flex min-h-11 max-w-312 flex-wrap items-center justify-center gap-x-3 gap-y-0.5 px-5 py-2 text-center text-sm sm:px-8">
         <span aria-hidden className="hidden gap-1 sm:flex">

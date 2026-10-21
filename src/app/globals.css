@@ -13,6 +13,8 @@
   --color-accent-strong: #0f57a8;
   --color-night: #020618;
   --color-mist: #aab2bf;
+  /* Texto claro fixo, para elementos que são escuros nos dois temas (barra de anúncio, oferta) */
+  --color-snow: #f8fafc;
 
   --radius-card: 1.25rem;
   --shadow-frame: 0 1px 2px rgb(2 6 24 / 0.06), 0 24px 48px -24px rgb(2 6 24 / 0.28);
@@ -94,11 +96,15 @@
   }
 }
 
+/* Destaque curto quando um preço muda na calculadora */
+@keyframes price-pop {
+  from {
+    opacity: 0.35;
+    transform: translateY(4px);
+  }
+}
+
 @utility bg-pixel-grid {
   background-image: radial-gradient(rgb(32 36 43 / 0.09) 1px, transparent 1px);
   background-size: 24px 24px;
-}
-
-@utility pb-safe-bar {
-  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
 }

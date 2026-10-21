@@ -9,7 +9,7 @@ export function Faq() {
     <section
       id="duvidas"
       aria-labelledby="duvidas-title"
-      className="scroll-mt-20 border-t border-line bg-surface/60 py-20 lg:py-28"
+      className="scroll-mt-20 border-t border-line bg-surface/60 py-12 md:py-20 lg:py-28"
     >
       <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-16">
         <div className="contents lg:block">
