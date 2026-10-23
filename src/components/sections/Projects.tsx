@@ -51,7 +51,7 @@ export function Projects() {
         {/* Celular: carrossel com rolagem lateral. A partir de md: grade 2 × 2. */}
         <ul
           aria-label="Projetos"
-          className="mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] md:mt-12 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 lg:gap-6 [&::-webkit-scrollbar]:hidden"
+          className="relative mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:none] md:mt-12 md:grid md:grid-cols-2 md:gap-5 md:overflow-visible md:pb-0 lg:gap-6 [&::-webkit-scrollbar]:hidden"
         >
           {projects.items.map((project, index) => (
             <ProjectCard key={project.url} project={project} index={index % 2} />
