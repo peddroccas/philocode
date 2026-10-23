@@ -15,7 +15,7 @@ export function Hero() {
       <TideCanvas className="absolute inset-0 -z-10 size-full" />
       <div
         aria-hidden
-        className="absolute inset-0 -z-10 bg-linear-to-b from-night/75 to-night/45 md:bg-linear-to-r md:from-night/90 md:via-night/40 md:to-transparent"
+        className="absolute inset-0 -z-10 bg-linear-to-b from-night/50 to-night/10 md:bg-linear-to-r md:from-night/90 md:via-night/40 md:to-transparent"
       />
 
       <Container className="py-12 sm:py-24 lg:py-32">

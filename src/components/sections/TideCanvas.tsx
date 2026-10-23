@@ -7,6 +7,7 @@ const REACH = 140;
 
 /**
  * "Maré de pixels": grade de pontos que ondula devagar e acende em azul perto do cursor.
+ * Em telas de toque (sem cursor), um brilho passeia sozinho pela grade e as ondas ficam mais fortes.
  * Pausa fora da tela e com a aba oculta; com "reduzir movimento", desenha um quadro parado.
  */
 export function TideCanvas({ className }: { className?: string }) {
@@ -19,6 +20,8 @@ export function TideCanvas({ className }: { className?: string }) {
     if (!canvas || !host || !ctx) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const touch = window.matchMedia("(hover: none)").matches;
+    const boost = touch ? 1.6 : 1;
     const mouse = { x: -9999, y: -9999 };
     let width = 0;
     let height = 0;
@@ -38,13 +41,17 @@ export function TideCanvas({ className }: { className?: string }) {
     function draw(now: number) {
       const time = now / 1000;
       ctx!.clearRect(0, 0, width, height);
+      if (touch) {
+        mouse.x = width * (0.55 + 0.4 * Math.sin(time * 0.35));
+        mouse.y = height * (0.5 + 0.4 * Math.sin(time * 0.5 + 1));
+      }
       for (let y = GAP / 2; y < height + GAP; y += GAP) {
         for (let x = GAP / 2; x < width; x += GAP) {
           const wave = Math.sin(x * 0.018 + time * 0.9) * Math.cos(y * 0.022 - time * 0.6);
-          const yy = y + wave * 7;
+          const yy = y + wave * 7 * boost;
           const near = Math.max(0, 1 - Math.hypot(x - mouse.x, yy - mouse.y) / REACH);
-          const size = 1 + (wave + 1) * 0.55 + near * 2.2;
-          const alpha = 0.14 + (wave + 1) * 0.16 + near * 0.6;
+          const size = 1 + (wave + 1) * 0.55 * boost + near * 2.2;
+          const alpha = Math.min(0.14 + (wave + 1) * 0.16 * boost, 0.75) + near * 0.6;
           ctx!.fillStyle =
             near > 0.05 ? `rgba(35,137,248,${Math.min(alpha + 0.2, 1)})` : `rgba(170,190,215,${alpha})`;
           ctx!.fillRect(x - size / 2, yy - size / 2, size, size);
