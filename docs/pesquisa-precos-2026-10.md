@@ -47,7 +47,7 @@ Estes são preços comerciais recomendados e aprovados pelo responsável pela Ph
 | Institucional de até 5 páginas | R$ 2.490 |
 | Funcionalidades adicionais e projetos ampliados | Sob orçamento |
 
-Todos incluem responsividade, SEO técnico básico, WhatsApp, publicação e duas rodadas de revisão dentro do escopo. Não anunciar número máximo de seções: a proposta descreve conteúdo e funcionalidades. Marca, imagens e textos são fornecidos pelo cliente. Domínio, hospedagem, redação completa, identidade visual, blog, CMS, idiomas e integrações não estão incluídos no preço inicial.
+Todos incluem responsividade, SEO técnico básico, WhatsApp, publicação e duas rodadas de revisão dentro do escopo. Não anunciar número máximo de seções: a proposta descreve conteúdo e funcionalidades. Conteúdo, recursos e apoio com textos e imagens são combinados na proposta conforme a necessidade e os materiais disponíveis. O cliente não precisa obrigatoriamente providenciar tudo pronto. Domínio e hospedagem têm custos próprios.
 
 | Desenvolvimento Shopify | A partir de |
 |---|---:|
