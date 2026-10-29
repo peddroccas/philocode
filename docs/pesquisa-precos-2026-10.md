@@ -82,3 +82,18 @@ Os planos Shopify equivalem a R$ 170/h no pacote de cinco horas e R$ 159/h no pa
 As páginas utilizam catálogo único para preços, cards, FAQ, mensagens do WhatsApp e dados estruturados. A oferta de lançamento, o contador de vagas e a calculadora por páginas foram removidos. O CNPJ pendente deixou de ser exibido. O portfólio atual segue identificado como sites; não foram criados cases ou depoimentos Shopify.
 
 Build de produção e TypeScript aprovados. As três rotas foram verificadas em 360, 768 e 1440 pixels, sem transbordamento horizontal; foram conferidos metadados, preços nas mensagens, menu móvel com fechamento por Escape, FAQ e ausência de imagens quebradas. Contratos não foram elaborados, conforme orientação posterior do usuário.
+
+## Revisão adicional de SEO e conversão
+
+O conteúdo principal é pré-renderizado em HTML, com uma intenção principal por página, H1 próprio, títulos e descrições distintos, canonical, Open Graph, sitemap com as três rotas e robots permitindo rastreamento. O catálogo de serviços alimenta dados estruturados sem avaliações inventadas. As imagens do portfólio têm texto alternativo e dimensões reservadas. A hero de criação de sites usa composição visual de benefícios, sem projeto de cliente; Mateus permanece somente no portfólio.
+
+Os destaques de sites e Shopify incluem acesso direto aos valores, mensagem de orçamento específica e explicação do próximo passo. Navegação com Next Link e identificação da página ativa. Os eventos existentes foram ampliados para registrar página, serviço e canal do clique, além da abertura de perguntas frequentes, sem mensagens pessoais, query strings ou dados de formulário. São indicadores de intenção; clique no WhatsApp não comprova lead ou venda. Eventos personalizados exigem plano Vercel Pro ou Enterprise; a coleta no painel não foi confirmada nesta execução.
+
+A animação decorativa preserva redução de movimento e pausa fora da tela e em aba oculta; em telas de toque, o desenho foi limitado a 30 quadros por segundo. Build e TypeScript passaram. Rotas, robots, sitemap e imagem social responderam HTTP 200. A tentativa de auditoria externa pela API PageSpeed retornou HTTP 429, portanto não foi atribuída nota Lighthouse nem aprovação de Core Web Vitals. A avaliação de conversão exige tráfego e acompanhamento de contatos efetivos.
+
+Próximos passos operacionais: verificar a propriedade no Google Search Console, enviar o sitemap, acompanhar indexação e consultas por página e cruzar cliques com orçamentos e contratos. Não foi configurada propriedade externa nem prometido posicionamento.
+
+Referências técnicas consultadas em 29/10/2026:
+- Guia de SEO do Google: https://developers.google.com/search/docs/fundamentals/seo-starter-guide?hl=pt-br
+- Web Vitals: https://web.dev/articles/vitals?hl=pt-br
+- Eventos personalizados Vercel: https://vercel.com/docs/analytics/custom-events

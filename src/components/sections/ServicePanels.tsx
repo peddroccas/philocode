@@ -31,3 +31,29 @@ export function Services() {
     </div>
   </Container></section>;
 }
+
+export function SiteVisual() {
+  return (
+    <div className="relative overflow-hidden rounded-card border border-white/15 bg-white/5 p-6 text-snow shadow-frame backdrop-blur-sm sm:p-8">
+      <div aria-hidden className="absolute -top-14 -right-14 size-48 rounded-full border border-brand/20" />
+      <div aria-hidden className="absolute -top-8 -right-8 size-36 rounded-full border border-brand/20" />
+      <p className="relative font-mono text-xs tracking-widest text-mist">SEU NEGÓCIO EM PRIMEIRO PLANO</p>
+      <h2 className="relative mt-5 max-w-xs text-3xl leading-tight font-semibold tracking-tight">Da sua ideia ao próximo contato.</h2>
+      <ol className="relative mt-8 space-y-5">
+        {[
+          ["01", "Apresente seu trabalho", "Uma presença que transmite quem você é."],
+          ["02", "Organize seus serviços", "Informações claras para quem precisa de você."],
+          ["03", "Facilite o contato", "Um caminho direto para começar a conversa."],
+        ].map(([number, title, text]) => (
+          <li key={number} className="flex gap-4 border-t border-white/10 pt-5">
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 font-mono text-xs text-snow">{number}</span>
+            <div><h3 className="font-semibold">{title}</h3><p className="mt-1 text-sm leading-relaxed text-mist">{text}</p></div>
+          </li>
+        ))}
+      </ol>
+      <div className="mt-7 flex flex-wrap gap-2 border-t border-white/10 pt-5 text-xs text-mist">
+        {["Sua identidade", "Celular e computador", "Seu domínio"].map(label => <span key={label} className="rounded-full border border-white/15 px-3 py-2">{label}</span>)}
+      </div>
+    </div>
+  );
+}

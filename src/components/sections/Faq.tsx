@@ -27,6 +27,7 @@ export function Faq({ items = homeFaq, message = whatsappMessages.faq }: { items
           {items.map((item) => (
             <details
               key={item.question}
+              data-faq={item.question}
               className="group rounded-2xl border border-line bg-surface transition-colors open:border-l-4 open:border-l-brand open:shadow-card"
             >
               <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 rounded-2xl px-6 py-4 text-lg font-semibold text-ink">

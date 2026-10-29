@@ -27,6 +27,7 @@ export function TideCanvas({ className }: { className?: string }) {
     let height = 0;
     let frame = 0;
     let visible = true;
+    let lastDraw = -Infinity;
 
     function resize() {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -60,7 +61,10 @@ export function TideCanvas({ className }: { className?: string }) {
     }
 
     function loop(now: number) {
-      draw(now);
+      if (now - lastDraw >= (touch ? 1000 / 30 : 1000 / 60)) {
+        draw(now);
+        lastDraw = now;
+      }
       frame = requestAnimationFrame(loop);
     }
 

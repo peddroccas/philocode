@@ -10,7 +10,7 @@ import { pageMetadata } from "@/lib/metadata";
 export const metadata = pageMetadata("/shopify", "Desenvolvimento e personalização Shopify · PhiloCode", `Temas, seções Liquid, páginas de produto e landing pages Shopify. Ajustes desde R$ ${formatPrice(shopifyOffers[0].price)}. Implementação de layouts para lojas e agências.`);
 export default function ShopifyPage() {
   return <>
-    <Hero service="shopify" eyebrow="Desenvolvimento Shopify" title={{ before: "Sua loja tem ideias. A gente transforma em ", emphasis: "código", after: "." }} subtitle="Personalização de temas, páginas e seções para criar e evoluir sua loja Shopify. Atendimento direto para lojistas e agências."><ThemeVisual /></Hero>
+    <Hero service="shopify" eyebrow="Desenvolvimento Shopify" title={{ before: "Desenvolvimento Shopify para sua loja ", emphasis: "ir além", after: "." }} subtitle="Personalização de temas, páginas e seções para criar e evoluir sua loja Shopify. Atendimento direto para lojistas e agências."><ThemeVisual /></Hero>
     <ShopifyDetails /><Pricing service="shopify" /><Support service="shopify" /><Faq items={shopifyFaq} message={whatsappMessages.shopify} /><Contact message={whatsappMessages.shopify} /><JsonLd service="shopify" />
   </>;
 }

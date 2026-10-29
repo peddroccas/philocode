@@ -1,11 +1,15 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { nav } from "@/content/site";
+import { nav, whatsappMessages } from "@/content/site";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { CloseIcon, MenuIcon } from "@/components/ui/Icons";
 
 export function MobileMenu() {
+  const pathname = usePathname();
+  const service = pathname === "/shopify" ? "shopify" : pathname === "/criacao-de-sites" ? "sites" : "default";
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -44,18 +48,19 @@ export function MobileMenu() {
           <ul className="divide-y divide-line">
             {nav.map((item) => (
               <li key={item.href}>
-                <a
+                <Link
                   href={item.href}
+                  aria-current={pathname === item.href ? "page" : undefined}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-13 items-center justify-between text-lg font-medium text-ink"
+                  className="flex min-h-13 items-center justify-between text-lg font-medium text-ink aria-[current=page]:text-accent"
                 >
                   {item.label}
                   <span aria-hidden className="h-0.75 w-4 rounded-full bg-line" />
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
-          <CtaButton location="menu-mobile" className="mt-5 w-full" />
+          <CtaButton location="menu-mobile" message={whatsappMessages[service]} className="mt-5 w-full" />
         </nav>
       </div>
     </div>

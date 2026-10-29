@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { company, contact, nav } from "@/content/site";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -26,9 +27,9 @@ export function Footer() {
             <ul className="mt-4 grid gap-1">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="inline-flex min-h-10 items-center hover:text-snow">
+                  <Link href={item.href} className="inline-flex min-h-10 items-center hover:text-snow">
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
