@@ -23,8 +23,8 @@ export function Pricing({ service = "sites" }: { service?: Service }) {
 }
 export function Support({ service }: { service: Service }) {
   return <section aria-labelledby="acompanhamento-title" className="border-t border-line bg-surface/60 py-14 md:py-20"><Container>
-    <SectionHeading id="acompanhamento-title" eyebrow="Depois da entrega" title={{ before: "Seu projeto pode continuar ", emphasis: "evoluindo", after: "." }} intro="Acompanhamento opcional, com escopo e tempo de atendimento combinados." />
-    <div className="mt-8 grid gap-5 md:grid-cols-2">{support[service].map(offer => <OfferCard key={offer.id} offer={offer} service={service} />)}</div>
-    <p className="mt-5 max-w-3xl text-sm leading-relaxed text-muted">Sem atendimento ilimitado ou disponibilidade permanente. Serviços e horas adicionais exigem aprovação prévia. As condições de contratos existentes são preservadas.{service === "sites" ? " Sem acompanhamento, o cliente precisa contratar hospedagem própria. O domínio é pago separadamente." : " O acompanhamento não inclui a assinatura da plataforma nem os custos dos apps."}</p>
+    <SectionHeading id="acompanhamento-title" eyebrow="Depois da entrega" title={{ before: "Seu projeto pode continuar ", emphasis: "evoluindo", after: "." }} intro={service === "sites" ? "Um plano simples para manter seu site cuidado e atualizado." : "Acompanhamento opcional, com escopo e tempo de atendimento combinados."} />
+    <div className={service === "sites" ? "mt-8 max-w-xl" : "mt-8 grid gap-5 md:grid-cols-2"}>{support[service].map(offer => <OfferCard key={offer.id} offer={offer} service={service} />)}</div>
+
   </Container></section>;
 }

@@ -64,12 +64,11 @@ Não oferecer design Shopify avulso. Layout visual inteiramente novo exige avali
 
 | Acompanhamento opcional | Valor mensal |
 |---|---:|
-| Sites com hospedagem e cuidados técnicos | R$ 129 |
-| Sites com cuidados técnicos e até 1 hora de pequenas alterações | R$ 249 |
+| Sites com hospedagem, cuidados técnicos e uma rodada de ajustes | R$ 79 |
 | Shopify com 5 horas de evolução | R$ 850 |
 | Shopify com 10 horas de evolução | R$ 1.590 |
 
-Horas não acumulam; adicionais exigem aprovação. Não se promete disponibilidade permanente ou atendimento ilimitado. O acompanhamento não substitui custos de terceiros. Contratos existentes mantêm condições anteriores.
+No acompanhamento de sites, uma rodada reúne pedidos de ajustes enviados em uma lista; a rodada não acumula. Novas páginas e funcionalidades são combinadas à parte. Os pacotes Shopify continuam por horas, que não acumulam; adicionais exigem aprovação. O domínio e os custos de terceiros continuam separados. Contratos existentes mantêm condições anteriores. O acompanhamento único de R$ 79/mês e a redação com uma rodada de ajustes foram aprovados para publicação em 29/10/2026.
 
 ## Como validar a economia da oferta
 

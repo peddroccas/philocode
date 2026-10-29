@@ -47,8 +47,7 @@ export const shopifyOffers: Offer[] = [
 ];
 export const support: Record<Service, Offer[]> = {
   sites: [
-    { id: "tecnico", name: "Cuidados técnicos", price: 129, unit: "/mês", summary: "Para manter o site no ar e acompanhado.", includes: ["Hospedagem gerenciada e SSL", "Verificações técnicas e cópia de recuperação", "Sem alterações de conteúdo"] },
-    { id: "conteudo", name: "Cuidados e conteúdo", price: 249, unit: "/mês", summary: "Para manter o site e fazer pequenas atualizações.", includes: ["Tudo do plano técnico", "Até 1 hora mensal de pequenas alterações", "Horas não acumulam"] },
+    { id: "acompanhamento", name: "Acompanhamento do site", price: 79, unit: "/mês", summary: "Seu site no ar, cuidado e atualizado.", includes: ["Hospedagem gerenciada e SSL", "Cuidados técnicos e cópia de recuperação", "Uma rodada de ajustes por mês"] },
   ],
   shopify: [
     { id: "cinco-horas", name: "Evolução essencial", price: 850, unit: "/mês", summary: "5 horas mensais para evoluir temas e páginas.", includes: ["Demandas priorizadas em conjunto", "Registro das horas utilizadas", "Horas não acumulam"] },
@@ -126,7 +125,8 @@ export const siteFaq: FaqItem[] = [
   { question: "Como é definido o escopo do projeto?", answer: "A proposta define o conteúdo e as funcionalidades que o seu site precisa. O investimento depende do trabalho envolvido, e não apenas da quantidade de blocos. Mudanças no escopo são avaliadas e orçadas antes de executar." },
   { question: "Quem fornece os textos, as imagens e o domínio?", answer: "Combinamos na proposta o que você já tem e o apoio necessário com textos e imagens. O domínio é registrado em seu nome, e nós cuidamos da conexão." },
   { question: "Como funcionam os ajustes e o prazo?", answer: "Cada projeto inclui duas rodadas de revisão dentro do escopo. Uma rodada é uma lista de pedidos enviada de uma vez. O prazo é definido na proposta, considerando os materiais e os retornos de aprovação. Pedidos adicionais são orçados antes da execução." },
-  { question: "Preciso contratar manutenção?", answer: `O acompanhamento é opcional. Cuidados técnicos custam R$ ${formatPrice(support.sites[0].price)}/mês; o plano com até uma hora de pequenas alterações custa R$ ${formatPrice(support.sites[1].price)}/mês. Sem o plano, você precisa de hospedagem própria. O domínio é separado. Contratos existentes mantêm suas condições.` },
+  { question: "Preciso contratar manutenção?", answer: `O acompanhamento é opcional e custa R$ ${formatPrice(support.sites[0].price)}/mês. Inclui hospedagem gerenciada, SSL, cuidados técnicos, cópia de recuperação e uma rodada de ajustes por mês. Sem acompanhamento, você pode usar hospedagem própria. O domínio é pago separadamente.` },
+  { question: "Como funciona a rodada mensal de ajustes?", answer: "Você reúne os pedidos de ajustes em uma lista e envia de uma vez, como atualização de textos, imagens e detalhes do site. Cada mês inclui uma rodada, que não acumula. Novas páginas ou funcionalidades são combinadas em uma proposta à parte." },
   { question: "Posso desistir depois de contratar?", answer: "Sim. Em até 7 dias após a contratação, devolvemos integralmente o valor pago." },
 ];
 export const shopifyFaq: FaqItem[] = [
