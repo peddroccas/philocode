@@ -1,20 +1,29 @@
-# PhiloCode — site institucional
+# PhiloCode
 
-Site one-page da PhiloCode (criação de sites), em Next.js 16 + Tailwind CSS v4.
+Site da PhiloCode em Next.js 16 e Tailwind CSS v4.
 
-- Briefing completo, decisões e pendências: [`docs/briefing.md`](docs/briefing.md)
-- Todo o conteúdo (textos, preços, contatos, mensagens do WhatsApp): [`src/content/site.ts`](src/content/site.ts)
-- Tokens de cor, fontes e animações de entrada: [`src/app/globals.css`](src/app/globals.css)
+## Páginas
 
-## Rodar
+- `/`: apresentação da empresa, frentes de serviços e portfólio de sites.
+- `/criacao-de-sites`: página profissional, landing page, institucional e acompanhamento.
+- `/shopify`: desenvolvimento e personalização de temas, páginas e componentes.
 
-```bash
+O catálogo de ofertas, preços, FAQ, contatos e mensagens está em `src/content/site.ts`. Os dados estruturados e as mensagens dos pacotes usam esse mesmo catálogo. Não há checkout ou contratação automática; o WhatsApp inicia uma conversa de orçamento.
+
+## Desenvolvimento e validação
+
+```sh
 npm install
 npm run dev
+npm run build
+npx tsc --noEmit
 ```
 
-Build de produção: `npm run build`. Antes de publicar, defina `NEXT_PUBLIC_SITE_URL` com o domínio final (usado em metadados, sitemap, robots e JSON-LD).
+O ambiente de publicação pode definir `NEXT_PUBLIC_SITE_URL`; o padrão é `https://philocode.vercel.app`. A mesma base é usada nos metadados e no sitemap.
 
-## Pendências
+## Conteúdo e decisões
 
-Procure por `[A CONFIRMAR` no projeto. Todas estão listadas na seção 24 do briefing.
+- `docs/briefing.md`: revisão vigente no topo e histórico de decisões.
+- `docs/pesquisa-precos-2026-10.md`: pesquisa pública, limites da comparação e tabela aprovada.
+
+Preços são iniciais para novos projetos. Contratos existentes mantêm suas condições. Não há serviço de design Shopify avulso. Cases Shopify e depoimentos não confirmados não devem ser criados.

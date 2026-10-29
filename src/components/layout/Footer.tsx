@@ -66,7 +66,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>
-            {company.legalName} · CNPJ {company.cnpj}
+            {company.legalName}{company.cnpj ? ` · CNPJ ${company.cnpj}` : ""}
           </p>
           <PixelSteps className="h-4 w-16 text-white/20" />
         </div>

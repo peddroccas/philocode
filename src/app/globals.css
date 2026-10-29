@@ -96,14 +96,6 @@
   }
 }
 
-/* Destaque curto quando um preço muda na calculadora */
-@keyframes price-pop {
-  from {
-    opacity: 0.35;
-    transform: translateY(4px);
-  }
-}
-
 @utility bg-pixel-grid {
   background-image: radial-gradient(rgb(32 36 43 / 0.09) 1px, transparent 1px);
   background-size: 24px 24px;

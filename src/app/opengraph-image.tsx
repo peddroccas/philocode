@@ -29,7 +29,7 @@ export default async function OpengraphImage() {
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ fontSize: 72, fontWeight: 600, letterSpacing: -2, lineHeight: 1.05 }}>{company.slogan}</div>
           <div style={{ fontSize: 30, color: "#aab2bf" }}>
-            Sites profissionais e institucionais · Atendimento online · Brasília (DF)
+            Sites profissionais e Shopify · Atendimento online · Brasília (DF)
           </div>
         </div>
         <div style={{ display: "flex", width: 120, height: 8, borderRadius: 4, background: "#2389f8" }} />

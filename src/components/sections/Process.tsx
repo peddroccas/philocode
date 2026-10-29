@@ -4,7 +4,7 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
 
 /** Desktop: três degraus que sobem, como a base da âncora. Mobile/tablet: lista com linha guia. */
-const stepOffsets = ["lg:mt-24", "lg:mt-12", "lg:mt-0"];
+const stepOffsets = ["", "", "", ""];
 
 export function Process() {
   return (
@@ -20,7 +20,7 @@ export function Process() {
           title={howItWorks.title}
         />
 
-        <ol className="mt-8 grid gap-0 md:mt-12 lg:mt-4 lg:grid-cols-3">
+        <ol className="mt-8 grid gap-0 md:mt-12 lg:mt-12 lg:grid-cols-4">
           {howItWorks.steps.map((step, index) => (
             <li
               key={step.title}

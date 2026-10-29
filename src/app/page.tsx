@@ -1,39 +1,15 @@
-import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
-import { Footer } from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
-import { RevealObserver } from "@/components/layout/RevealObserver";
-import { Contact } from "@/components/sections/Contact";
-import { Faq } from "@/components/sections/Faq";
 import { Hero } from "@/components/sections/Hero";
-import { JsonLd } from "@/components/sections/JsonLd";
-import { Pricing } from "@/components/sections/Pricing";
-import { Process } from "@/components/sections/Process";
+import { HomeVisual, Services } from "@/components/sections/ServicePanels";
 import { Projects } from "@/components/sections/Projects";
-import { Testimonials } from "@/components/sections/Testimonials";
-
+import { Process } from "@/components/sections/Process";
+import { Faq } from "@/components/sections/Faq";
+import { Contact } from "@/components/sections/Contact";
+import { JsonLd } from "@/components/sections/JsonLd";
+import { pageMetadata } from "@/lib/metadata";
+export const metadata = pageMetadata("/", "PhiloCode · Sites profissionais e desenvolvimento Shopify", "Sites para profissionais e empresas, personalização de temas e desenvolvimento Shopify. Atendimento online para todo o Brasil, direto de Brasília.");
 export default function Home() {
-  return (
-    <>
-      <a
-        href="#conteudo"
-        className="sr-only z-50 rounded-full bg-ink px-5 py-3 font-semibold text-canvas focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
-      >
-        Pular para o conteúdo
-      </a>
-      <AnnouncementBar />
-      <Header />
-      <main id="conteudo">
-        <Hero />
-        <Projects />
-        <Process />
-        <Pricing />
-        <Testimonials />
-        <Faq />
-        <Contact />
-      </main>
-      <Footer />
-      <JsonLd />
-      <RevealObserver />
-    </>
-  );
+  return <>
+    <Hero eyebrow="PhiloCode · Sites e Shopify" title={{ before: "Uma boa presença digital faz seu negócio ", emphasis: "ir além", after: "." }} subtitle="Criamos sites para apresentar seu trabalho e desenvolvemos páginas e personalizações Shopify para evoluir sua loja."><HomeVisual /></Hero>
+    <Services /><Projects /><Process /><Faq /><Contact /><JsonLd />
+  </>;
 }

@@ -1,10 +1,10 @@
-import { faq, whatsappMessages } from "@/content/site";
+import { homeFaq, whatsappMessages, type FaqItem } from "@/content/site";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
 import { PlusIcon } from "@/components/ui/Icons";
 
-export function Faq() {
+export function Faq({ items = homeFaq, message = whatsappMessages.faq }: { items?: FaqItem[]; message?: string }) {
   return (
     <section
       id="duvidas"
@@ -13,18 +13,18 @@ export function Faq() {
     >
       <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-16">
         <div className="contents lg:block">
-          <SectionHeading id="duvidas-title" eyebrow={faq.eyebrow} title={faq.title} />
+          <SectionHeading id="duvidas-title" eyebrow="Dúvidas" title={{ before: "Perguntas ", emphasis: "frequentes", after: "." }} />
 
           <aside
             className="order-last rounded-card border border-line bg-surface p-7 shadow-card lg:sticky lg:top-28 lg:mt-10">
-            <h3 className="text-xl font-semibold tracking-tight text-ink">{faq.helpTitle}</h3>
-            <p className="mt-2 leading-relaxed text-muted">{faq.helpText}</p>
-            <CtaButton location="duvidas" message={whatsappMessages.faq} className="mt-6 w-full" />
+            <h3 className="text-xl font-semibold tracking-tight text-ink">Ainda tem dúvidas?</h3>
+            <p className="mt-2 leading-relaxed text-muted">Converse com a gente pelo WhatsApp.</p>
+            <CtaButton location="duvidas" message={message} className="mt-6 w-full" />
           </aside>
         </div>
 
         <div className="grid content-start gap-3">
-          {faq.items.map((item) => (
+          {items.map((item) => (
             <details
               key={item.question}
               className="group rounded-2xl border border-line bg-surface transition-colors open:border-l-4 open:border-l-brand open:shadow-card"

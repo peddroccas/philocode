@@ -1,4 +1,4 @@
-import { company, contact, contactSection } from "@/content/site";
+import { company, contact, contactSection, whatsappMessages } from "@/content/site";
 import { whatsappLink } from "@/lib/whatsapp";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
@@ -8,7 +8,7 @@ import { MailIcon, WhatsAppIcon } from "@/components/ui/Icons";
 const cardClass =
   "flex min-h-20 items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 transition-colors";
 
-export function Contact() {
+export function Contact({ message = whatsappMessages.default }: { message?: string }) {
   return (
     <section
       id="contato"
@@ -25,7 +25,7 @@ export function Contact() {
             intro={contactSection.text}
           />
           <div>
-            <CtaButton location="contato" className="mt-9 w-full sm:w-auto" />
+            <CtaButton location="contato" message={message} className="mt-9 w-full sm:w-auto" />
           </div>
           <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[0.9375rem] text-mist">
             {contactSection.facts.map((fact) => (
@@ -40,7 +40,7 @@ export function Contact() {
         <ul className="grid gap-3">
           <li>
             <a
-              href={whatsappLink()}
+              href={whatsappLink(message)}
               target="_blank"
               rel="noopener noreferrer"
               data-cta="contato-whatsapp"

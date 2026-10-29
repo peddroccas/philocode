@@ -4,6 +4,9 @@ import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL, company } from "@/content/site";
 import { CtaTracker } from "@/components/layout/CtaTracker";
 import { revealBootScript } from "@/components/layout/RevealObserver";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { RevealObserver } from "@/components/layout/RevealObserver";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -28,9 +31,9 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const title = `${company.name} · Criação de sites profissionais e institucionais em Brasília (DF)`;
+const title = `${company.name} · Sites profissionais e desenvolvimento Shopify`;
 const description =
-  "A PhiloCode cria sites profissionais sob medida para empresas e profissionais. A partir de R$ 499. Atendimento online, Brasília (DF).";
+  "Sites profissionais e desenvolvimento Shopify. Atendimento online para todo o Brasil, direto de Brasília.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -63,7 +66,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script dangerouslySetInnerHTML={{ __html: revealBootScript }} />
       </head>
       <body className="min-h-dvh overflow-x-clip">
-        {children}
+        <a href="#conteudo" className="sr-only z-50 rounded-full bg-ink px-5 py-3 font-semibold text-canvas focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Pular para o conteúdo</a>
+        <Header />
+        <main id="conteudo">{children}</main>
+        <Footer />
+        <RevealObserver />
         <Analytics />
         <CtaTracker />
       </body>

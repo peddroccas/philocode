@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-surface/90 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between gap-6 lg:h-20">
-        <a href="#inicio" className="shrink-0 rounded-md" aria-label={`${company.name} — voltar ao início`}>
+        <a href="/" className="shrink-0 rounded-md" aria-label={`${company.name} — voltar ao início`}>
           <Image
             src="/images/philocode-logo.png"
             alt=""
