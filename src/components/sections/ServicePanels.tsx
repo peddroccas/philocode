@@ -1,16 +1,9 @@
 import Link from "next/link";
-import { siteOffers, shopifyOffers, formatPrice } from "@/content/site";
+import { products, whatsappMessages } from "@/content/site";
 import { Container } from "@/components/ui/Container";
+import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
 
-export function HomeVisual() {
-  return <div className="grid gap-4" aria-label="Duas formas de trabalhar com a PhiloCode">
-    {[{ number: "01", name: "Seu negócio na internet", text: "Sites para apresentar seu trabalho e facilitar novos contatos.", href: "/criacao-de-sites", label: "Criação de sites" }, { number: "02", name: "Sua loja em evolução", text: "Páginas, temas e melhorias para sua operação Shopify.", href: "/shopify", label: "Desenvolvimento Shopify" }].map(item => <Link key={item.number} href={item.href} className="group rounded-card border border-white/15 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-brand/60 hover:bg-white/10 sm:p-8">
-      <span className="flex items-center justify-between font-mono text-xs tracking-widest text-mist"><span>{item.number} / {item.label.toUpperCase()}</span><span aria-hidden className="text-xl text-brand">↗</span></span>
-      <h2 className="mt-5 text-2xl font-semibold tracking-tight text-snow">{item.name}</h2><p className="mt-2 leading-relaxed text-mist">{item.text}</p>
-    </Link>)}
-  </div>;
-}
 export function ThemeVisual() {
   return <div className="rounded-card border border-white/15 bg-white/5 p-5 text-snow shadow-frame sm:p-7">
     <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs text-mist"><span>TEMA / PRÉVIA</span><span className="rounded-full bg-brand/15 px-3 py-1 text-snow">Não publicado</span></div>
@@ -22,13 +15,19 @@ export function ThemeVisual() {
     <p className="mt-5 text-xs leading-relaxed text-mist">Ilustração do processo. Alterações no tema são apresentadas para aprovação antes de publicar.</p>
   </div>;
 }
-export function Services() {
-  return <section id="valores" aria-labelledby="servicos-title" className="scroll-mt-24 py-14 md:py-20 lg:py-24"><Container>
-    <span id="lancamento" className="scroll-mt-24" />
-    <SectionHeading id="servicos-title" eyebrow="O que fazemos" title={{ before: "O próximo passo do ", emphasis: "seu negócio", after: "." }} intro="Escolha o caminho que combina com o seu momento. O escopo e o investimento são confirmados antes de começar." />
-    <div className="mt-9 grid gap-5 md:grid-cols-2">
-      {[{ n: "01", title: "Criação de sites", desc: "Para profissionais e empresas que querem apresentar seus serviços com clareza e receber novos contatos.", points: ["Páginas profissionais", "Landing pages de campanha", "Sites institucionais"], price: siteOffers[0].price, href: "/criacao-de-sites", link: "Conhecer criação de sites" }, { n: "02", title: "Desenvolvimento Shopify", desc: "Para lojas e agências que precisam personalizar temas, implementar páginas e resolver demandas técnicas.", points: ["Ajustes e seções em Liquid", "Páginas de produto e campanhas", "Configuração e evolução de lojas"], price: shopifyOffers[0].price, href: "/shopify", link: "Conhecer serviços Shopify" }].map(item => <article key={item.n} className="flex flex-col rounded-card border border-line bg-surface p-7 sm:p-9"><p className="font-mono text-xs text-muted">{item.n} / SERVIÇOS</p><h3 className="mt-4 text-3xl font-semibold tracking-tight">{item.title}</h3><p className="mt-4 leading-relaxed text-muted">{item.desc}</p><ul className="my-6 space-y-3">{item.points.map(point => <li key={point} className="flex gap-3"><span aria-hidden className="text-brand">↗</span>{point}</li>)}</ul><div className="mt-auto border-t border-line pt-6"><p className="text-sm text-muted">{item.n === "02" ? "Ajustes pontuais a partir de" : "Projetos a partir de"}</p><p className="mt-1 text-3xl font-semibold">R$ {formatPrice(item.price)}</p><Link href={item.href} data-cta={`home-servico-${item.n}`} className="mt-5 inline-flex min-h-11 items-center gap-3 font-semibold text-accent underline decoration-line underline-offset-4">{item.link}<span aria-hidden>↗</span></Link></div></article>)}
+export function Products() {
+  return <section id="produtos" aria-labelledby="produtos-title" className="scroll-mt-24 py-14 md:py-20 lg:py-24"><Container>
+    <span id="valores" className="scroll-mt-24" /><span id="lancamento" className="scroll-mt-24" />
+    <SectionHeading id="produtos-title" eyebrow="Produtos" title={{ before: "O software certo para o ", emphasis: "seu negócio", after: "." }} intro="Escolha o caminho que combina com o seu momento. O escopo e o investimento são confirmados antes de começar." />
+    <div className="mt-9 grid gap-5 lg:grid-cols-3">
+      {products.map(item => <article key={item.n} className="flex flex-col rounded-card border border-line bg-surface p-7 sm:p-8"><p className="font-mono text-xs text-muted">{item.n} / PRODUTOS</p><h3 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">{item.title}</h3><p className="mt-4 leading-relaxed text-muted">{item.desc}</p><ul className="my-6 space-y-3">{item.points.map(point => <li key={point} className="flex gap-3"><span aria-hidden className="text-brand">↗</span>{point}</li>)}</ul><div className="mt-auto border-t border-line pt-6"><p className="text-sm text-muted">{item.priceLabel}</p><p className="mt-1 text-2xl font-semibold">{item.price}</p><Link href={item.href} data-cta={`home-produto-${item.n}`} className="mt-5 inline-flex min-h-11 items-center gap-3 font-semibold text-accent underline decoration-line underline-offset-4">{item.link}<span aria-hidden>↗</span></Link></div></article>)}
     </div>
+  </Container></section>;
+}
+export function CustomSoftware() {
+  return <section aria-labelledby="sob-medida-title" className="bg-ink py-14 text-snow md:py-20"><Container className="grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
+    <div><p className="font-mono text-xs tracking-widest text-mist">SOB MEDIDA</p><h2 id="sob-medida-title" className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Precisa de um software sob medida?</h2><p className="mt-5 max-w-2xl text-lg leading-relaxed text-mist">Sistemas internos, automações e integrações para a sua operação. Você conta o que precisa, nós avaliamos e enviamos uma proposta com escopo, valor e prazo.</p></div>
+    <div className="lg:justify-self-end"><CtaButton location="home-sob-medida" message={whatsappMessages.custom} /></div>
   </Container></section>;
 }
 

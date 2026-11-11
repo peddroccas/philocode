@@ -4,7 +4,7 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
 import { PlusIcon } from "@/components/ui/Icons";
 
-export function Faq({ items = homeFaq, message = whatsappMessages.faq }: { items?: FaqItem[]; message?: string }) {
+export function Faq({ items = homeFaq, message = whatsappMessages.faq, label }: { items?: FaqItem[]; message?: string; label?: string }) {
   return (
     <section
       id="duvidas"
@@ -19,7 +19,7 @@ export function Faq({ items = homeFaq, message = whatsappMessages.faq }: { items
             className="order-last rounded-card border border-line bg-surface p-7 shadow-card lg:sticky lg:top-28 lg:mt-10">
             <h3 className="text-xl font-semibold tracking-tight text-ink">Ainda tem dúvidas?</h3>
             <p className="mt-2 leading-relaxed text-muted">Converse com a gente pelo WhatsApp.</p>
-            <CtaButton location="duvidas" message={message} className="mt-6 w-full" />
+            <CtaButton location="duvidas" message={message} label={label} className="mt-6 w-full" />
           </aside>
         </div>
 

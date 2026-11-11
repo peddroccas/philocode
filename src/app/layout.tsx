@@ -31,9 +31,9 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const title = `${company.name} · Sites profissionais e desenvolvimento Shopify`;
+const title = `${company.name} · Desenvolvimento de software`;
 const description =
-  "Sites profissionais e desenvolvimento Shopify. Atendimento online para todo o Brasil, direto de Brasília.";
+  "Desenvolvimento de software: sites, Shopify e sistema de gestão da catequese. Atendimento online para todo o Brasil, direto de Brasília.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
-import { company, nav, whatsappMessages } from "@/content/site";
+import { catequeseCtaLabel, company, nav, whatsappMessages } from "@/content/site";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { MobileMenu } from "./MobileMenu";
 
 export function Header() {
   const pathname = usePathname();
-  const service = pathname === "/shopify" ? "shopify" : pathname === "/criacao-de-sites" ? "sites" : "default";
+  const service = pathname === "/shopify" ? "shopify" : pathname === "/criacao-de-sites" ? "sites" : pathname === "/sistema-catequese" ? "catequese" : "default";
   return (
     <header className="sticky top-0 z-40 border-b border-line/80 bg-surface/90 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between gap-6 lg:h-20">
@@ -43,7 +43,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <div className="hidden lg:block">
-            <CtaButton location="header" message={whatsappMessages[service]} size="md" />
+            <CtaButton location="header" message={whatsappMessages[service]} label={service === "catequese" ? catequeseCtaLabel : undefined} size="md" />
           </div>
           <MobileMenu />
         </div>

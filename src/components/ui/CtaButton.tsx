@@ -7,12 +7,14 @@ type CtaButtonProps = {
   /** Valor do atributo data-cta, para medição futura. */
   location: string;
   message?: string;
+  /** Texto do botão. Padrão: primaryCta.label. */
+  label?: string;
   className?: string;
   size?: "md" | "lg";
 };
 
 /** A ação principal do site. Texto único em primaryCta.label. */
-export function CtaButton({ location, message = whatsappMessages.default, className, size = "lg" }: CtaButtonProps) {
+export function CtaButton({ location, message = whatsappMessages.default, label, className, size = "lg" }: CtaButtonProps) {
   return (
     <a
       href={whatsappLink(message)}
@@ -26,7 +28,7 @@ export function CtaButton({ location, message = whatsappMessages.default, classN
       )}
     >
       <WhatsAppIcon className="size-5 shrink-0" />
-      <span className="whitespace-nowrap">{primaryCta.label}</span>
+      <span className="whitespace-nowrap">{label ?? primaryCta.label}</span>
       <span className="sr-only"> (abre o WhatsApp em nova aba)</span>
       <ArrowRightIcon className="hidden size-4 shrink-0 min-[400px]:block motion-safe:transition-transform motion-safe:group-hover:translate-x-0.5" />
     </a>

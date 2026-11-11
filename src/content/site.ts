@@ -1,13 +1,13 @@
 /** Conteúdo e catálogo aprovados em 29/10/2026. Preços iniciais para novos projetos. */
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://philocode.vercel.app").replace(/\/$/, "");
 export type Emphasis = { before: string; emphasis: string; after?: string };
-export type Service = "sites" | "shopify";
+export type Service = "sites" | "shopify" | "catequese";
 export type FaqItem = { question: string; answer: string };
 export type Offer = { id: string; name: string; price: number; unit?: string; summary: string; includes: string[]; featured?: boolean };
 export const company = {
   name: "PhiloCode", legalName: "PhiloCode", cnpj: "",
-  slogan: "Seu negócio merece uma boa presença digital.", city: "Brasília", state: "DF",
-  summary: "Sites profissionais e desenvolvimento Shopify. Atendimento online para todo o Brasil.",
+  slogan: "Software que faz o seu negócio andar.", city: "Brasília", state: "DF",
+  summary: "Desenvolvimento de software: sites, Shopify e sistema online de gestão da catequese. Atendimento online para todo o Brasil.",
 };
 export const contact = {
   whatsappDigits: "5561999016604", whatsappDisplay: "(61) 99901-6604", email: "pedroabernardes11@gmail.com",
@@ -15,7 +15,9 @@ export const contact = {
 };
 export const primaryCta = { label: "Solicitar orçamento" };
 export const whatsappMessages = {
-  default: "Olá! Vim pelo site da PhiloCode e gostaria de conversar sobre meu projeto. Meu negócio é: ",
+  default: "Olá! Vim pelo site da PhiloCode e gostaria de conversar sobre um projeto de software. Meu negócio é: ",
+  catequese: "Olá! Tenho interesse no sistema de catequese da PhiloCode. Minha paróquia é: ",
+  custom: "Olá! Preciso de um software sob medida e gostaria de conversar com a PhiloCode. A minha ideia é: ",
   sites: "Olá! Gostaria de um orçamento para criar um site com a PhiloCode. Meu negócio é: ",
   shopify: "Olá! Preciso de desenvolvimento ou personalização na Shopify. O endereço da minha loja é: ",
   agency: "Olá! Tenho uma agência e gostaria de conversar sobre uma parceria de desenvolvimento Shopify. Minha demanda é: ",
@@ -23,8 +25,9 @@ export const whatsappMessages = {
   faq: "Olá! Tenho uma dúvida sobre os serviços da PhiloCode: ",
 };
 export const nav = [
-  { label: "Início", href: "/" }, { label: "Criação de sites", href: "/criacao-de-sites" },
-  { label: "Shopify", href: "/shopify" }, { label: "Projetos", href: "/#projetos" }, { label: "Contato", href: "/#contato" },
+  { label: "Início", href: "/" }, { label: "Sites", href: "/criacao-de-sites" },
+  { label: "Shopify", href: "/shopify" }, { label: "Catequese", href: "/sistema-catequese" },
+  { label: "Projetos", href: "/#projetos" }, { label: "Contato", href: "/#contato" },
 ];
 export const formatPrice = (value: number) => value.toLocaleString("pt-BR");
 export function offerMessage(offer: Offer, service: Service) {
@@ -53,6 +56,7 @@ export const support: Record<Service, Offer[]> = {
     { id: "cinco-horas", name: "Evolução essencial", price: 850, unit: "/mês", summary: "5 horas mensais para evoluir temas e páginas.", includes: ["Demandas priorizadas em conjunto", "Registro das horas utilizadas", "Horas não acumulam"] },
     { id: "dez-horas", name: "Evolução contínua", price: 1590, unit: "/mês", summary: "10 horas mensais para dar continuidade às melhorias.", includes: ["Demandas priorizadas em conjunto", "Registro das horas utilizadas", "Horas não acumulam"] },
   ],
+  catequese: [],
 };
 export type Project = {
   name: string;
@@ -68,7 +72,7 @@ export type Project = {
 export const projects = {
   eyebrow: "Projetos",
   title: { before: "Sites que ", emphasis: "já estão no ar", after: "." } satisfies Emphasis,
-  intro: "Alguns dos nossos trabalhos mais recentes.",
+  intro: "Alguns dos sites mais recentes que entregamos.",
   items: [
     {
       name: "Mateus Marques Rosa",
@@ -137,9 +141,54 @@ export const shopifyFaq: FaqItem[] = [
   { question: "Quais serviços precisam de avaliação separada?", answer: "Integrações complexas, migrações de dados, apps próprios, headless e projetos Plus ficam fora destes pacotes. A viabilidade precisa ser avaliada antes de qualquer compromisso." },
   { question: "Como funciona o acompanhamento mensal?", answer: `Você pode reservar 5 horas por R$ ${formatPrice(support.shopify[0].price)}/mês ou 10 horas por R$ ${formatPrice(support.shopify[1].price)}/mês para evolução de temas e páginas. As horas não acumulam e excedentes exigem aprovação. Não inclui disponibilidade permanente nem atendimento ilimitado.` },
 ];
+/** Sistema de gestão da catequese: produto com preço fixo (implantação + mensalidade). */
+export const catequese = {
+  pricing: {
+    setup: 299,
+    monthly: 149,
+    annualMonths: 10,
+    annual: 149 * 10,
+    setupIncludes: ["Sistema pronto para a sua paróquia", "Acesso para a coordenação", "Link de inscrição para as famílias"],
+    monthlyIncludes: ["Hospedagem e backups", "Atualizações do sistema", "Suporte para a coordenação e os catequistas"],
+  },
+  features: [
+    { title: "Inscrição online", text: "As famílias se inscrevem pelo celular, enviam os documentos e aceitam o termo de compromisso. A coordenação aprova e o catequizando entra na turma." },
+    { title: "Turmas e catequizandos", text: "Ficha completa com pais, sacramentos, necessidades especiais e quem pode buscar. Documentos guardados e ficha com anexos em PDF ou ZIP." },
+    { title: "Chamadas e presença", text: "Registro de cada encontro com os temas do itinerário e mapa de presença em PDF ou Excel para a turma." },
+    { title: "Catequistas e formações", text: "Cadastro dos catequistas, acesso individual e registro das formações com tema, formador e presença." },
+    { title: "Finanças e carnê", text: "Entradas, saídas e o carnê de cada catequizando, com PIX, dinheiro e cartão." },
+    { title: "Ritos e WhatsApp", text: "Biblioteca de roteiros de ritos em PDF e convite das famílias para o grupo de WhatsApp da turma em um clique." },
+  ],
+  screens: [
+    { image: "/images/catequese/painel.webp", title: "Painel da coordenação", text: "Totais de catequizandos, turmas e catequistas e atalhos para tudo o que a coordenação usa no dia a dia.", alt: "Painel inicial do sistema de catequese com totais de catequizandos, turmas e catequistas e atalhos para turmas, finanças, chamadas, inscrições e ritos." },
+    { image: "/images/catequese/catequizandos.webp", title: "Catequizandos", text: "Lista com busca, turma, catequista e responsáveis de cada catequizando, com ficha completa e documentos.", alt: "Lista de catequizandos do sistema, com totais por etapa, busca e colunas de idade, turma, catequista e responsáveis." },
+    { image: "/images/catequese/chamadas.webp", title: "Chamadas e presença", text: "Cada encontro registrado com os temas do itinerário, presentes e faltas, com mapa de frequência da turma.", alt: "Tela de chamadas de uma turma de Crisma, com a lista de encontros, temas do itinerário e quantidade de presentes e faltas." },
+  ],
+  access: [
+    ["Coordenação", "Vê e gerencia tudo: inscrições, turmas, finanças, catequistas e configurações."],
+    ["Catequistas", "Veem apenas as próprias turmas e os catequizandos delas."],
+  ] as [string, string][],
+};
+export const catequeseCtaLabel = "Quero contratar";
+export const catequeseOfferMessage = `Olá! Vi o sistema de catequese da PhiloCode (implantação R$ ${formatPrice(catequese.pricing.setup)} + R$ ${formatPrice(catequese.pricing.monthly)}/mês, ou R$ ${formatPrice(catequese.pricing.annual)} à vista por 12 meses) e gostaria de contratar. Minha paróquia é: `;
+export const catequeseFaq: FaqItem[] = [
+  { question: "Preciso instalar alguma coisa?", answer: "Não. É um sistema online, por assinatura: funciona no navegador, no celular ou no computador, sem instalar nada e sem a paróquia manter servidor. Você recebe o acesso da coordenação e começa a cadastrar." },
+  { question: "As famílias precisam criar conta?", answer: "Não. Elas usam apenas o link de inscrição da paróquia, preenchem os dados, enviam os documentos e aguardam a aprovação da coordenação." },
+  { question: "Os dados da minha paróquia ficam separados de outras?", answer: "Sim. Cada paróquia tem o seu próprio espaço, e os dados de uma não aparecem para as outras. Os documentos ficam em armazenamento privado e abrem apenas por links temporários." },
+  { question: "Quem pode ver o quê?", answer: "A coordenação acessa tudo. Cada catequista vê somente as próprias turmas e os catequizandos delas." },
+  { question: "O que está incluído na implantação?", answer: `R$ ${formatPrice(catequese.pricing.setup)}, pagos uma vez. Deixamos o sistema pronto para a sua paróquia começar a usar e entregamos o acesso da coordenação.` },
+  { question: "Existe desconto pagando à vista?", answer: `Sim. Pagando R$ ${formatPrice(catequese.pricing.annual)} à vista, você usa o sistema por 12 meses, o equivalente a ${catequese.pricing.annualMonths} mensalidades.` },
+  { question: "O que está incluído na mensalidade?", answer: `R$ ${formatPrice(catequese.pricing.monthly)} por mês, enquanto a paróquia usar o sistema. Inclui hospedagem, backups, atualizações automáticas e suporte para a coordenação e os catequistas.` },
+];
+/** Produtos exibidos na home. Preços vêm dos catálogos acima. */
+export const products = [
+  { n: "01", title: "Criação de sites", desc: "Para profissionais e empresas que querem apresentar seus serviços com clareza e receber novos contatos.", points: ["Páginas profissionais", "Landing pages de campanha", "Sites institucionais"], priceLabel: "Projetos a partir de", price: `R$ ${formatPrice(siteOffers[0].price)}`, href: "/criacao-de-sites", link: "Conhecer criação de sites" },
+  { n: "02", title: "Desenvolvimento Shopify", desc: "Para lojas e agências que precisam personalizar temas, implementar páginas e resolver demandas técnicas.", points: ["Ajustes e seções em Liquid", "Páginas de produto e campanhas", "Configuração e evolução de lojas"], priceLabel: "Ajustes pontuais a partir de", price: `R$ ${formatPrice(shopifyOffers[0].price)}`, href: "/shopify", link: "Conhecer serviços Shopify" },
+  { n: "03", title: "Sistema de Catequese", desc: "Sistema online, por assinatura, para paróquias organizarem inscrições, turmas, presença e finanças da catequese em um só lugar.", points: ["Inscrição online das famílias", "Turmas, chamadas e carnê", "Acesso para coordenação e catequistas"], priceLabel: "Implantação + assinatura mensal", price: `R$ ${formatPrice(catequese.pricing.setup)} + R$ ${formatPrice(catequese.pricing.monthly)}/mês`, href: "/sistema-catequese", link: "Conhecer o sistema de catequese" },
+];
 export const homeFaq: FaqItem[] = [
-  { question: "A PhiloCode atende clientes de outras cidades?", answer: "Sim. Estamos em Brasília (DF) e atendemos online profissionais, empresas, lojas e agências de todo o Brasil." },
-  { question: "Como sei qual serviço escolher?", answer: "Se você precisa apresentar seu trabalho e receber contatos, conheça criação de sites. Se já usa ou quer começar na Shopify, conheça desenvolvimento e personalização Shopify. Podemos ajudar a entender seu caso pelo WhatsApp." },
+  { question: "A PhiloCode atende clientes de outras cidades?", answer: "Sim. Estamos em Brasília (DF) e atendemos online profissionais, empresas, lojas, agências e paróquias de todo o Brasil." },
+  { question: "Como sei qual produto escolher?", answer: "Se você precisa apresentar seu trabalho e receber contatos, conheça criação de sites. Se já usa ou quer começar na Shopify, veja desenvolvimento Shopify. Se cuida de uma paróquia, conheça o sistema de catequese. Se a sua necessidade é outra, conte a ideia e avaliamos um software sob medida." },
   { question: "Os valores do site são o orçamento final?", answer: "São preços iniciais para escopos específicos. A proposta confirma entregas, investimento e prazo antes do início. Novos preços não alteram as condições de contratos existentes." },
 ];
 export const contactSection = {

@@ -1,15 +1,16 @@
 import { Hero } from "@/components/sections/Hero";
-import { HomeVisual, Services } from "@/components/sections/ServicePanels";
+import { CodeVisual } from "@/components/sections/CodeVisual";
+import { Products, CustomSoftware } from "@/components/sections/ServicePanels";
 import { Projects } from "@/components/sections/Projects";
 import { Process } from "@/components/sections/Process";
 import { Faq } from "@/components/sections/Faq";
 import { Contact } from "@/components/sections/Contact";
 import { JsonLd } from "@/components/sections/JsonLd";
 import { pageMetadata } from "@/lib/metadata";
-export const metadata = pageMetadata("/", "PhiloCode · Sites profissionais e desenvolvimento Shopify", "Sites para profissionais e empresas, personalização de temas e desenvolvimento Shopify. Atendimento online para todo o Brasil, direto de Brasília.");
+export const metadata = pageMetadata("/", "PhiloCode · Desenvolvimento de software", "Desenvolvimento de software: criação de sites, desenvolvimento Shopify, sistema de gestão da catequese e projetos sob medida. Atendimento online para todo o Brasil, direto de Brasília.");
 export default function Home() {
   return <>
-    <Hero eyebrow="PhiloCode · Sites e Shopify" title={{ before: "Sites profissionais e Shopify para seu negócio ", emphasis: "ir além", after: "." }} subtitle="Criamos sites para apresentar seu trabalho e desenvolvemos páginas e personalizações Shopify para evoluir sua loja."><HomeVisual /></Hero>
-    <Services /><Projects /><Process /><Faq /><Contact /><JsonLd />
+    <Hero eyebrow="PhiloCode · Desenvolvimento de software" title={{ before: "Software que faz o seu negócio ", emphasis: "andar", after: "." }} subtitle="Criamos sites, desenvolvemos lojas Shopify e oferecemos um sistema de gestão para paróquias. Quando você precisa de algo diferente, construímos sob medida."><CodeVisual /></Hero>
+    <Products /><Projects /><Process /><CustomSoftware /><Faq /><Contact /><JsonLd />
   </>;
 }

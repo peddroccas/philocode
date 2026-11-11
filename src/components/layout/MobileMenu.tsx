@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { nav, whatsappMessages } from "@/content/site";
+import { catequeseCtaLabel, nav, whatsappMessages } from "@/content/site";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { CloseIcon, MenuIcon } from "@/components/ui/Icons";
 
 export function MobileMenu() {
   const pathname = usePathname();
-  const service = pathname === "/shopify" ? "shopify" : pathname === "/criacao-de-sites" ? "sites" : "default";
+  const service = pathname === "/shopify" ? "shopify" : pathname === "/criacao-de-sites" ? "sites" : pathname === "/sistema-catequese" ? "catequese" : "default";
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -60,7 +60,7 @@ export function MobileMenu() {
               </li>
             ))}
           </ul>
-          <CtaButton location="menu-mobile" message={whatsappMessages[service]} className="mt-5 w-full" />
+          <CtaButton location="menu-mobile" message={whatsappMessages[service]} label={service === "catequese" ? catequeseCtaLabel : undefined} className="mt-5 w-full" />
         </nav>
       </div>
     </div>

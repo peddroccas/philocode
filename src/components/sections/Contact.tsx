@@ -8,7 +8,7 @@ import { MailIcon, WhatsAppIcon } from "@/components/ui/Icons";
 const cardClass =
   "flex min-h-20 items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 transition-colors";
 
-export function Contact({ message = whatsappMessages.default }: { message?: string }) {
+export function Contact({ message = whatsappMessages.default, label }: { message?: string; label?: string }) {
   return (
     <section
       id="contato"
@@ -25,7 +25,7 @@ export function Contact({ message = whatsappMessages.default }: { message?: stri
             intro={contactSection.text}
           />
           <div>
-            <CtaButton location="contato" message={message} className="mt-9 w-full sm:w-auto" />
+            <CtaButton location="contato" message={message} label={label} className="mt-9 w-full sm:w-auto" />
           </div>
           <ul className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[0.9375rem] text-mist">
             {contactSection.facts.map((fact) => (
