@@ -41,20 +41,20 @@ export function CatequeseAccess() {
 export function CatequesePricing() {
   const { pricing } = catequese;
   return <section id="valores" aria-labelledby="valores-title" className="scroll-mt-24 py-14 md:py-20 lg:py-24"><Container>
-    <SectionHeading id="valores-title" eyebrow="Investimento" title={{ before: "Dois valores, ", emphasis: "sem rodeios", after: "." }} intro="Assinatura de preço fixo: uma implantação única e uma mensalidade. Sem pacotes por número de turmas ou de catequizandos." />
+    <SectionHeading id="valores-title" eyebrow="Investimento" title={{ before: "Um valor, ", emphasis: "sem rodeios", after: "." }} intro="Assinatura de preço fixo, só a mensalidade. Sem pacotes por número de turmas ou de catequizandos." />
     <article className="mt-9 rounded-card border border-brand bg-surface p-6 shadow-frame sm:p-8">
-      <div className="grid gap-8 md:grid-cols-2 md:gap-0 md:divide-x md:divide-line">
-        {[{ label: "IMPLANTAÇÃO", price: pricing.setup, unit: "pagamento único", items: pricing.setupIncludes }, { label: "MENSALIDADE", price: pricing.monthly, unit: "/mês", items: pricing.monthlyIncludes }].map((col, i) => <div key={col.label} className={i === 1 ? "md:pl-8" : "md:pr-8"}>
-          <p className="font-mono text-xs tracking-widest text-muted">{col.label}</p>
-          <p className="mt-3 flex flex-wrap items-baseline gap-1.5"><span className="text-lg">R$</span><span className="text-5xl font-semibold tracking-tight">{formatPrice(col.price)}</span><span className="text-muted">{col.unit}</span></p>
-          <ul className="mt-6 space-y-3 border-t border-line pt-6 text-[.9375rem]">{col.items.map(item => <li key={item} className="flex gap-3"><span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-[2px] bg-brand" /><span>{item}</span></li>)}</ul>
-        </div>)}
+      <div className="grid gap-8 md:grid-cols-[1fr_1.3fr] md:items-center md:gap-0 md:divide-x md:divide-line">
+        <div className="md:pr-8">
+          <p className="font-mono text-xs tracking-widest text-muted">MENSALIDADE</p>
+          <p className="mt-3 flex flex-wrap items-baseline gap-1.5"><span className="text-lg">R$</span><span className="text-5xl font-semibold tracking-tight">{formatPrice(pricing.monthly)}</span><span className="text-muted">/mês</span></p>
+          <CtaButton location="catequese-oferta" message={catequeseOfferMessage} label={catequeseCtaLabel} className="mt-6 w-full sm:w-auto" />
+        </div>
+        <ul className="space-y-3 text-[.9375rem] md:pl-8">{pricing.monthlyIncludes.map(item => <li key={item} className="flex gap-3"><span aria-hidden className="mt-2 size-1.5 shrink-0 rounded-[2px] bg-brand" /><span>{item}</span></li>)}</ul>
       </div>
       <div className="mt-8 flex flex-col gap-3 rounded-xl border border-line bg-canvas p-5 sm:flex-row sm:items-center sm:justify-between">
         <div><p className="font-semibold">Pagando à vista</p><p className="mt-1 text-muted">12 meses de uso pelo preço de {pricing.annualMonths} mensalidades.</p></div>
         <p className="flex items-baseline gap-1.5"><span className="text-lg">R$</span><span className="text-3xl font-semibold tracking-tight">{formatPrice(pricing.annual)}</span><span className="text-muted">à vista</span></p>
       </div>
-      <CtaButton location="catequese-oferta" message={catequeseOfferMessage} label={catequeseCtaLabel} className="mt-6 w-full sm:w-auto" />
     </article>
   </Container></section>;
 }

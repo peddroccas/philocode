@@ -141,15 +141,13 @@ export const shopifyFaq: FaqItem[] = [
   { question: "Quais serviços precisam de avaliação separada?", answer: "Integrações complexas, migrações de dados, apps próprios, headless e projetos Plus ficam fora destes pacotes. A viabilidade precisa ser avaliada antes de qualquer compromisso." },
   { question: "Como funciona o acompanhamento mensal?", answer: `Você pode reservar 5 horas por R$ ${formatPrice(support.shopify[0].price)}/mês ou 10 horas por R$ ${formatPrice(support.shopify[1].price)}/mês para evolução de temas e páginas. As horas não acumulam e excedentes exigem aprovação. Não inclui disponibilidade permanente nem atendimento ilimitado.` },
 ];
-/** Sistema de gestão da catequese: produto com preço fixo (implantação + mensalidade). */
+/** Sistema de gestão da catequese: produto com preço fixo (somente mensalidade). */
 export const catequese = {
   pricing: {
-    setup: 299,
     monthly: 149,
     annualMonths: 10,
     annual: 149 * 10,
-    setupIncludes: ["Sistema pronto para a sua paróquia", "Acesso para a coordenação", "Link de inscrição para as famílias"],
-    monthlyIncludes: ["Hospedagem e backups", "Atualizações do sistema", "Suporte para a coordenação e os catequistas"],
+    monthlyIncludes: ["Sistema pronto para a sua paróquia", "Acesso para a coordenação e link de inscrição para as famílias", "Hospedagem e backups", "Atualizações do sistema", "Suporte para a coordenação e os catequistas"],
   },
   features: [
     { title: "Inscrição online", text: "As famílias se inscrevem pelo celular, enviam os documentos e aceitam o termo de compromisso. A coordenação aprova e o catequizando entra na turma." },
@@ -169,22 +167,21 @@ export const catequese = {
     ["Catequistas", "Veem apenas as próprias turmas e os catequizandos delas."],
   ] as [string, string][],
 };
-export const catequeseCtaLabel = "Quero contratar";
-export const catequeseOfferMessage = `Olá! Vi o sistema de catequese da PhiloCode (implantação R$ ${formatPrice(catequese.pricing.setup)} + R$ ${formatPrice(catequese.pricing.monthly)}/mês, ou R$ ${formatPrice(catequese.pricing.annual)} à vista por 12 meses) e gostaria de contratar. Minha paróquia é: `;
+export const catequeseCtaLabel = "Quero assinar";
+export const catequeseOfferMessage = `Olá! Vi o sistema de catequese da PhiloCode (R$ ${formatPrice(catequese.pricing.monthly)}/mês, ou R$ ${formatPrice(catequese.pricing.annual)} à vista por 12 meses) e gostaria de assinar. Minha paróquia é: `;
 export const catequeseFaq: FaqItem[] = [
   { question: "Preciso instalar alguma coisa?", answer: "Não. É um sistema online, por assinatura: funciona no navegador, no celular ou no computador, sem instalar nada e sem a paróquia manter servidor. Você recebe o acesso da coordenação e começa a cadastrar." },
   { question: "As famílias precisam criar conta?", answer: "Não. Elas usam apenas o link de inscrição da paróquia, preenchem os dados, enviam os documentos e aguardam a aprovação da coordenação." },
   { question: "Os dados da minha paróquia ficam separados de outras?", answer: "Sim. Cada paróquia tem o seu próprio espaço, e os dados de uma não aparecem para as outras. Os documentos ficam em armazenamento privado e abrem apenas por links temporários." },
   { question: "Quem pode ver o quê?", answer: "A coordenação acessa tudo. Cada catequista vê somente as próprias turmas e os catequizandos delas." },
-  { question: "O que está incluído na implantação?", answer: `R$ ${formatPrice(catequese.pricing.setup)}, pagos uma vez. Deixamos o sistema pronto para a sua paróquia começar a usar e entregamos o acesso da coordenação.` },
   { question: "Existe desconto pagando à vista?", answer: `Sim. Pagando R$ ${formatPrice(catequese.pricing.annual)} à vista, você usa o sistema por 12 meses, o equivalente a ${catequese.pricing.annualMonths} mensalidades.` },
-  { question: "O que está incluído na mensalidade?", answer: `R$ ${formatPrice(catequese.pricing.monthly)} por mês, enquanto a paróquia usar o sistema. Inclui hospedagem, backups, atualizações automáticas e suporte para a coordenação e os catequistas.` },
+  { question: "O que está incluído na mensalidade?", answer: `R$ ${formatPrice(catequese.pricing.monthly)} por mês, enquanto a paróquia usar o sistema. Inclui o sistema pronto para a paróquia, acesso da coordenação, link de inscrição para as famílias, hospedagem, backups, atualizações automáticas e suporte para a coordenação e os catequistas.` },
 ];
 /** Produtos exibidos na home. Preços vêm dos catálogos acima. */
 export const products = [
   { n: "01", title: "Criação de sites", desc: "Para profissionais e empresas que querem apresentar seus serviços com clareza e receber novos contatos.", points: ["Páginas profissionais", "Landing pages de campanha", "Sites institucionais"], priceLabel: "Projetos a partir de", price: `R$ ${formatPrice(siteOffers[0].price)}`, href: "/criacao-de-sites", link: "Conhecer criação de sites" },
   { n: "02", title: "Desenvolvimento Shopify", desc: "Para lojas e agências que precisam personalizar temas, implementar páginas e resolver demandas técnicas.", points: ["Ajustes e seções em Liquid", "Páginas de produto e campanhas", "Configuração e evolução de lojas"], priceLabel: "Ajustes pontuais a partir de", price: `R$ ${formatPrice(shopifyOffers[0].price)}`, href: "/shopify", link: "Conhecer serviços Shopify" },
-  { n: "03", title: "Sistema de Catequese", desc: "Sistema online, por assinatura, para paróquias organizarem inscrições, turmas, presença e finanças da catequese em um só lugar.", points: ["Inscrição online das famílias", "Turmas, chamadas e carnê", "Acesso para coordenação e catequistas"], priceLabel: "Implantação + assinatura mensal", price: `R$ ${formatPrice(catequese.pricing.setup)} + R$ ${formatPrice(catequese.pricing.monthly)}/mês`, href: "/sistema-catequese", link: "Conhecer o sistema de catequese" },
+  { n: "03", title: "Sistema de Catequese", desc: "Sistema online, por assinatura, para paróquias organizarem inscrições, turmas, presença e finanças da catequese em um só lugar.", points: ["Inscrição online das famílias", "Turmas, chamadas e carnê", "Acesso para coordenação e catequistas"], priceLabel: "Assinatura mensal", price: `R$ ${formatPrice(catequese.pricing.monthly)}/mês`, href: "/sistema-catequese", link: "Conhecer o sistema de catequese" },
 ];
 export const homeFaq: FaqItem[] = [
   { question: "A PhiloCode atende clientes de outras cidades?", answer: "Sim. Estamos em Brasília (DF) e atendemos online profissionais, empresas, lojas, agências e paróquias de todo o Brasil." },

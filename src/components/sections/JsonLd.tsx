@@ -1,8 +1,7 @@
 import { SITE_URL, company, contact, siteOffers, shopifyOffers, support, catequese, type Offer, type Service } from "@/content/site";
 
 const catequeseOffers: Offer[] = [
-  { id: "implantacao", name: "Implantação do sistema de catequese", price: catequese.pricing.setup, summary: "Sistema pronto para a paróquia começar a usar.", includes: catequese.pricing.setupIncludes },
-  { id: "mensalidade", name: "Mensalidade do sistema de catequese", price: catequese.pricing.monthly, unit: "/mês", summary: "Hospedagem, backups, atualizações e suporte.", includes: catequese.pricing.monthlyIncludes },
+  { id: "mensalidade", name: "Mensalidade do sistema de catequese", price: catequese.pricing.monthly, unit: "/mês", summary: "Sistema pronto para a paróquia, hospedagem, backups, atualizações e suporte.", includes: catequese.pricing.monthlyIncludes },
   { id: "anual", name: "Sistema de catequese à vista por 12 meses", price: catequese.pricing.annual, unit: "/ano", summary: "12 meses de uso pelo preço de 10 mensalidades.", includes: catequese.pricing.monthlyIncludes },
 ];
 const offersByService: Record<Service, { name: string; path: string; offers: Offer[]; fixed?: boolean }> = {
