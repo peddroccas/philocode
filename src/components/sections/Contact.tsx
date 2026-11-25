@@ -55,7 +55,7 @@ export function Contact({ message = whatsappMessages.default, label }: { message
             >
               <WhatsAppIcon className="size-6 shrink-0 text-snow" />
               <span>
-                <span className="block font-mono text-xs tracking-[0.08em] text-mist uppercase">WhatsApp e telefone</span>
+                <span className="block font-mono text-xs tracking-[0.08em] text-mist uppercase">WhatsApp</span>
                 <span className="mt-0.5 block text-lg font-semibold">{contact.whatsappDisplay}</span>
               </span>
               <span className="sr-only"> (abre em nova aba)</span>

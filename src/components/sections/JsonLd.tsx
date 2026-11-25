@@ -7,7 +7,7 @@ const catequeseOffers: Offer[] = [
 const offersByService: Record<Service, { name: string; path: string; offers: Offer[]; fixed?: boolean }> = {
   sites: { name: "Criação de sites", path: "/criacao-de-sites", offers: [...siteOffers, ...support.sites] },
   shopify: { name: "Desenvolvimento Shopify", path: "/shopify", offers: [...shopifyOffers, ...support.shopify] },
-  catequese: { name: "Catequese Hub · Sistema de gestão da catequese", path: "/sistema-catequese", offers: catequeseOffers, fixed: true },
+  catequese: { name: "Catequese Hub · Sistema online para catequeses", path: "/sistema-catequese", offers: catequeseOffers, fixed: true },
 };
 export function JsonLd({ service }: { service?: Service }) {
   const current = service ? offersByService[service] : undefined;

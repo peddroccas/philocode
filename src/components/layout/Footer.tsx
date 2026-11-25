@@ -44,11 +44,6 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href={`tel:+${contact.whatsappDigits}`} className="inline-flex min-h-10 items-center hover:text-snow">
-                  Telefone {contact.whatsappDisplay}
-                </a>
-              </li>
-              <li>
                 <a href={`mailto:${contact.email}`} className="inline-flex min-h-10 items-center break-all hover:text-snow">
                   {contact.email}
                 </a>

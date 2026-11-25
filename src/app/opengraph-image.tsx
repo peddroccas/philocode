@@ -13,12 +13,12 @@ export default async function OpengraphImage() {
       <div style={{ width: "100%", height: "100%", display: "flex", position: "relative", background: "#0B0B0B", color: "#FFFFFF", padding: 72 }}>
         <div style={{ position: "absolute", left: 790, top: 140, width: 380, height: 380, borderRadius: 9999, border: "1px solid rgba(107,114,128,0.45)", display: "flex" }} />
         <div style={{ position: "absolute", left: 980, top: 0, width: 1, height: 630, background: "rgba(107,114,128,0.35)", display: "flex" }} />
-        <svg width="230" height="264" viewBox="12 4 96 110" style={{ position: "absolute", left: 865, top: 198 }}>
+        <svg width="230" height="264" viewBox="12 4 96 108" style={{ position: "absolute", left: 865, top: 198 }}>
           <path d={ANCHOR_PATH} fill="#FFFFFF" />
         </svg>
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <svg width="44" height="50" viewBox="12 4 96 110"><path d={ANCHOR_PATH} fill="#FFFFFF" /></svg>
+            <svg width="44" height="50" viewBox="12 4 96 108"><path d={ANCHOR_PATH} fill="#FFFFFF" /></svg>
             <div style={{ fontSize: 44, fontWeight: 600, letterSpacing: -2 }}>philocode</div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
