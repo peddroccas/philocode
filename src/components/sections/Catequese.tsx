@@ -8,7 +8,7 @@ import { reveal } from "@/lib/reveal";
 
 /** Ilustração em código de um painel de coordenação. Dados fictícios, sem nomes reais. */
 export function CatequeseVisual() {
-  return <div className="rounded-card border border-white/15 bg-white/5 p-5 text-snow shadow-frame backdrop-blur-sm sm:p-7">
+  return <div className="rounded-card border border-white/15 bg-[#121214] p-5 text-snow shadow-frame backdrop-blur-sm sm:p-7">
     <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs text-mist"><span>PAINEL / COORDENAÇÃO</span><span className="rounded-full bg-brand/15 px-3 py-1 text-snow">Inscrições abertas</span></div>
     <div className="mt-5 space-y-3">
       <div className="rounded-xl border border-white/10 p-4"><div className="flex items-center justify-between"><p className="font-semibold">Turma Eucaristia · 2026</p><span className="font-mono text-xs text-mist">CHAMADA</span></div><div aria-hidden className="mt-3 flex gap-2">{["✓", "✓", "✓", "–", "✓", "✓"].map((mark, i) => <span key={i} className={`flex size-8 items-center justify-center rounded-md border text-sm ${mark === "✓" ? "border-brand/40 bg-brand/15 text-snow" : "border-white/10 text-mist"}`}>{mark}</span>)}</div></div>

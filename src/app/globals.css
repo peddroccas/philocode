@@ -142,6 +142,7 @@
   background: radial-gradient(60% 70% at 78% 45%, rgb(255 255 255 / 0.07), transparent 70%);
 }
 .blueprint-grid,
+.blueprint-scan,
 .blueprint-spot {
   --minor: rgb(255 255 255 / 0.035);
   --strong: rgb(255 255 255 / 0.075);
@@ -157,16 +158,10 @@
     var(--cell) var(--cell);
   background-position: -1px -1px;
 }
-.blueprint-grid,
-.blueprint-marks {
+.blueprint-grid {
   mask-image: radial-gradient(110% 95% at 78% 40%, #000 30%, transparent 85%);
 }
-/* Marcas "+" nas interseções das linhas principais */
-.blueprint-marks {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='224' height='224'%3E%3Cpath d='M0 -6v12M-6 0h12M224 -6v12M218 0h12M0 218v12M-6 224h12M224 218v12M218 224h12' stroke='white' stroke-opacity='.45' stroke-width='1.5'/%3E%3C/svg%3E");
-  background-size: var(--major) var(--major);
-  background-position: -1px -1px;
-}
+/* Luz sob o cursor */
 .blueprint-spot {
   --minor: rgb(255 255 255 / 0.16);
   --strong: rgb(255 255 255 / 0.34);
@@ -174,13 +169,27 @@
   opacity: 0;
   transition: opacity 0.5s ease;
 }
+@property --scan {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: -20%;
+}
+/* Faixa de luz que percorre a grade de cima a baixo */
+.blueprint-scan {
+  --minor: rgb(255 255 255 / 0.09);
+  --strong: rgb(255 255 255 / 0.2);
+  mask-image:
+    linear-gradient(to bottom, transparent calc(var(--scan) - 12%), #000 var(--scan), transparent calc(var(--scan) + 12%)),
+    radial-gradient(110% 95% at 78% 40%, #000 30%, transparent 85%);
+  mask-composite: intersect;
+}
 .blueprint[data-active] .blueprint-spot {
   opacity: 1;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .blueprint-marks {
-    animation: marks-in 1.6s var(--ease-out-expo) 0.3s both;
+  .blueprint-scan {
+    animation: scan 9s linear infinite;
   }
   /* Toque: o brilho passeia sozinho */
   @media (hover: none) {
@@ -191,14 +200,12 @@
   }
 }
 
-@keyframes marks-in {
+@keyframes scan {
   from {
-    opacity: 0;
-    transform: scale(1.04);
+    --scan: -20%;
   }
   to {
-    opacity: 1;
-    transform: none;
+    --scan: 120%;
   }
 }
 @keyframes spin-slow {

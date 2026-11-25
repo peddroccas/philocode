@@ -7,7 +7,7 @@ import { AnchorSymbol } from "@/components/ui/Logo";
 import { reveal } from "@/lib/reveal";
 
 export function ThemeVisual() {
-  return <div className="rounded-card border border-white/15 bg-white/5 p-5 text-snow shadow-frame sm:p-7">
+  return <div className="rounded-card border border-white/15 bg-[#121214] p-5 text-snow shadow-frame sm:p-7">
     <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs text-mist"><span>TEMA / PRÉVIA</span><span className="rounded-full bg-brand/15 px-3 py-1 text-snow">Não publicado</span></div>
     <div className="mt-6 grid grid-cols-[.8fr_1fr] gap-5 rounded-xl border border-white/10 p-4 sm:p-6">
       <div aria-hidden className="flex min-h-40 items-center justify-center rounded-lg bg-linear-to-br from-white/15 to-white/5"><AnchorSymbol className="h-16 w-auto text-snow/80" /></div>
@@ -35,7 +35,7 @@ export function CustomSoftware() {
 
 export function SiteVisual() {
   return (
-    <div className="relative overflow-hidden rounded-card border border-white/15 bg-white/5 p-6 text-snow shadow-frame backdrop-blur-sm sm:p-8">
+    <div className="relative overflow-hidden rounded-card border border-white/15 bg-[#121214] p-6 text-snow shadow-frame backdrop-blur-sm sm:p-8">
       <div aria-hidden className="absolute -top-14 -right-14 size-48 rounded-full border border-brand/20" />
       <div aria-hidden className="absolute -top-8 -right-8 size-36 rounded-full border border-brand/20" />
       <p className="relative font-mono text-xs tracking-widest text-mist">SEU NEGÓCIO EM PRIMEIRO PLANO</p>

@@ -15,7 +15,7 @@ export default function Home() {
       eyebrow="Engineering what’s next."
       title={{ before: "Sites, lojas Shopify e sistemas que fazem o seu negócio ", emphasis: "andar", after: "." }}
       subtitle="Um site feito para receber contatos, uma loja do jeito que você imaginou ou um sistema que tira a operação das planilhas."
-      proof={["Você fala direto com quem desenvolve", "Valor fechado antes de começar", "Nada vai ao ar sem o seu ok"]}
+      proof={["Feito para o celular", "Pronto para aparecer no Google", "Nada vai ao ar sem o seu ok"]}
     ><CodeVisual /></Hero>
     <Pains />
     <Products /><Projects /><Process /><CustomSoftware /><Faq /><Contact /><JsonLd />

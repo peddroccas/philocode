@@ -80,7 +80,7 @@ export function CodeVisual() {
   const starts = tab.lines.map((_, i) => tab.lines.slice(0, i).reduce((sum, l) => sum + l.length, 0));
 
   return (
-    <div ref={rootRef} aria-hidden className="overflow-hidden rounded-card border border-white/15 bg-night/60 text-snow shadow-frame backdrop-blur-sm">
+    <div ref={rootRef} aria-hidden className="overflow-hidden rounded-card border border-white/15 bg-[#121214] text-snow shadow-frame">
       <div className="flex items-center gap-3 border-b border-white/10 px-4 py-3">
         <span className="flex gap-1.5"><span className="size-2.5 rounded-full bg-white/20" /><span className="size-2.5 rounded-full bg-white/20" /><span className="size-2.5 rounded-full bg-white/20" /></span>
         <span className="font-mono text-xs text-mist">philocode/</span>

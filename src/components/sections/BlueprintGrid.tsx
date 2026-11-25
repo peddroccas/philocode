@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import clsx from "clsx";
 
 /**
- * Fundo do hero: grade de projeto (blueprint) com linhas principais a cada 4 células e marcas "+" nas interseções.
+ * Fundo do hero: grade de projeto (blueprint) com linhas principais a cada 4 células e uma faixa de luz que percorre a grade.
  * Com mouse, a grade acende sob o cursor; em telas de toque, o brilho passeia sozinho (CSS).
  * Com "reduzir movimento", fica tudo parado. As regras visuais estão em globals.css (.blueprint).
  */
@@ -43,7 +43,7 @@ export function BlueprintGrid({ className }: { className?: string }) {
     <div ref={ref} aria-hidden className={clsx("blueprint", className)}>
       <div className="blueprint-glow" />
       <div className="blueprint-grid" />
-      <div className="blueprint-marks" />
+      <div className="blueprint-scan" />
       <div className="blueprint-spot" />
     </div>
   );
