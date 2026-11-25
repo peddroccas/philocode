@@ -24,10 +24,10 @@ export function CtaButton({ location, message = whatsappMessages.default, label,
       rel="noopener noreferrer"
       data-cta={location}
       className={clsx(
-        "group inline-flex items-center justify-center gap-2.5 rounded-full font-semibold transition-colors",
+        "group inline-flex items-center justify-center gap-2.5 rounded-full font-semibold transition-[background-color,box-shadow,transform] duration-200 hover:-translate-y-px",
         tone === "dark"
-          ? "bg-snow text-ink shadow-[0_8px_28px_-10px_rgb(255_255_255/0.45)] hover:bg-white active:bg-white/90"
-          : "bg-accent text-white shadow-[0_6px_18px_-8px_rgb(11_11_11/0.6)] hover:bg-accent-strong active:bg-accent-strong",
+          ? "bg-snow text-night shadow-[0_8px_28px_-10px_rgb(255_255_255/0.45)] hover:bg-white active:bg-white/90"
+          : "bg-accent text-snow shadow-[0_8px_20px_-10px_rgb(9_9_11/0.55)] hover:bg-accent-strong active:bg-accent-strong",
         size === "lg" ? "min-h-13 px-5 text-[0.9375rem] sm:px-6 sm:text-base" : "min-h-11 px-5 text-[0.9375rem]",
         className,
       )}

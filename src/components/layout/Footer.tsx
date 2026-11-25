@@ -6,7 +6,7 @@ import { AnchorSymbol, Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
-    <footer className="bg-night text-mist">
+    <footer className="border-t border-white/10 bg-night text-mist">
       <Container className="py-12 lg:py-16">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>

@@ -15,7 +15,7 @@ export function Products() {
   </Container></section>;
 }
 export function CustomSoftware() {
-  return <section aria-labelledby="sob-medida-title" className="bg-ink py-14 text-snow md:py-20"><Container className="grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
+  return <section aria-labelledby="sob-medida-title" className="bg-night py-14 text-snow md:py-20"><Container className="grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
     <div><p className="font-mono text-xs tracking-widest text-mist">SOB MEDIDA</p><h2 id="sob-medida-title" className="mt-4 text-3xl font-semibold tracking-tight sm:text-4xl">Nenhum sistema pronto resolve o seu caso?</h2><p className="mt-5 max-w-2xl text-lg leading-relaxed text-mist">Sistemas internos, automações e integrações para a sua operação. Conte a ideia e avaliamos juntos o que faz sentido construir.</p></div>
     <div className="lg:justify-self-end"><CtaButton location="home-sob-medida" message={whatsappMessages.custom} label="Contar minha ideia" tone="dark" /></div>
   </Container></section>;

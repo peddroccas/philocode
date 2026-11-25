@@ -14,7 +14,7 @@ export function Contact({ message = whatsappMessages.default, label }: { message
     <section
       id="contato"
       aria-labelledby="contato-title"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-linear-to-b from-graphite to-ink py-12 text-snow md:py-20 lg:py-28"
+      className="relative isolate scroll-mt-20 overflow-hidden bg-night py-12 text-snow md:py-20 lg:py-28"
     >
       <div aria-hidden className="pointer-events-none absolute -right-24 -bottom-32 -z-10 size-[34rem] text-white/[0.045] lg:right-[-4rem]">
         <svg viewBox="0 0 100 100" className="absolute inset-0 size-full fill-none stroke-current motion-safe:animate-[spin-slow_120s_linear_infinite]" strokeWidth="0.25" strokeDasharray="0.6 2.4">

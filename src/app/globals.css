@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
-/* Tokens da marca Philocode (rebranding 2026) — monocromática. Figma: página "Rebranding 2026". */
+/*
+ * Tokens da marca Philocode (rebranding 2026) — monocromática.
+ * Direção da skill UI/UX Pro Max: "Minimalism & Swiss Style" (base clara, muito respiro, alto contraste)
+ * + "Scroll-Triggered Storytelling" (abertura escura, capítulos claros, faixas e clímax escuros).
+ * Tipografia mantida conforme o Brand Guidelines (Sora, Inter, JetBrains Mono).
+ */
 @theme {
+  /* Papéis: canvas = fundo da página, surface = cartões, ink = texto principal */
   --color-canvas: #fafafa;
   --color-surface: #ffffff;
-  --color-ink: #0b0b0b;
+  --color-ink: #09090b;
   --color-graphite: #18181b;
-  --color-muted: #4b5563;
-  --color-line: #e5e7eb;
-  /* Cinza da marca: detalhes decorativos que precisam funcionar no claro e no escuro */
-  --color-brand: #6b7280;
+  /* Texto de apoio: 7,7:1 sobre o branco */
+  --color-muted: #52525b;
+  --color-line: #e4e4e7;
+  --color-brand: #71717a;
   /* Ação principal no fundo claro */
-  --color-accent: #0b0b0b;
+  --color-accent: #09090b;
   --color-accent-strong: #27272a;
-  --color-night: #0b0b0b;
+  /* Faixas escuras (abertura, bandas e clímax) */
+  --color-night: #000000;
   --color-mist: #a1a1aa;
-  /* Texto claro fixo, para elementos que são escuros nos dois temas */
   --color-snow: #fafafa;
 
   --radius-card: 1.25rem;
-  --shadow-frame: 0 1px 2px rgb(11 11 11 / 0.06), 0 24px 48px -24px rgb(11 11 11 / 0.3);
-  --shadow-card: 0 1px 2px rgb(11 11 11 / 0.04), 0 8px 24px -16px rgb(11 11 11 / 0.16);
+  --shadow-frame: 0 1px 2px rgb(9 9 11 / 0.06), 0 24px 48px -24px rgb(9 9 11 / 0.28);
+  --shadow-card: 0 1px 2px rgb(9 9 11 / 0.04), 0 8px 24px -16px rgb(9 9 11 / 0.16);
 }
 
 @theme inline {
@@ -61,6 +67,18 @@
 
   summary::-webkit-details-marker {
     display: none;
+  }
+
+  /* Tudo que é clicável mostra a mãozinha */
+  button,
+  summary,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--color-ink);
+    color: var(--color-canvas);
   }
 }
 
@@ -112,7 +130,7 @@
 }
 
 @utility bg-pixel-grid {
-  background-image: radial-gradient(rgb(11 11 11 / 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgb(9 9 11 / 0.07) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -327,5 +345,28 @@
   &:focus-within::before {
     opacity: 1;
     inset: -9px;
+  }
+}
+
+/* ---------- Barra de progresso da leitura (CSS scroll-driven, sem JS) ---------- */
+.scroll-progress {
+  display: none;
+}
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-progress {
+      display: block;
+      transform-origin: 0 50%;
+      animation: scroll-progress linear both;
+      animation-timeline: scroll(root block);
+    }
+  }
+}
+@keyframes scroll-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
   }
 }
