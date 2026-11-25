@@ -1,9 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { company, contact, nav } from "@/content/site";
 import { whatsappLink } from "@/lib/whatsapp";
 import { Container } from "@/components/ui/Container";
-import { PixelSteps } from "@/components/ui/Icons";
+import { AnchorSymbol, Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
@@ -11,13 +10,7 @@ export function Footer() {
       <Container className="py-12 lg:py-16">
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Image
-              src="/images/philocode-logo-escuro.png"
-              alt={company.name}
-              width={427}
-              height={137}
-              className="h-14 w-auto"
-            />
+<Logo className="text-3xl text-snow" />
             <p className="mt-5 max-w-xs text-lg text-snow">{company.slogan}</p>
             <p className="mt-2 text-[0.9375rem]">{company.summary}</p>
           </div>
@@ -69,7 +62,7 @@ export function Footer() {
           <p>
             {company.legalName}{company.cnpj ? ` · CNPJ ${company.cnpj}` : ""}
           </p>
-          <PixelSteps className="h-4 w-16 text-white/20" />
+          <p className="flex items-center gap-2 font-mono text-xs text-white/40"><AnchorSymbol className="h-3.5 w-auto" />Engineering what’s next.</p>
         </div>
       </Container>
     </footer>

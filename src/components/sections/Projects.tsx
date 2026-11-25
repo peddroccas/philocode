@@ -1,7 +1,6 @@
 import { projects, type Project } from "@/content/site";
 import { BrowserFrame } from "@/components/ui/BrowserFrame";
 import { Container } from "@/components/ui/Container";
-import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
 import { ArrowUpRightIcon } from "@/components/ui/Icons";
 import { reveal } from "@/lib/reveal";
@@ -59,9 +58,6 @@ export function Projects() {
         </ul>
         <p className="mt-2 text-sm text-muted md:hidden">Arraste para o lado para ver mais.</p>
 
-        <div className="mt-10 flex justify-center">
-          <CtaButton location="projetos" className="w-full sm:w-auto" />
-        </div>
       </Container>
     </section>
   );

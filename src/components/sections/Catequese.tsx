@@ -3,6 +3,8 @@ import { BrowserFrame } from "@/components/ui/BrowserFrame";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
+import { Guarantees } from "./Guarantees";
+import { reveal } from "@/lib/reveal";
 
 /** Ilustração em código de um painel de coordenação. Dados fictícios, sem nomes reais. */
 export function CatequeseVisual() {
@@ -10,7 +12,7 @@ export function CatequeseVisual() {
     <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs text-mist"><span>PAINEL / COORDENAÇÃO</span><span className="rounded-full bg-brand/15 px-3 py-1 text-snow">Inscrições abertas</span></div>
     <div className="mt-5 space-y-3">
       <div className="rounded-xl border border-white/10 p-4"><div className="flex items-center justify-between"><p className="font-semibold">Turma Eucaristia · 2026</p><span className="font-mono text-xs text-mist">CHAMADA</span></div><div aria-hidden className="mt-3 flex gap-2">{["✓", "✓", "✓", "–", "✓", "✓"].map((mark, i) => <span key={i} className={`flex size-8 items-center justify-center rounded-md border text-sm ${mark === "✓" ? "border-brand/40 bg-brand/15 text-snow" : "border-white/10 text-mist"}`}>{mark}</span>)}</div></div>
-      <div className="flex items-center justify-between rounded-xl border border-white/10 p-4"><div><p className="font-semibold">Inscrições para aprovar</p><p className="mt-1 text-sm text-mist">Documentos enviados pelas famílias</p></div><span aria-hidden className="rounded-md bg-accent px-3 py-2 text-xs font-semibold">Aprovar</span></div>
+      <div className="flex items-center justify-between rounded-xl border border-white/10 p-4"><div><p className="font-semibold">Inscrições para aprovar</p><p className="mt-1 text-sm text-mist">Documentos enviados pelas famílias</p></div><span aria-hidden className="rounded-md bg-snow px-3 py-2 text-xs font-semibold text-ink">Aprovar</span></div>
       <div className="rounded-xl border border-white/10 p-4"><div className="flex items-center justify-between"><p className="font-semibold">Carnê do mês</p><span className="font-mono text-xs text-mist">PIX · DINHEIRO · CARTÃO</span></div><div aria-hidden className="mt-3 h-2 w-full rounded bg-white/10"><div className="h-2 w-2/3 rounded bg-brand" /></div></div>
     </div>
     <div className="mt-4 grid grid-cols-3 gap-2 text-center text-xs text-mist">{["Coordenação", "Catequistas", "Famílias"].map(label => <span key={label} className="rounded-lg border border-white/10 px-2 py-3">{label}</span>)}</div>
@@ -19,9 +21,9 @@ export function CatequeseVisual() {
 }
 export function CatequeseScreens() {
   return <section aria-labelledby="catequese-telas-title" className="border-y border-line bg-surface/60 py-14 md:py-20"><Container>
-    <SectionHeading id="catequese-telas-title" eyebrow="O sistema por dentro" title={{ before: "Veja como ele ", emphasis: "funciona", after: "." }} intro="Telas do sistema, com dados fictícios de demonstração." />
+    <SectionHeading id="catequese-telas-title" eyebrow="O sistema por dentro" title={{ before: "Veja o sistema ", emphasis: "por dentro", after: "." }} intro="Telas reais do sistema, com dados fictícios de demonstração. É isso que a coordenação usa no dia a dia." />
     <ul className="mt-10 space-y-12 lg:space-y-16">{catequese.screens.map((item, i) => <li key={item.title} className="grid items-center gap-6 lg:grid-cols-[1.45fr_1fr] lg:gap-12">
-      <BrowserFrame src={item.image} alt={item.alt} domain="sistema de catequese · dados fictícios" sizes="(min-width: 1024px) 720px, 100vw" className={i % 2 ? "lg:order-2" : ""} />
+      <BrowserFrame src={item.image} alt={item.alt} domain={`${catequese.domain} · dados fictícios`} sizes="(min-width: 1024px) 720px, 100vw" className={i % 2 ? "lg:order-2" : ""} />
       <div className={i % 2 ? "lg:order-1" : ""}><p className="font-mono text-xs text-accent">0{i + 1}</p><h3 className="mt-3 text-2xl font-semibold tracking-tight">{item.title}</h3><p className="mt-3 text-lg leading-relaxed text-muted">{item.text}</p></div>
     </li>)}</ul>
   </Container></section>;
@@ -29,19 +31,19 @@ export function CatequeseScreens() {
 export function CatequeseFeatures() {
   return <section aria-labelledby="catequese-recursos-title" className="py-14 md:py-20"><Container>
     <SectionHeading id="catequese-recursos-title" eyebrow="O que o sistema faz" title={{ before: "A catequese da paróquia em ", emphasis: "um só lugar", after: "." }} intro="Da inscrição das famílias ao carnê, a coordenação e os catequistas trabalham no mesmo sistema, pelo navegador." />
-    <div className="mt-9 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{catequese.features.map((item, i) => <article key={item.title} className="rounded-card border border-line bg-surface p-7"><span className="font-mono text-xs text-accent">0{i + 1}</span><h3 className="mt-5 text-xl font-semibold">{item.title}</h3><p className="mt-3 leading-relaxed text-muted">{item.text}</p></article>)}</div>
+    <div className="mt-9 grid gap-5 md:grid-cols-2 lg:grid-cols-3">{catequese.features.map((item, i) => <article key={item.title} {...reveal("up", i % 3)} className="brackets rounded-card border border-line bg-surface p-7"><span className="font-mono text-xs text-accent">0{i + 1}</span><h3 className="mt-5 text-xl font-semibold">{item.title}</h3><p className="mt-3 leading-relaxed text-muted">{item.text}</p></article>)}</div>
   </Container></section>;
 }
 export function CatequeseAccess() {
   return <section aria-labelledby="catequese-acessos-title" className="border-y border-line bg-surface/60 py-14 md:py-20"><Container>
-    <SectionHeading id="catequese-acessos-title" eyebrow="Acessos" title={{ before: "Cada pessoa vê o que ", emphasis: "precisa ver", after: "." }} intro="Os dados de cada paróquia ficam separados dos de outras paróquias, e os documentos das famílias ficam em armazenamento privado." />
+    <SectionHeading id="catequese-acessos-title" eyebrow="Acessos" title={{ before: "Cada pessoa vê o que ", emphasis: "precisa ver", after: "." }} intro="Coordenação e catequistas entram com acessos diferentes, e cada um encontra só o que precisa." />
     <ul className="mt-9 grid gap-6 md:grid-cols-2">{catequese.access.map(([title, text], i) => <li key={title} className="border-t-2 border-brand pt-5"><span className="font-mono text-xs text-muted">0{i + 1}</span><h3 className="mt-3 text-xl font-semibold">{title}</h3><p className="mt-3 leading-relaxed text-muted">{text}</p></li>)}</ul>
   </Container></section>;
 }
 export function CatequesePricing() {
   const { pricing } = catequese;
   return <section id="valores" aria-labelledby="valores-title" className="scroll-mt-24 py-14 md:py-20 lg:py-24"><Container>
-    <SectionHeading id="valores-title" eyebrow="Investimento" title={{ before: "Um valor, ", emphasis: "sem rodeios", after: "." }} intro="Assinatura de preço fixo, só a mensalidade. Sem pacotes por número de turmas ou de catequizandos." />
+    <SectionHeading id="valores-title" eyebrow="Investimento" title={{ before: "Um valor, ", emphasis: "sem rodeios", after: "." }} intro="Uma mensalidade fixa, sem pacotes nem cobrança por turma ou catequizando." />
     <article className="mt-9 rounded-card border border-brand bg-surface p-6 shadow-frame sm:p-8">
       <div className="grid gap-8 md:grid-cols-[1fr_1.3fr] md:items-center md:gap-0 md:divide-x md:divide-line">
         <div className="md:pr-8">
@@ -56,5 +58,6 @@ export function CatequesePricing() {
         <p className="flex items-baseline gap-1.5"><span className="text-lg">R$</span><span className="text-3xl font-semibold tracking-tight">{formatPrice(pricing.annual)}</span><span className="text-muted">à vista</span></p>
       </div>
     </article>
+    <Guarantees service="catequese" />
   </Container></section>;
 }

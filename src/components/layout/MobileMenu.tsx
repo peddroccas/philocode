@@ -52,7 +52,7 @@ export function MobileMenu() {
                   href={item.href}
                   aria-current={pathname === item.href ? "page" : undefined}
                   onClick={() => setOpen(false)}
-                  className="flex min-h-13 items-center justify-between text-lg font-medium text-ink aria-[current=page]:text-accent"
+                  className="flex min-h-13 items-center justify-between text-lg font-medium text-ink aria-[current=page]:text-ink aria-[current=page]:underline underline-offset-4"
                 >
                   {item.label}
                   <span aria-hidden className="h-0.75 w-4 rounded-full bg-line" />

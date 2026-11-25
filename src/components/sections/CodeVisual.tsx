@@ -18,7 +18,7 @@ const TOKEN = /("[^"]*"|\b(?:const|await|true|for|in|endfor)\b|\b\d+\b)/g;
 /** Divide a linha em trechos para dar cor a textos, palavras-chave e números. */
 function tokenize(line: string) {
   return line.split(TOKEN).filter(Boolean).map((text) => {
-    const tone = text.startsWith('"') ? "text-emerald-300" : /^(const|await|true|for|in|endfor|\d+)$/.test(text) ? "text-brand" : "text-snow/90";
+    const tone = text.startsWith('"') ? "text-mist" : /^(const|await|true|for|in|endfor|\d+)$/.test(text) ? "font-semibold text-white" : "text-snow/80";
     return { text, tone };
   });
 }
@@ -76,7 +76,8 @@ export function CodeVisual() {
 
   const tab = TABS[state.tab];
   const done = state.count >= TOTALS[state.tab];
-  let remaining = state.count;
+  // Início de cada linha na contagem de caracteres digitados.
+  const starts = tab.lines.map((_, i) => tab.lines.slice(0, i).reduce((sum, l) => sum + l.length, 0));
 
   return (
     <div ref={rootRef} aria-hidden className="overflow-hidden rounded-card border border-white/15 bg-night/60 text-snow shadow-frame backdrop-blur-sm">
@@ -86,28 +87,28 @@ export function CodeVisual() {
       </div>
       <div className="flex border-b border-white/10 font-mono text-xs">
         {TABS.map((item, index) => (
-          <span key={item.file} className={`border-r border-white/10 px-4 py-2.5 ${index === state.tab ? "bg-white/[0.06] text-snow shadow-[inset_0_-2px_0_var(--color-brand)]" : "text-mist"}`}>{item.file}</span>
+          <span key={item.file} className={`border-r border-white/10 px-4 py-2.5 ${index === state.tab ? "bg-white/[0.06] text-snow shadow-[inset_0_-2px_0_var(--color-snow)]" : "text-mist"}`}>{item.file}</span>
         ))}
       </div>
       <div className="h-44 overflow-hidden px-4 py-4 font-mono text-[13px] leading-6 sm:px-5">
         {tab.lines.map((line, index) => {
+          const remaining = state.count - starts[index];
           const shown = Math.max(0, Math.min(line.length, remaining));
-          remaining -= line.length;
           const typing = !done && shown > 0 && shown < line.length;
           return (
             <div key={index} className="flex min-h-6 gap-4 whitespace-pre">
               <span className="w-3 shrink-0 text-right text-white/30 select-none">{index + 1}</span>
               <span>
                 {visibleSegments(line, shown).map((segment, i) => <span key={i} className={segment.tone}>{segment.text}</span>)}
-                {typing || (!done && shown === line.length && remaining === 0) ? <span className="ml-px inline-block h-4 w-[7px] translate-y-0.5 bg-brand motion-safe:animate-pulse" /> : null}
+                {typing || (!done && shown === line.length && remaining === line.length) ? <span className="ml-px inline-block h-4 w-[7px] translate-y-0.5 bg-snow motion-safe:animate-pulse" /> : null}
               </span>
             </div>
           );
         })}
       </div>
       <div className="flex items-center justify-between border-t border-white/10 px-4 py-3 font-mono text-xs sm:px-5">
-        <span className={done ? "text-emerald-300" : "text-mist"}>{done ? "✓ build ok · publicado" : "compilando…"}</span>
-        <span className="text-mist">PhiloCode</span>
+        <span className={done ? "text-snow" : "text-mist"}>{done ? "✓ build ok · publicado" : "compilando…"}</span>
+        <span className="text-mist">philocode</span>
       </div>
     </div>
   );

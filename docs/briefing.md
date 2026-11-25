@@ -239,7 +239,7 @@ AI First, velocidade, qualidade e atendimento já aparecem no hero (prazo de 2 d
 
 ### 13.9 Contato (`Contact`)
 - **Finalidade:** última chamada com os dados reais visíveis.
-- **Conteúdo:** `h2` “Vamos colocar seu negócio *na internet*?” · apoio · botão principal · WhatsApp **(61) 99901-6604** · e-mail **pedroabernardes11@gmail.com** · “Atendimento online · Sediada em Brasília (DF)”.
+- **Conteúdo:** `h2` “Vamos colocar seu negócio *na internet*?” · apoio · botão principal · WhatsApp **(61) 98483-7618** · e-mail **philocodesystems@gmail.com** · “Atendimento online · Sediada em Brasília (DF)”.
 - **Composição:** fundo gradiente grafite da marca, texto claro, cartões de contato com borda translúcida.
 - **CTA:** `data-cta="contato"`.
 
@@ -273,7 +273,7 @@ Todas as respostas são **[Confirmado]** pelo cliente; a redação é sugerida.
 ## 15. Botões e chamadas para ação
 
 - **Texto único:** “Chamar no WhatsApp” (`primaryCta.label`). Links por cartão de serviço usam estilo de link e o mesmo canal.
-- **WhatsApp:** `https://wa.me/5561999016604?text=…` gerado por `src/lib/whatsapp.ts`.
+- **WhatsApp:** `https://wa.me/5561984837618?text=…` gerado por `src/lib/whatsapp.ts`.
 - **Mensagens pré-preenchidas [Sugerido — a validar com o cliente]:**
 
 | `data-cta` | Mensagem |
@@ -291,9 +291,9 @@ Todas as respostas são **[Confirmado]** pelo cliente; a redação é sugerida.
 
 | Dado | Valor | Status |
 |---|---|---|
-| WhatsApp | +55 61 99901-6604 | Confirmado |
+| WhatsApp | +55 61 98483-7618 | Confirmado (atualizado em 25/11/2026) |
 | Telefone fixo | mesmo número do WhatsApp | Confirmado — exibido uma vez |
-| E-mail | pedroabernardes11@gmail.com | Confirmado (informado como e-mail profissional) |
+| E-mail | philocodesystems@gmail.com | Confirmado (atualizado em 25/11/2026) |
 | Instagram / LinkedIn / outras redes | O formulário traz apenas `https://www.instagram.com/` (página inicial, sem perfil) | **Pendente** — não exibido |
 | Perfil no Google | Não possui | Confirmado |
 | Domínio | A PhiloCode ainda não tem domínio próprio. **Política para clientes:** domínio registrado no nome do cliente | **Pendente** (domínio da PhiloCode) / Confirmado (política) |

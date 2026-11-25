@@ -2,6 +2,7 @@ import { howItWorks, whatsappMessages } from "@/content/site";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
+import { reveal } from "@/lib/reveal";
 
 /** Desktop: três degraus que sobem, como a base da âncora. Mobile/tablet: lista com linha guia. */
 const stepOffsets = ["", "", "", ""];
@@ -24,11 +25,12 @@ export function Process() {
           {howItWorks.steps.map((step, index) => (
             <li
               key={step.title}
+              {...reveal("up", index)}
               className={`relative border-l-2 border-ink/15 pb-9 pl-8 last:pb-0 lg:border-t-2 lg:pt-7 lg:pr-10 lg:pb-0 lg:pl-6 ${stepOffsets[index]}`}
             >
               <span
                 aria-hidden
-                className="absolute top-0 -left-[7px] size-3 rounded-[3px] bg-brand lg:-top-[7px]"
+                className="absolute top-0 -left-[7px] size-3 rounded-[3px] bg-ink lg:-top-[7px]"
               />
               <span className="font-mono text-xs tracking-[0.08em] text-muted">PASSO 0{index + 1}</span>
               <h3 className="mt-2 text-xl leading-snug font-semibold tracking-tight text-ink">
@@ -42,7 +44,7 @@ export function Process() {
         <div
           className="mt-10 flex flex-col gap-4 rounded-card border border-line bg-surface p-5 sm:flex-row sm:items-center sm:justify-between sm:p-7 md:mt-14"
         >
-          <p className="text-lg font-medium text-ink">O primeiro passo é uma conversa.</p>
+          <p className="text-lg font-medium text-ink">O primeiro passo é só uma conversa, sem compromisso.</p>
           <CtaButton location="processo" message={whatsappMessages.process} className="w-full sm:w-auto" />
         </div>
       </Container>

@@ -1,12 +1,12 @@
 import type { CSSProperties } from "react";
 
 /**
- * Animação de entrada (CSS em globals.css + RevealObserver), usada só nas imagens de trabalho:
+ * Animação de entrada (CSS em globals.css + RevealObserver):
  * - frame / frame-left: capturas de tela que sobem levemente ao aparecer
- * - fade: etiqueta do hero
- * Textos não animam.
+ * - up: títulos de seção e cartões, em sequência pelo índice
+ * - fade: só opacidade
  */
-export type RevealVariant = "frame" | "frame-left" | "fade";
+export type RevealVariant = "frame" | "frame-left" | "fade" | "up";
 
 export function reveal(variant: RevealVariant, index = 0) {
   return {

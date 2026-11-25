@@ -1,29 +1,31 @@
 @import "tailwindcss";
 
-/* Tokens da marca PhiloCode — ver docs/briefing.md, seção 8 */
+/* Tokens da marca Philocode (rebranding 2026) — monocromática. Figma: página "Rebranding 2026". */
 @theme {
-  --color-canvas: #f8fafc;
+  --color-canvas: #fafafa;
   --color-surface: #ffffff;
-  --color-ink: #20242b;
-  --color-graphite: #2c3037;
-  --color-muted: #525a66;
-  --color-line: #e2e8f0;
-  --color-brand: #2389f8;
-  --color-accent: #1468c8;
-  --color-accent-strong: #0f57a8;
-  --color-night: #020618;
-  --color-mist: #aab2bf;
-  /* Texto claro fixo, para elementos que são escuros nos dois temas (barra de anúncio, oferta) */
-  --color-snow: #f8fafc;
+  --color-ink: #0b0b0b;
+  --color-graphite: #18181b;
+  --color-muted: #4b5563;
+  --color-line: #e5e7eb;
+  /* Cinza da marca: detalhes decorativos que precisam funcionar no claro e no escuro */
+  --color-brand: #6b7280;
+  /* Ação principal no fundo claro */
+  --color-accent: #0b0b0b;
+  --color-accent-strong: #27272a;
+  --color-night: #0b0b0b;
+  --color-mist: #a1a1aa;
+  /* Texto claro fixo, para elementos que são escuros nos dois temas */
+  --color-snow: #fafafa;
 
   --radius-card: 1.25rem;
-  --shadow-frame: 0 1px 2px rgb(2 6 24 / 0.06), 0 24px 48px -24px rgb(2 6 24 / 0.28);
-  --shadow-card: 0 1px 2px rgb(2 6 24 / 0.04), 0 8px 24px -16px rgb(2 6 24 / 0.16);
+  --shadow-frame: 0 1px 2px rgb(11 11 11 / 0.06), 0 24px 48px -24px rgb(11 11 11 / 0.3);
+  --shadow-card: 0 1px 2px rgb(11 11 11 / 0.04), 0 8px 24px -16px rgb(11 11 11 / 0.16);
 }
 
 @theme inline {
-  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif), Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
@@ -44,8 +46,15 @@
     font-family: var(--font-sans);
   }
 
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+  }
+
   :focus-visible {
-    outline: 2px solid var(--color-brand);
+    outline: 2px solid currentColor;
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -55,9 +64,10 @@
   }
 }
 
-/* Palavra em destaque dos títulos: sublinhado azul */
+/* Palavra em destaque dos títulos: sublinhado na cor do texto */
 @utility emphasis-underline {
-  background-image: linear-gradient(rgb(35 137 248 / 0.38), rgb(35 137 248 / 0.38));
+  --u: color-mix(in srgb, currentColor 28%, transparent);
+  background-image: linear-gradient(var(--u), var(--u));
   background-repeat: no-repeat;
   background-position: 0 92%;
   background-size: 100% 0.06em;
@@ -77,7 +87,7 @@
     transition-property: opacity, transform;
     transition-duration: 1s;
     transition-timing-function: var(--ease-out-expo);
-    transition-delay: calc(var(--reveal-i, 0) * 120ms);
+    transition-delay: calc(var(--reveal-i, 0) * 90ms);
     transform-origin: 50% 100%;
   }
 
@@ -90,6 +100,11 @@
     transform: translate3d(0, 32px, 0) scale(0.97);
   }
 
+  .reveal-ready [data-reveal="up"]:not([data-revealed]) {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+
   .reveal-ready [data-reveal="frame-left"]:not([data-revealed]) {
     opacity: 0;
     transform: translate3d(-24px, 32px, 0) scale(0.97);
@@ -97,6 +112,187 @@
 }
 
 @utility bg-pixel-grid {
-  background-image: radial-gradient(rgb(32 36 43 / 0.09) 1px, transparent 1px);
+  background-image: radial-gradient(rgb(11 11 11 / 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+
+/* ---------- Hero: grade de projeto (BlueprintGrid) ---------- */
+@property --mx {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 72%;
+}
+@property --my {
+  syntax: "<length-percentage>";
+  inherits: true;
+  initial-value: 38%;
+}
+
+.blueprint > * {
+  position: absolute;
+  inset: 0;
+}
+.blueprint-grid,
+.blueprint-spot {
+  --line: rgb(255 255 255 / 0.055);
+  background-image:
+    linear-gradient(to right, var(--line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: -1px -1px;
+}
+.blueprint-grid {
+  mask-image: radial-gradient(120% 90% at 75% 35%, #000 25%, transparent 85%);
+}
+.blueprint-spot {
+  --line: rgb(255 255 255 / 0.42);
+  mask-image: radial-gradient(280px circle at var(--mx) var(--my), #000, transparent 72%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.blueprint[data-active] .blueprint-spot {
+  opacity: 1;
+}
+.blueprint-guides {
+  inset: auto;
+  top: 50%;
+  right: -6%;
+  width: min(58vw, 760px);
+  height: auto;
+  aspect-ratio: 1;
+  translate: 0 -50%;
+  stroke: rgb(255 255 255 / 0.13);
+  stroke-width: 1;
+}
+.blueprint-orbit {
+  stroke-dasharray: 2 10;
+  transform-origin: 300px 300px;
+}
+@media (max-width: 1023px) {
+  .blueprint-guides {
+    top: auto;
+    bottom: -18%;
+    right: -30%;
+    width: 120vw;
+    translate: 0 0;
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .blueprint-guides [pathLength] {
+    stroke-dasharray: 1;
+    animation: draw-line 1.8s var(--ease-out-expo) both;
+  }
+  .blueprint-guides circle[pathLength]:nth-of-type(2) {
+    animation-delay: 250ms;
+  }
+  .blueprint-orbit {
+    animation: spin-slow 90s linear infinite;
+  }
+  /* Toque: o brilho passeia sozinho */
+  @media (hover: none) {
+    .blueprint-spot {
+      opacity: 1;
+      animation: spot-drift 16s ease-in-out infinite alternate;
+    }
+  }
+}
+
+@keyframes draw-line {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes spin-slow {
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes spot-drift {
+  0% {
+    --mx: 20%;
+    --my: 30%;
+  }
+  50% {
+    --mx: 80%;
+    --my: 55%;
+  }
+  100% {
+    --mx: 45%;
+    --my: 85%;
+  }
+}
+
+/* ---------- Título do hero: palavras sobem em sequência ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .word-rise {
+    display: inline-block;
+    animation: word-rise 0.9s var(--ease-out-expo) both;
+    animation-delay: calc(var(--w, 0) * 45ms + 60ms);
+  }
+  .hero-enter {
+    animation: hero-enter 0.9s var(--ease-out-expo) both;
+    animation-delay: var(--d, 450ms);
+  }
+}
+@keyframes word-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Cartões: moldura de cantos da marca ("Expansão") no hover ---------- */
+@utility brackets {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    --c: var(--color-ink);
+    --l: 16px;
+    background:
+      linear-gradient(var(--c), var(--c)) top left / var(--l) 2px,
+      linear-gradient(var(--c), var(--c)) top left / 2px var(--l),
+      linear-gradient(var(--c), var(--c)) top right / var(--l) 2px,
+      linear-gradient(var(--c), var(--c)) top right / 2px var(--l),
+      linear-gradient(var(--c), var(--c)) bottom left / var(--l) 2px,
+      linear-gradient(var(--c), var(--c)) bottom left / 2px var(--l),
+      linear-gradient(var(--c), var(--c)) bottom right / var(--l) 2px,
+      linear-gradient(var(--c), var(--c)) bottom right / 2px var(--l);
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition:
+      opacity 0.3s ease,
+      inset 0.5s var(--ease-out-expo);
+  }
+
+  &:hover::before,
+  &:focus-within::before {
+    opacity: 1;
+    inset: -9px;
+  }
 }

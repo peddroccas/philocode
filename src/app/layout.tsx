@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Figtree, Instrument_Serif, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono, Sora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL, company } from "@/content/site";
 import { CtaTracker } from "@/components/layout/CtaTracker";
@@ -9,18 +9,15 @@ import { Footer } from "@/components/layout/Footer";
 import { RevealObserver } from "@/components/layout/RevealObserver";
 import "./globals.css";
 
-const figtree = Figtree({
-  variable: "--font-figtree",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
   display: "swap",
 });
 
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
+const sora = Sora({
+  variable: "--font-sora",
   subsets: ["latin"],
-  weight: "400",
-  style: "italic",
   display: "swap",
 });
 
@@ -33,7 +30,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 const title = `${company.name} · Desenvolvimento de software`;
 const description =
-  "Desenvolvimento de software: sites, Shopify e sistema de gestão da catequese. Atendimento online para todo o Brasil, direto de Brasília.";
+  "Desenvolvimento de software: sites, Shopify e o Catequese Hub, sistema de gestão da catequese. Atendimento online para todo o Brasil, direto de Brasília.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -52,7 +49,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f8fafc",
+  themeColor: "#0b0b0b",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -60,7 +57,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-BR"
       suppressHydrationWarning
-      className={`${figtree.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} antialiased`}
+      className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable} antialiased`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: revealBootScript }} />

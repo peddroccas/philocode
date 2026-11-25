@@ -1,7 +1,8 @@
 import clsx from "clsx";
 import type { Emphasis } from "@/content/site";
+import { reveal } from "@/lib/reveal";
 
-/** Rótulo em mono com o traço azul dos braços da âncora. */
+/** Rótulo em mono com um traço curto. */
 export function Eyebrow({ children, tone = "light" }: { children: React.ReactNode; tone?: "light" | "dark" }) {
   return (
     <p
@@ -10,18 +11,18 @@ export function Eyebrow({ children, tone = "light" }: { children: React.ReactNod
         tone === "light" ? "text-muted" : "text-mist",
       )}
     >
-      <span aria-hidden className="h-0.75 w-5 rounded-full bg-brand" />
+      <span aria-hidden className={clsx("h-px w-5", tone === "light" ? "bg-ink" : "bg-snow")} />
       {children}
     </p>
   );
 }
 
-/** Título com palavra-chave em serifa itálica. */
+/** Título com palavra-chave sublinhada. */
 export function EmphasisText({ text }: { text: Emphasis }) {
   return (
     <>
       {text.before}
-      <em className="emphasis-underline font-serif font-normal tracking-normal">{text.emphasis}</em>
+      <em className="emphasis-underline not-italic">{text.emphasis}</em>
       {text.after}
     </>
   );
@@ -38,7 +39,7 @@ type SectionHeadingProps = {
 
 export function SectionHeading({ eyebrow, title, intro, id, tone = "light", className }: SectionHeadingProps) {
   return (
-    <div className={clsx("max-w-2xl", className)}>
+    <div {...reveal("up")} className={clsx("max-w-2xl", className)}>
       <Eyebrow tone={tone}>{eyebrow}</Eyebrow>
       <h2
         id={id}
