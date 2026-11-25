@@ -1,5 +1,4 @@
 import { Hero } from "@/components/sections/Hero";
-import { CodeVisual } from "@/components/sections/CodeVisual";
 import { Products, CustomSoftware } from "@/components/sections/ServicePanels";
 import { Projects } from "@/components/sections/Projects";
 import { Pains } from "@/components/sections/Pains";
@@ -16,7 +15,7 @@ export default function Home() {
       title={{ before: "Sites, lojas Shopify e sistemas que fazem o seu negócio ", emphasis: "andar", after: "." }}
       subtitle="Um site feito para receber contatos, uma loja do jeito que você imaginou ou um sistema que tira a operação das planilhas."
       proof={["Feito para o celular", "Pronto para aparecer no Google", "Nada vai ao ar sem o seu ok"]}
-    ><CodeVisual /></Hero>
+    />
     <Pains />
     <Products /><Projects /><Process /><CustomSoftware /><Faq /><Contact /><JsonLd />
   </>;

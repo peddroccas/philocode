@@ -6,19 +6,6 @@ import { SectionHeading } from "@/components/ui/Heading";
 import { Guarantees } from "./Guarantees";
 import { reveal } from "@/lib/reveal";
 
-/** Ilustração em código de um painel de coordenação. Dados fictícios, sem nomes reais. */
-export function CatequeseVisual() {
-  return <div className="rounded-card border border-white/15 bg-[#121214] p-5 text-snow shadow-frame backdrop-blur-sm sm:p-7">
-    <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs text-mist"><span>PAINEL / COORDENAÇÃO</span><span className="rounded-full bg-brand/15 px-3 py-1 text-snow">Inscrições abertas</span></div>
-    <div className="mt-5 space-y-3">
-      <div className="rounded-xl border border-white/10 p-4"><div className="flex items-center justify-between"><p className="font-semibold">Turma Eucaristia · 2026</p><span className="font-mono text-xs text-mist">CHAMADA</span></div><div aria-hidden className="mt-3 flex gap-2">{["✓", "✓", "✓", "–", "✓", "✓"].map((mark, i) => <span key={i} className={`flex size-8 items-center justify-center rounded-md border text-sm ${mark === "✓" ? "border-brand/40 bg-brand/15 text-snow" : "border-white/10 text-mist"}`}>{mark}</span>)}</div></div>
-      <div className="flex items-center justify-between rounded-xl border border-white/10 p-4"><div><p className="font-semibold">Inscrições para aprovar</p><p className="mt-1 text-sm text-mist">Documentos enviados pelas famílias</p></div><span aria-hidden className="rounded-md bg-snow px-3 py-2 text-xs font-semibold text-ink">Aprovar</span></div>
-      <div className="rounded-xl border border-white/10 p-4"><div className="flex items-center justify-between"><p className="font-semibold">Carnê do mês</p><span className="font-mono text-xs text-mist">PIX · DINHEIRO · CARTÃO</span></div><div aria-hidden className="mt-3 h-2 w-full rounded bg-white/10"><div className="h-2 w-2/3 rounded bg-brand" /></div></div>
-    </div>
-    <div className="mt-4 grid grid-cols-3 gap-2 text-center text-xs text-mist">{["Coordenação", "Catequistas", "Famílias"].map(label => <span key={label} className="rounded-lg border border-white/10 px-2 py-3">{label}</span>)}</div>
-    <p className="mt-5 text-xs leading-relaxed text-mist">Ilustração do sistema, com dados fictícios.</p>
-  </div>;
-}
 export function CatequeseScreens() {
   return <section aria-labelledby="catequese-telas-title" className="border-y border-line bg-surface/60 py-14 md:py-20"><Container>
     <SectionHeading id="catequese-telas-title" eyebrow="O sistema por dentro" title={{ before: "Veja o sistema ", emphasis: "por dentro", after: "." }} intro="Telas reais do sistema, com dados fictícios de demonstração. É isso que a coordenação usa no dia a dia." />

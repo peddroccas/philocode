@@ -228,6 +228,39 @@
   }
 }
 
+/* ---------- Hero: símbolo em contorno ---------- */
+.hero-symbol-line {
+  stroke: rgb(255 255 255 / 0.55);
+  stroke-width: 1.25;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: miter;
+}
+.hero-symbol-fill {
+  fill: rgb(255 255 255 / 0.035);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-symbol-line {
+    stroke-dasharray: 1;
+    animation: symbol-draw 2.6s var(--ease-out-expo) 0.35s both;
+  }
+  .hero-symbol-fill {
+    animation: symbol-fill 1.4s ease 1.8s both;
+  }
+}
+@keyframes symbol-draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes symbol-fill {
+  from {
+    fill: rgb(255 255 255 / 0);
+  }
+}
+
 /* ---------- Título do hero: palavras sobem em sequência ---------- */
 @media (prefers-reduced-motion: no-preference) {
   .word-rise {

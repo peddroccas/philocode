@@ -3,20 +3,8 @@ import { products, whatsappMessages } from "@/content/site";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
-import { AnchorSymbol } from "@/components/ui/Logo";
 import { reveal } from "@/lib/reveal";
 
-export function ThemeVisual() {
-  return <div className="rounded-card border border-white/15 bg-[#121214] p-5 text-snow shadow-frame sm:p-7">
-    <div className="flex items-center justify-between border-b border-white/10 pb-4 font-mono text-xs text-mist"><span>TEMA / PRÉVIA</span><span className="rounded-full bg-brand/15 px-3 py-1 text-snow">Não publicado</span></div>
-    <div className="mt-6 grid grid-cols-[.8fr_1fr] gap-5 rounded-xl border border-white/10 p-4 sm:p-6">
-      <div aria-hidden className="flex min-h-40 items-center justify-center rounded-lg bg-linear-to-br from-white/15 to-white/5"><AnchorSymbol className="h-16 w-auto text-snow/80" /></div>
-      <div className="self-center"><p className="font-mono text-[10px] tracking-widest text-mist">SUA MARCA</p><p className="mt-3 text-xl font-semibold">Seu produto,<br />bem apresentado.</p><div aria-hidden className="mt-4 h-2 w-3/4 rounded bg-white/15" /><div aria-hidden className="mt-2 h-2 w-1/2 rounded bg-white/10" /><div aria-hidden className="mt-5 rounded-md bg-snow px-3 py-2 text-center text-xs font-semibold text-ink">Adicionar ao carrinho</div></div>
-    </div>
-    <div className="mt-4 grid grid-cols-3 gap-2 text-center text-xs text-mist">{["Liquid", "Responsivo", "Editável"].map(label => <span key={label} className="rounded-lg border border-white/10 px-2 py-3">{label}</span>)}</div>
-    <p className="mt-5 text-xs leading-relaxed text-mist">Ilustração do processo.</p>
-  </div>;
-}
 export function Products() {
   return <section id="produtos" aria-labelledby="produtos-title" className="scroll-mt-24 py-14 md:py-20 lg:py-24"><Container>
     <span id="valores" className="scroll-mt-24" /><span id="lancamento" className="scroll-mt-24" />
@@ -33,28 +21,3 @@ export function CustomSoftware() {
   </Container></section>;
 }
 
-export function SiteVisual() {
-  return (
-    <div className="relative overflow-hidden rounded-card border border-white/15 bg-[#121214] p-6 text-snow shadow-frame backdrop-blur-sm sm:p-8">
-      <div aria-hidden className="absolute -top-14 -right-14 size-48 rounded-full border border-brand/20" />
-      <div aria-hidden className="absolute -top-8 -right-8 size-36 rounded-full border border-brand/20" />
-      <p className="relative font-mono text-xs tracking-widest text-mist">SEU NEGÓCIO EM PRIMEIRO PLANO</p>
-      <h2 className="relative mt-5 max-w-xs text-3xl leading-tight font-semibold tracking-tight">Da sua ideia ao próximo contato.</h2>
-      <ol className="relative mt-8 space-y-5">
-        {[
-          ["01", "Apresente seu trabalho", "Uma presença que transmite quem você é."],
-          ["02", "Organize seus serviços", "Informações claras para quem precisa de você."],
-          ["03", "Facilite o contato", "Um botão claro para começar a conversa."],
-        ].map(([number, title, text]) => (
-          <li key={number} className="flex gap-4 border-t border-white/10 pt-5">
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-lg border border-brand/30 bg-brand/10 font-mono text-xs text-snow">{number}</span>
-            <div><h3 className="font-semibold">{title}</h3><p className="mt-1 text-sm leading-relaxed text-mist">{text}</p></div>
-          </li>
-        ))}
-      </ol>
-      <div className="mt-7 flex flex-wrap gap-2 border-t border-white/10 pt-5 text-xs text-mist">
-        {["Sua identidade", "Celular e computador", "Seu domínio"].map(label => <span key={label} className="rounded-full border border-white/15 px-3 py-2">{label}</span>)}
-      </div>
-    </div>
-  );
-}

@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { Eyebrow } from "@/components/ui/Heading";
 import { BlueprintGrid } from "./BlueprintGrid";
+import { HeroSymbol } from "./HeroSymbol";
 import { catequeseCtaLabel, whatsappMessages, type Emphasis, type Service } from "@/content/site";
 
 /** Divide o título em palavras que sobem em sequência (CSS .word-rise; parado com "reduzir movimento"). */
@@ -25,8 +26,8 @@ function risingWords(title: Emphasis) {
 
 const enter = (delay: number) => ({ className: "hero-enter", style: { "--d": `${delay}ms` } as CSSProperties });
 
-type Props = { eyebrow: string; title: Emphasis; subtitle: string; service?: Service; proof?: string[]; children?: React.ReactNode };
-export function Hero({ eyebrow, title, subtitle, service, proof, children }: Props) {
+type Props = { eyebrow: string; title: Emphasis; subtitle: string; service?: Service; proof?: string[] };
+export function Hero({ eyebrow, title, subtitle, service, proof }: Props) {
   return (
     <section id="inicio" aria-labelledby="hero-title" className="relative isolate scroll-mt-24 overflow-hidden bg-[radial-gradient(120%_90%_at_80%_10%,#1c1c1f_0%,#0f0f10_55%,var(--color-night)_100%)]">
       <BlueprintGrid className="absolute inset-0 -z-10" />
@@ -39,7 +40,7 @@ export function Hero({ eyebrow, title, subtitle, service, proof, children }: Pro
           <div {...enter(480)} className={`${enter(480).className} mt-8 flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-5`}><CtaButton tone="dark" location={`${service ?? "home"}-hero`} message={whatsappMessages[service ?? "default"]} label={service === "catequese" ? catequeseCtaLabel : undefined} className="w-full sm:w-auto" /><a href={service ? "#valores" : "#produtos"} data-cta={`${service ?? "home"}-ver-valores`} className="inline-flex min-h-11 items-center gap-2 font-semibold text-snow underline decoration-white/30 underline-offset-4 hover:decoration-snow">{service ? "Ver serviços e valores" : "Conhecer produtos"} <span aria-hidden>↓</span></a></div>
           {proof ? <ul {...enter(580)} className={`${enter(580).className} mt-7 flex flex-wrap gap-x-5 gap-y-2 text-sm text-mist`}>{proof.map(item => <li key={item} className="flex items-center gap-2"><span aria-hidden className="text-snow">✓</span>{item}</li>)}</ul> : <p {...enter(580)} className={`${enter(580).className} mt-7 flex items-center gap-2 text-sm text-mist`}><span aria-hidden className="size-1.5 rounded-full bg-snow" />Atendimento direto · Brasília para todo o Brasil</p>}
         </div>
-        <div {...enter(520)}>{children}</div>
+        <HeroSymbol />
       </Container>
     </section>
   );
