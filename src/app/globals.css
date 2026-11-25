@@ -129,67 +129,58 @@
   initial-value: 38%;
 }
 
+.blueprint {
+  --cell: 56px;
+  --major: calc(var(--cell) * 4);
+}
 .blueprint > * {
   position: absolute;
   inset: 0;
 }
+/* Brilho suave atrás do visual da direita */
+.blueprint-glow {
+  background: radial-gradient(60% 70% at 78% 45%, rgb(255 255 255 / 0.07), transparent 70%);
+}
 .blueprint-grid,
 .blueprint-spot {
-  --line: rgb(255 255 255 / 0.055);
+  --minor: rgb(255 255 255 / 0.035);
+  --strong: rgb(255 255 255 / 0.075);
   background-image:
-    linear-gradient(to right, var(--line) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--line) 1px, transparent 1px);
-  background-size: 56px 56px;
+    linear-gradient(to right, var(--strong) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--strong) 1px, transparent 1px),
+    linear-gradient(to right, var(--minor) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--minor) 1px, transparent 1px);
+  background-size:
+    var(--major) var(--major),
+    var(--major) var(--major),
+    var(--cell) var(--cell),
+    var(--cell) var(--cell);
   background-position: -1px -1px;
 }
-.blueprint-grid {
-  mask-image: radial-gradient(120% 90% at 75% 35%, #000 25%, transparent 85%);
+.blueprint-grid,
+.blueprint-marks {
+  mask-image: radial-gradient(110% 95% at 78% 40%, #000 30%, transparent 85%);
+}
+/* Marcas "+" nas interseções das linhas principais */
+.blueprint-marks {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='224' height='224'%3E%3Cpath d='M0 -6v12M-6 0h12M224 -6v12M218 0h12M0 218v12M-6 224h12M224 218v12M218 224h12' stroke='white' stroke-opacity='.45' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-size: var(--major) var(--major);
+  background-position: -1px -1px;
 }
 .blueprint-spot {
-  --line: rgb(255 255 255 / 0.42);
-  mask-image: radial-gradient(280px circle at var(--mx) var(--my), #000, transparent 72%);
+  --minor: rgb(255 255 255 / 0.16);
+  --strong: rgb(255 255 255 / 0.34);
+  mask-image: radial-gradient(260px circle at var(--mx) var(--my), #000, transparent 72%);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 .blueprint[data-active] .blueprint-spot {
   opacity: 1;
 }
-.blueprint-guides {
-  inset: auto;
-  top: 50%;
-  right: -6%;
-  width: min(58vw, 760px);
-  height: auto;
-  aspect-ratio: 1;
-  translate: 0 -50%;
-  stroke: rgb(255 255 255 / 0.13);
-  stroke-width: 1;
-}
-.blueprint-orbit {
-  stroke-dasharray: 2 10;
-  transform-origin: 300px 300px;
-}
-@media (max-width: 1023px) {
-  .blueprint-guides {
-    top: auto;
-    bottom: -18%;
-    right: -30%;
-    width: 120vw;
-    translate: 0 0;
-    opacity: 0.6;
-  }
-}
 
 @media (prefers-reduced-motion: no-preference) {
-  .blueprint-guides [pathLength] {
-    stroke-dasharray: 1;
-    animation: draw-line 1.8s var(--ease-out-expo) both;
-  }
-  .blueprint-guides circle[pathLength]:nth-of-type(2) {
-    animation-delay: 250ms;
-  }
-  .blueprint-orbit {
-    animation: spin-slow 90s linear infinite;
+  .blueprint-marks {
+    animation: marks-in 1.6s var(--ease-out-expo) 0.3s both;
   }
   /* Toque: o brilho passeia sozinho */
   @media (hover: none) {
@@ -200,12 +191,14 @@
   }
 }
 
-@keyframes draw-line {
+@keyframes marks-in {
   from {
-    stroke-dashoffset: 1;
+    opacity: 0;
+    transform: scale(1.04);
   }
   to {
-    stroke-dashoffset: 0;
+    opacity: 1;
+    transform: none;
   }
 }
 @keyframes spin-slow {
