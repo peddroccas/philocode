@@ -13,7 +13,7 @@ export function RevealObserver() {
     const root = document.documentElement;
 
     if (!("IntersectionObserver" in window)) {
-      root.classList.remove("reveal-ready");
+      root.classList.remove("js-reveal");
       root.dataset.revealBound = "true";
       return;
     }
@@ -67,4 +67,4 @@ export function RevealObserver() {
  * Executado antes da primeira pintura: ativa os estados iniciais das animações.
  * Se o JavaScript não carregar em 3,5 s, o conteúdo volta a aparecer sem animação.
  */
-export const revealBootScript = `(function(){var d=document.documentElement;d.classList.add("reveal-ready");setTimeout(function(){if(!d.dataset.revealBound){d.classList.remove("reveal-ready")}},3500)})();`;
+export const revealBootScript = `(function(){var d=document.documentElement;d.classList.add("js-reveal");setTimeout(function(){if(!d.dataset.revealBound){d.classList.remove("js-reveal")}},3500)})();`;

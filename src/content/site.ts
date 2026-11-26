@@ -70,13 +70,12 @@ export type Project = {
 
 /** Portfólio informado no formulário. [A CONFIRMAR: autorização de cada cliente para exibição] */
 export const projects = {
-  eyebrow: "Projetos",
   title: { before: "Sites que você pode ", emphasis: "abrir agora", after: "." } satisfies Emphasis,
   intro: "Projetos reais, no ar. Clique e veja como cada um funciona no celular e no computador.",
   items: [
     {
       name: "Mateus Marques Rosa",
-      segment: "Advocacia criminal · Brasília (DF)",
+      segment: "Advocacia criminal, Brasília (DF)",
       description: "Site com áreas de atuação, forma de atendimento e contato direto pelo WhatsApp.",
       url: "https://adv-mateus-marques.vercel.app/",
       domain: "adv-mateus-marques.vercel.app",
@@ -85,7 +84,7 @@ export const projects = {
     },
     {
       name: "Laura Antunes",
-      segment: "Psicologia · Psicoterapia on-line",
+      segment: "Psicologia, psicoterapia on-line",
       description: "Site com atendimentos, perguntas frequentes e agendamento de conversa.",
       url: "https://laura-antunes.vercel.app/",
       domain: "laura-antunes.vercel.app",
@@ -94,7 +93,7 @@ export const projects = {
     },
     {
       name: "Jaqueline Trigueiro",
-      segment: "Design de sobrancelhas · Ceilândia (DF)",
+      segment: "Design de sobrancelhas, Ceilândia (DF)",
       description: "Site com serviços, antes e depois, o espaço de atendimento e agendamento pelo WhatsApp.",
       url: "https://jaqueline-trigueiro.vercel.app/",
       domain: "jaqueline-trigueiro.vercel.app",
@@ -103,7 +102,7 @@ export const projects = {
     },
     {
       name: "Rafaela Antunes",
-      segment: "Farmacêutica clínica · Saúde e performance",
+      segment: "Farmacêutica clínica, saúde e performance",
       description: "Site com a trajetória da profissional e o método que ela oferece.",
       url: "https://www.farmarafaelaantunes.com/",
       domain: "farmarafaelaantunes.com",
@@ -115,7 +114,7 @@ export const projects = {
 
 
 export const howItWorks = {
-  eyebrow: "Como funciona", title: { before: "Do primeiro “oi” ao projeto no ar, ", emphasis: "sem surpresa", after: "." },
+  title: { before: "Do primeiro “oi” ao projeto no ar, ", emphasis: "sem surpresa", after: "." },
   steps: [
     { title: "Conversa", text: "Você conta o que precisa pelo WhatsApp, com as suas palavras. Nada de formulário longo." },
     { title: "Proposta", text: "Você recebe por escrito o escopo, o investimento, as revisões e o prazo, e só então decide." },
@@ -189,9 +188,8 @@ export const products = [
 ];
 /** Seções "Isso soa familiar?": problema antes do produto, nas palavras do cliente. */
 export type PainItem = { who?: string; pain: string; fix: string; href?: string; link?: string };
-export type PainsContent = { eyebrow: string; title: Emphasis; items: PainItem[] };
+export type PainsContent = { title: Emphasis; items: PainItem[] };
 export const pains: PainsContent = {
-  eyebrow: "Isso soa familiar?",
   title: { before: "Talvez você esteja ", emphasis: "aqui", after: "." },
   items: [
     { who: "Profissionais e empresas", pain: "“Os clientes me procuram no Google e encontram o concorrente.”", fix: "Um site claro, rápido e com um caminho direto para o WhatsApp.", href: "/criacao-de-sites", link: "Ver criação de sites" },
@@ -200,7 +198,6 @@ export const pains: PainsContent = {
   ],
 };
 export const sitePains: PainsContent = {
-  eyebrow: "Isso soa familiar?",
   title: { before: "Seu trabalho é bom. Falta ", emphasis: "ser encontrado", after: "." },
   items: [
     { pain: "“Quem me indica manda o meu Instagram, e a pessoa não entende o que eu faço.”", fix: "Uma página que explica seus serviços em segundos, com o botão certo para a pessoa te chamar." },
@@ -209,7 +206,6 @@ export const sitePains: PainsContent = {
   ],
 };
 export const shopifyPains: PainsContent = {
-  eyebrow: "Isso soa familiar?",
   title: { before: "O tema quase serve. ", emphasis: "Quase", after: "." },
   items: [
     { pain: "“Falta aquela seção que a minha página de produto precisa, e o tema não tem.”", fix: "Seções personalizadas em Liquid, editáveis no próprio editor do tema." },
@@ -218,7 +214,6 @@ export const shopifyPains: PainsContent = {
   ],
 };
 export const catequesePains: PainsContent = {
-  eyebrow: "Isso soa familiar?",
   title: { before: "A coordenação merece ", emphasis: "menos papel", after: "." },
   items: [
     { pain: "“Todo início de ano é uma pilha de fichas e documentos para conferir.”", fix: "As famílias se inscrevem pelo celular e enviam os documentos. A coordenação só aprova." },
@@ -240,8 +235,8 @@ export const homeFaq: FaqItem[] = [
   { question: "Os valores do site são o orçamento final?", answer: "São preços iniciais para escopos específicos. A proposta confirma entregas, investimento e prazo antes do início. Novos preços não alteram as condições de contratos existentes." },
 ];
 export const contactSection = {
-  eyebrow: "Contato", title: { before: "Vamos tirar o seu projeto ", emphasis: "do papel", after: "?" },
-  text: "Mande uma mensagem contando o que você precisa, do seu jeito. A gente responde com os próximos passos.", facts: ["Brasília (DF) · Atendimento online para todo o Brasil"],
+  title: { before: "Vamos tirar o seu projeto ", emphasis: "do papel", after: "?" },
+  text: "Mande uma mensagem contando o que você precisa, do seu jeito. A gente responde com os próximos passos.", facts: ["Brasília (DF)", "Atendimento online para todo o Brasil"],
 };
 export type Testimonial = { quote: string; author: string; role: string };
 export const testimonials: Testimonial[] = [];

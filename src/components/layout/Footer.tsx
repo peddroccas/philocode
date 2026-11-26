@@ -2,21 +2,21 @@ import Link from "next/link";
 import { company, contact, nav } from "@/content/site";
 import { whatsappLink } from "@/lib/whatsapp";
 import { Container } from "@/components/ui/Container";
-import { AnchorSymbol, Logo } from "@/components/ui/Logo";
+import { Logo } from "@/components/ui/Logo";
 
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-night text-mist">
       <Container className="py-12 lg:py-16">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
-          <div>
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
+          <div className="md:col-span-2 lg:col-span-1">
 <Logo className="text-3xl text-snow" />
             <p className="mt-5 max-w-xs text-lg text-snow">{company.slogan}</p>
             <p className="mt-2 text-[0.9375rem]">{company.summary}</p>
           </div>
 
           <nav aria-label="Rodapé">
-            <h2 className="font-mono text-xs tracking-[0.08em] text-snow uppercase">Navegação</h2>
+            <h2 className="text-sm font-semibold text-snow">Navegação</h2>
             <ul className="mt-4 grid gap-1">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -29,7 +29,7 @@ export function Footer() {
           </nav>
 
           <div>
-            <h2 className="font-mono text-xs tracking-[0.08em] text-snow uppercase">Contato</h2>
+            <h2 className="text-sm font-semibold text-snow">Contato</h2>
             <ul className="mt-4 grid gap-1">
               <li>
                 <a
@@ -55,9 +55,8 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
           <p>
-            {company.legalName}{company.cnpj ? ` · CNPJ ${company.cnpj}` : ""}
+            © {company.legalName}{company.cnpj ? `, CNPJ ${company.cnpj}` : ""}
           </p>
-          <p className="flex items-center gap-2 font-mono text-xs text-white/40"><AnchorSymbol className="h-3.5 w-auto" />Engineering what’s next.</p>
         </div>
       </Container>
     </footer>

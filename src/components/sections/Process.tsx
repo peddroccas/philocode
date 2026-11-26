@@ -17,7 +17,7 @@ export function Process() {
       <Container>
         <SectionHeading
           id="como-funciona-title"
-          eyebrow={howItWorks.eyebrow}
+         
           title={howItWorks.title}
         />
 
@@ -32,7 +32,7 @@ export function Process() {
                 aria-hidden
                 className="absolute top-0 -left-[7px] size-3 rounded-[3px] bg-ink lg:-top-[7px]"
               />
-              <span className="font-mono text-xs tracking-[0.08em] text-muted">PASSO 0{index + 1}</span>
+              <span className="text-sm font-medium text-muted">Passo {index + 1}</span>
               <h3 className="mt-2 text-xl leading-snug font-semibold tracking-tight text-ink">
                 {step.title}
               </h3>

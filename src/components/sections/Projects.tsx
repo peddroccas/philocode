@@ -2,7 +2,6 @@ import { projects, type Project } from "@/content/site";
 import { BrowserFrame } from "@/components/ui/BrowserFrame";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/Heading";
-import { ArrowUpRightIcon } from "@/components/ui/Icons";
 import { reveal } from "@/lib/reveal";
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -16,11 +15,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         alt={project.alt}
         domain={project.domain}
         sizes="(min-width: 768px) 46vw, 85vw"
-        className="shadow-none"
+        flat
       />
       <div className="px-2 pb-2">
-        <p className="font-mono text-xs tracking-[0.08em] text-muted uppercase">{project.segment}</p>
-        <h3 className="mt-2 text-xl font-semibold tracking-tight text-ink">{project.name}</h3>
+        <h3 className="text-xl font-semibold tracking-tight text-ink">{project.name}</h3>
+        <p className="mt-1 text-sm font-medium text-muted">{project.segment}</p>
         <p className="mt-2 leading-relaxed text-muted">{project.description}</p>
         <a
           href={project.url}
@@ -30,7 +29,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         >
           Ver site no ar
           <span className="sr-only"> de {project.name} (abre em nova aba)</span>
-          <ArrowUpRightIcon className="size-4 text-brand motion-safe:transition-transform motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover:translate-x-0.5" />
         </a>
       </div>
     </li>
@@ -45,7 +43,7 @@ export function Projects() {
       className="scroll-mt-20 bg-surface/60 py-12 md:py-20 lg:py-28"
     >
       <Container>
-        <SectionHeading id="projetos-title" eyebrow={projects.eyebrow} title={projects.title} intro={projects.intro} />
+        <SectionHeading id="projetos-title" title={projects.title} intro={projects.intro} />
 
         {/* Celular: carrossel com rolagem lateral. A partir de md: grade 2 × 2. */}
         <ul

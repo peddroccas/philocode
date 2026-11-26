@@ -13,7 +13,7 @@ export function Faq({ items = homeFaq, message = whatsappMessages.faq, label }: 
     >
       <Container className="grid gap-10 lg:grid-cols-[1fr_1.5fr] lg:gap-16">
         <div className="contents lg:block">
-          <SectionHeading id="duvidas-title" eyebrow="Dúvidas" title={{ before: "Perguntas ", emphasis: "frequentes", after: "." }} />
+          <SectionHeading id="duvidas-title" title={{ before: "Perguntas ", emphasis: "frequentes", after: "." }} />
 
           <aside
             className="order-last rounded-card border border-line bg-surface p-7 shadow-card lg:sticky lg:top-28 lg:mt-10">

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { primaryCta, whatsappMessages } from "@/content/site";
 import { whatsappLink } from "@/lib/whatsapp";
-import { ArrowRightIcon, WhatsAppIcon } from "./Icons";
+import { WhatsAppIcon } from "./Icons";
 
 type CtaButtonProps = {
   /** Valor do atributo data-cta, para medição futura. */
@@ -26,8 +26,8 @@ export function CtaButton({ location, message = whatsappMessages.default, label,
       className={clsx(
         "group inline-flex items-center justify-center gap-2.5 rounded-full font-semibold transition-[background-color,box-shadow,transform] duration-200 hover:-translate-y-px",
         tone === "dark"
-          ? "bg-snow text-night shadow-[0_8px_28px_-10px_rgb(255_255_255/0.45)] hover:bg-white active:bg-white/90"
-          : "bg-accent text-snow shadow-[0_8px_20px_-10px_rgb(9_9_11/0.55)] hover:bg-accent-strong active:bg-accent-strong",
+          ? "bg-snow text-night shadow-cta-dark hover:bg-white active:bg-white/90"
+          : "bg-accent text-snow shadow-cta hover:bg-accent-strong active:bg-accent-strong",
         size === "lg" ? "min-h-13 px-5 text-[0.9375rem] sm:px-6 sm:text-base" : "min-h-11 px-5 text-[0.9375rem]",
         className,
       )}
@@ -35,7 +35,6 @@ export function CtaButton({ location, message = whatsappMessages.default, label,
       <WhatsAppIcon className="size-5 shrink-0" />
       <span className="whitespace-nowrap">{label ?? primaryCta.label}</span>
       <span className="sr-only"> (abre o WhatsApp em nova aba)</span>
-      <ArrowRightIcon className="hidden size-4 shrink-0 min-[400px]:block motion-safe:transition-transform motion-safe:group-hover:translate-x-0.5" />
     </a>
   );
 }
@@ -62,7 +61,6 @@ export function CtaLink({ location, message, children, className }: CtaLinkProps
     >
       {children}
       <span className="sr-only"> (abre o WhatsApp em nova aba)</span>
-      <ArrowRightIcon className="ml-1.5 inline size-4 align-[-2px] text-ink motion-safe:transition-transform motion-safe:group-hover:translate-x-0.5" />
     </a>
   );
 }

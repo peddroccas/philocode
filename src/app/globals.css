@@ -1,3 +1,12 @@
+/* Hallmark · checked: 2026-11-26 · genre: modern-minimal (inferred) · surface: absolute
+ * floor: 0 FAIL · fixed: 26a, 33, 34, 38iii, 47a, 48, 54, 58, 62, 63, 64, 66, 67, 71 · structural: printed (3, 8, 42, 58, 59, 77) · finish-review: subagent, 5 resolved
+ * built: the project · redesign: polish · v2.0.0 */
+/* Hallmark · waive 7b · surface: absolute, the night bands keep snow text at 19:1 · the Philocode brand is monochrome and its night bands are the pure black of the guide */
+/* Hallmark · waive 26b · no form control and no aria-disabled anywhere on the site · every Philocode control is a link to WhatsApp, e-mail or a page, nothing can be disabled */
+/* Hallmark · waive 72 · the answer paragraph sits inside a closed <details> and is measured while hidden · each FAQ answer on the Philocode pages has 24px of padding once the question is opened */
+/* Hallmark · answered F20 · the three proof items in the Shopify hero wrap only by text length, and they read as a list, not a grid */
+/* Hallmark · dismissed 49 · the long label is the sr-only "(abre o WhatsApp em nova aba)" text, never painted */
+/* Hallmark · dismissed 54 · SectionHeading renders a real <h2> with the id the section is labelled by */
 @import "tailwindcss";
 
 /*
@@ -23,10 +32,17 @@
   --color-night: #000000;
   --color-mist: #a1a1aa;
   --color-snow: #fafafa;
+  /* Fundo do hero: brilho no canto, escurecendo até o night */
+  --color-hero-glow: #1c1c1f;
+  --color-hero-mid: #0f0f10;
+  /* Anel de foco: ink no claro; as faixas escuras trocam para snow (ver .bg-night, .hero-surface) */
+  --color-focus: var(--color-ink);
 
   --radius-card: 1.25rem;
   --shadow-frame: 0 1px 2px rgb(9 9 11 / 0.06), 0 24px 48px -24px rgb(9 9 11 / 0.28);
   --shadow-card: 0 1px 2px rgb(9 9 11 / 0.04), 0 8px 24px -16px rgb(9 9 11 / 0.16);
+  --shadow-cta: 0 8px 20px -10px rgb(9 9 11 / 0.55);
+  --shadow-cta-dark: 0 8px 28px -10px rgb(255 255 255 / 0.45);
 }
 
 @theme inline {
@@ -38,6 +54,9 @@
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
+    overflow-x: clip;
+    scrollbar-color: var(--color-brand) var(--color-canvas);
+    caret-color: var(--color-ink);
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -57,12 +76,19 @@
   h3 {
     font-family: var(--font-display);
     letter-spacing: -0.025em;
+    text-wrap: balance;
   }
 
   :focus-visible {
-    outline: 2px solid currentColor;
+    outline: 2px solid var(--color-focus);
     outline-offset: 3px;
     border-radius: 4px;
+  }
+
+  /* Faixas escuras: o anel de foco passa a ser claro */
+  .bg-night,
+  .hero-surface {
+    --color-focus: var(--color-snow);
   }
 
   summary::-webkit-details-marker {
@@ -82,16 +108,6 @@
   }
 }
 
-/* Palavra em destaque dos títulos: sublinhado na cor do texto */
-@utility emphasis-underline {
-  --u: color-mix(in srgb, currentColor 28%, transparent);
-  background-image: linear-gradient(var(--u), var(--u));
-  background-repeat: no-repeat;
-  background-position: 0 92%;
-  background-size: 100% 0.06em;
-  padding-inline: 0.04em;
-}
-
 /*
  * Animação de entrada (ver src/lib/reveal.ts): só nas imagens de trabalho
  * (capturas do hero e cartões de projetos). Textos ficam sempre parados.
@@ -101,7 +117,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .reveal-ready [data-reveal] {
+  .js-reveal [data-reveal] {
     transition-property: opacity, transform;
     transition-duration: 1s;
     transition-timing-function: var(--ease-out-expo);
@@ -109,28 +125,28 @@
     transform-origin: 50% 100%;
   }
 
-  .reveal-ready [data-reveal="fade"]:not([data-revealed]) {
+  .js-reveal [data-reveal="fade"]:not([data-revealed]) {
     opacity: 0;
   }
 
-  .reveal-ready [data-reveal="frame"]:not([data-revealed]) {
+  .js-reveal [data-reveal="frame"]:not([data-revealed]) {
     opacity: 0;
     transform: translate3d(0, 32px, 0) scale(0.97);
   }
 
-  .reveal-ready [data-reveal="up"]:not([data-revealed]) {
+  .js-reveal [data-reveal="up"]:not([data-revealed]) {
     opacity: 0;
     transform: translate3d(0, 28px, 0);
   }
 
-  .reveal-ready [data-reveal="frame-left"]:not([data-revealed]) {
+  .js-reveal [data-reveal="frame-left"]:not([data-revealed]) {
     opacity: 0;
     transform: translate3d(-24px, 32px, 0) scale(0.97);
   }
 }
 
 @utility bg-pixel-grid {
-  background-image: radial-gradient(rgb(9 9 11 / 0.07) 1px, transparent 1px);
+  background-image: radial-gradient(color-mix(in srgb, var(--color-ink) 7%, transparent) 1px, transparent 1px);
   background-size: 24px 24px;
 }
 
@@ -157,13 +173,13 @@
 }
 /* Brilho suave atrás do visual da direita */
 .blueprint-glow {
-  background: radial-gradient(60% 70% at 78% 45%, rgb(255 255 255 / 0.07), transparent 70%);
+  background: radial-gradient(60% 70% at 78% 45%, color-mix(in srgb, var(--color-snow) 7%, transparent), transparent 70%);
 }
 .blueprint-grid,
 .blueprint-scan,
 .blueprint-spot {
-  --minor: rgb(255 255 255 / 0.035);
-  --strong: rgb(255 255 255 / 0.075);
+  --minor: color-mix(in srgb, var(--color-snow) 3.5%, transparent);
+  --strong: color-mix(in srgb, var(--color-snow) 7.5%, transparent);
   background-image:
     linear-gradient(to right, var(--strong) 1px, transparent 1px),
     linear-gradient(to bottom, var(--strong) 1px, transparent 1px),
@@ -177,13 +193,13 @@
   background-position: -1px -1px;
 }
 .blueprint-grid {
-  mask-image: radial-gradient(110% 95% at 78% 40%, #000 30%, transparent 85%);
+  mask-image: radial-gradient(110% 95% at 78% 40%, var(--color-night) 30%, transparent 85%);
 }
 /* Luz sob o cursor */
 .blueprint-spot {
-  --minor: rgb(255 255 255 / 0.16);
-  --strong: rgb(255 255 255 / 0.34);
-  mask-image: radial-gradient(260px circle at var(--mx) var(--my), #000, transparent 72%);
+  --minor: color-mix(in srgb, var(--color-snow) 16%, transparent);
+  --strong: color-mix(in srgb, var(--color-snow) 34%, transparent);
+  mask-image: radial-gradient(260px circle at var(--mx) var(--my), var(--color-night), transparent 72%);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -194,11 +210,11 @@
 }
 /* Faixa de luz que percorre a grade de cima a baixo */
 .blueprint-scan {
-  --minor: rgb(255 255 255 / 0.09);
-  --strong: rgb(255 255 255 / 0.2);
+  --minor: color-mix(in srgb, var(--color-snow) 9%, transparent);
+  --strong: color-mix(in srgb, var(--color-snow) 20%, transparent);
   mask-image:
-    linear-gradient(to bottom, transparent calc(var(--scan) - 12%), #000 var(--scan), transparent calc(var(--scan) + 12%)),
-    radial-gradient(110% 95% at 78% 40%, #000 30%, transparent 85%);
+    linear-gradient(to bottom, transparent calc(var(--scan) - 12%), var(--color-night) var(--scan), transparent calc(var(--scan) + 12%)),
+    radial-gradient(110% 95% at 78% 40%, var(--color-night) 30%, transparent 85%);
   mask-composite: intersect;
 }
 .blueprint[data-active] .blueprint-spot {
@@ -248,13 +264,13 @@
 
 /* ---------- Hero: símbolo em contorno ---------- */
 .hero-symbol-line {
-  stroke: rgb(255 255 255 / 0.55);
+  stroke: color-mix(in srgb, var(--color-snow) 55%, transparent);
   stroke-width: 1.25;
   vector-effect: non-scaling-stroke;
   stroke-linejoin: miter;
 }
 .hero-symbol-fill {
-  fill: rgb(255 255 255 / 0.035);
+  fill: color-mix(in srgb, var(--color-snow) 3.5%, transparent);
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero-symbol-line {
@@ -275,7 +291,7 @@
 }
 @keyframes symbol-fill {
   from {
-    fill: rgb(255 255 255 / 0);
+    fill: transparent;
   }
 }
 
@@ -369,4 +385,9 @@
   to {
     transform: scaleX(1);
   }
+}
+
+/* ---------- Hero: fundo escuro com brilho no canto ---------- */
+.hero-surface {
+  background: radial-gradient(120% 90% at 80% 10%, var(--color-hero-glow) 0%, var(--color-hero-mid) 55%, var(--color-night) 100%);
 }
