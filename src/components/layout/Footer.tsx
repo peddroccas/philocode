@@ -4,23 +4,42 @@ import { whatsappLink } from "@/lib/whatsapp";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 
+/** Colofão: a marca, um parágrafo com quem somos e como falar, e os links do site. */
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-night text-mist">
-      <Container className="py-12 lg:py-16">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr]">
-          <div className="md:col-span-2 lg:col-span-1">
-<Logo className="text-3xl text-snow" />
-            <p className="mt-5 max-w-xs text-lg text-snow">{company.slogan}</p>
-            <p className="mt-2 text-[0.9375rem]">{company.summary}</p>
-          </div>
+    <footer className="border-t border-night-line bg-night text-mist">
+      <Container className="grid gap-12 py-16 lg:grid-cols-12 lg:gap-8 lg:py-20">
+        <div className="lg:col-span-5">
+          <Logo className="text-3xl text-snow" />
+          <p className="mt-6 text-lead text-snow">{company.slogan}</p>
+        </div>
 
-          <nav aria-label="Rodapé">
-            <h2 className="text-sm font-semibold text-snow">Navegação</h2>
-            <ul className="mt-4 grid gap-1">
+        <div className="lg:col-span-7">
+          <p className="max-w-[60ch] text-[0.9375rem] leading-relaxed">
+            {company.summary} {company.legalName}, {company.city} ({company.state}). Fale pelo{" "}
+            <a
+              href={whatsappLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              data-cta="rodape"
+              className="whitespace-nowrap text-snow underline decoration-night-line underline-offset-4 hover:decoration-snow"
+            >
+              WhatsApp {contact.whatsappDisplay}
+              <span className="sr-only"> (abre em nova aba)</span>
+            </a>{" "}
+            ou pelo e-mail{" "}
+            <a href={`mailto:${contact.email}`} className="text-snow underline decoration-night-line underline-offset-4 hover:decoration-snow">
+              {contact.email}
+            </a>
+            .
+          </p>
+
+          <nav aria-label="Rodapé" className="mt-10">
+            <h2 className="sr-only">Navegação</h2>
+            <ul className="flex flex-wrap gap-x-8 gap-y-1">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="inline-flex min-h-10 items-center hover:text-snow">
+                  <Link href={item.href} className="inline-flex min-h-11 items-center hover:text-snow">
                     {item.label}
                   </Link>
                 </li>
@@ -28,34 +47,9 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div>
-            <h2 className="text-sm font-semibold text-snow">Contato</h2>
-            <ul className="mt-4 grid gap-1">
-              <li>
-                <a
-                  href={whatsappLink()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-cta="rodape"
-                  className="inline-flex min-h-10 items-center hover:text-snow"
-                >
-                  WhatsApp {contact.whatsappDisplay}
-                  <span className="sr-only"> (abre em nova aba)</span>
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${contact.email}`} className="inline-flex min-h-10 items-center break-all hover:text-snow">
-                  {contact.email}
-                </a>
-              </li>
-              <li className="pt-1 text-[0.9375rem]">{company.city} ({company.state})</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-sm sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {company.legalName}{company.cnpj ? `, CNPJ ${company.cnpj}` : ""}
+          <p className="mt-10 border-t border-night-line pt-6 text-sm">
+            © {company.legalName}
+            {company.cnpj ? `, CNPJ ${company.cnpj}` : ""}
           </p>
         </div>
       </Container>

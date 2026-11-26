@@ -3,74 +3,53 @@ import { whatsappLink } from "@/lib/whatsapp";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { SectionHeading } from "@/components/ui/Heading";
-import { MailIcon, WhatsAppIcon } from "@/components/ui/Icons";
-import { AnchorSymbol } from "@/components/ui/Logo";
 
-const cardClass =
-  "flex min-h-20 items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 transition-colors";
-
+/** Fechamento de toda página: o convite, e o telefone e o e-mail em tipo grande. */
 export function Contact({ message = whatsappMessages.default, label }: { message?: string; label?: string }) {
   return (
-    <section
-      id="contato"
-      aria-labelledby="contato-title"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-night py-12 text-snow md:py-20 lg:py-28"
-    >
-      <div aria-hidden className="pointer-events-none absolute -right-24 -bottom-32 -z-10 size-[34rem] text-white/[0.045] lg:right-[-4rem]">
-        <svg viewBox="0 0 100 100" className="absolute inset-0 size-full fill-none stroke-current motion-safe:animate-[spin-slow_120s_linear_infinite]" strokeWidth="0.25" strokeDasharray="0.6 2.4">
-          <circle cx="50" cy="50" r="49" />
-        </svg>
-        <AnchorSymbol className="absolute inset-[22%] size-[56%]" />
-      </div>
-      <Container className="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16">
-        <div>
-          <SectionHeading
-            id="contato-title"
-            tone="dark"
-           
-            title={contactSection.title}
-            intro={contactSection.text}
-          />
-          <div>
-            <CtaButton tone="dark" location="contato" message={message} label={label} className="mt-9 w-full sm:w-auto" />
-          </div>
-          <ul className="mt-6 grid gap-1 text-[0.9375rem] text-mist">
-            {contactSection.facts.map((fact) => (
-              <li key={fact}>{fact}</li>
-            ))}
-          </ul>
+    <section id="contato" aria-labelledby="contato-title" className="scroll-mt-20 bg-night-2 py-[var(--section-gap)] text-snow">
+      <Container className="grid gap-14 lg:grid-cols-12 lg:items-end lg:gap-8">
+        <div className="lg:col-span-6">
+          <SectionHeading id="contato-title" tone="dark" title={contactSection.title} intro={contactSection.text} />
+          <CtaButton tone="dark" location="contato" message={message} label={label} className="mt-10 w-full sm:w-auto" />
         </div>
 
-        <ul className="grid gap-3">
-          <li>
-            <a
-              href={whatsappLink(message)}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-cta="contato-whatsapp"
-              className={`${cardClass} hover:border-white/25 hover:bg-white/[0.07]`}
-            >
-              <WhatsAppIcon className="size-6 shrink-0 text-snow" />
-              <span>
-                <span className="block text-sm font-medium text-mist">WhatsApp</span>
-                <span className="mt-0.5 block text-lg font-semibold">{contact.whatsappDisplay}</span>
-              </span>
-              <span className="sr-only"> (abre em nova aba)</span>
-            </a>
-          </li>
-          <li>
-            <a href={`mailto:${contact.email}`} className={`${cardClass} hover:border-white/25 hover:bg-white/[0.07]`}>
-              <MailIcon className="size-6 shrink-0 text-snow" />
-              <span className="min-w-0">
-                <span className="block text-sm font-medium text-mist">E-mail</span>
-                <span className="mt-0.5 block text-lg font-semibold break-all">{contact.email}</span>
-              </span>
-            </a>
-          </li>
-          <li className="px-1 pt-1 text-sm text-mist">
-            {company.legalName}, {company.city} ({company.state})
-          </li>
-        </ul>
+        <div className="grid gap-10 border-t border-night-line pt-10 lg:col-span-6 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-12">
+        <dl className="grid gap-10">
+          <div>
+            <dt className="text-sm text-mist">WhatsApp</dt>
+            <dd className="mt-2">
+              <a
+                href={whatsappLink(message)}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-cta="contato-whatsapp"
+                className="font-display text-[1.75rem] font-semibold tracking-tight whitespace-nowrap text-snow underline decoration-night-line decoration-2 underline-offset-8 hover:decoration-snow"
+              >
+                {contact.whatsappDisplay}
+                <span className="sr-only"> (abre em nova aba)</span>
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt className="text-sm text-mist">E-mail</dt>
+            <dd className="mt-2">
+              <a
+                href={`mailto:${contact.email}`}
+                className="text-lg font-semibold break-all text-snow underline sm:text-title decoration-night-line decoration-2 underline-offset-8 hover:decoration-snow"
+              >
+                {contact.email}
+              </a>
+            </dd>
+          </div>
+        </dl>
+          <div className="text-[0.9375rem] text-mist">
+            <p>{company.legalName}, {company.city} ({company.state})</p>
+            {contactSection.facts.slice(1).map((fact) => (
+              <p key={fact}>{fact}</p>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   );

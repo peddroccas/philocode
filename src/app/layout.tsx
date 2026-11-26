@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono, Sora } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL, company } from "@/content/site";
 import { CtaTracker } from "@/components/layout/CtaTracker";
@@ -18,13 +18,6 @@ const inter = Inter({
 const sora = Sora({
   variable: "--font-sora",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  weight: "500",
   display: "swap",
 });
 
@@ -57,7 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-BR"
       suppressHydrationWarning
-      className={`${inter.variable} ${sora.variable} ${jetbrainsMono.variable} antialiased`}
+      className={`${inter.variable} ${sora.variable} antialiased`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: revealBootScript }} />

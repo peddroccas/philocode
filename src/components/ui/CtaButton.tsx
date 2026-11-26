@@ -44,10 +44,11 @@ type CtaLinkProps = {
   message: string;
   children: React.ReactNode;
   className?: string;
+  tone?: "light" | "dark";
 };
 
 /** Chamada secundária em estilo de link, pelo mesmo canal. */
-export function CtaLink({ location, message, children, className }: CtaLinkProps) {
+export function CtaLink({ location, message, children, className, tone = "light" }: CtaLinkProps) {
   return (
     <a
       href={whatsappLink(message)}
@@ -55,7 +56,8 @@ export function CtaLink({ location, message, children, className }: CtaLinkProps
       rel="noopener noreferrer"
       data-cta={location}
       className={clsx(
-        "group inline-block py-3 leading-snug font-semibold text-ink underline decoration-line decoration-2 underline-offset-[6px] transition-colors hover:decoration-ink",
+        "group inline-block py-3 leading-snug font-semibold underline decoration-2 underline-offset-[6px] transition-colors",
+        tone === "dark" ? "text-snow decoration-night-line hover:decoration-snow" : "text-ink decoration-line hover:decoration-ink",
         className,
       )}
     >

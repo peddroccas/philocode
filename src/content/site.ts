@@ -26,8 +26,12 @@ export const whatsappMessages = {
 };
 export const nav = [
   { label: "Início", href: "/" }, { label: "Sites", href: "/criacao-de-sites" },
-  { label: "Shopify", href: "/shopify" }, { label: "Catequese", href: "/sistema-catequese" },
+  { label: "Shopify", href: "/shopify" }, { label: "Catequese", href: "/catequese-hub" },
   { label: "Projetos", href: "/#projetos" }, { label: "Contato", href: "/#contato" },
+];
+/** Links do topo: os três produtos. Início, Projetos e Contato ficam no rodapé. */
+export const primaryNav = [
+  { label: "Sites", href: "/criacao-de-sites" }, { label: "Shopify", href: "/shopify" }, { label: "Catequese Hub", href: "/catequese-hub" },
 ];
 export const formatPrice = (value: number) => value.toLocaleString("pt-BR");
 export function offerMessage(offer: Offer, service: Service) {
@@ -184,7 +188,7 @@ export const catequeseFaq: FaqItem[] = [
 export const products = [
   { n: "01", title: "Criação de sites", desc: "Para profissionais e empresas que precisam ser encontrados na internet e receber contatos pelo WhatsApp.", points: ["Página profissional, landing page ou institucional", "Pronto para o celular e para o Google", "Publicado no seu domínio"], priceLabel: "Projetos a partir de", price: `R$ ${formatPrice(siteOffers[0].price)}`, href: "/criacao-de-sites", link: "Ver formatos e preços" },
   { n: "02", title: "Desenvolvimento Shopify", desc: "Para lojas e agências que querem a loja do jeito que imaginaram, sem brigar com o tema.", points: ["Seções e ajustes em Liquid", "Páginas de produto e de campanha", "Prévia aprovada antes de publicar"], priceLabel: "Ajustes pontuais a partir de", price: `R$ ${formatPrice(shopifyOffers[0].price)}`, href: "/shopify", link: "Ver serviços e preços" },
-  { n: "03", title: "Catequese Hub", desc: "O sistema online para catequeses que querem tudo organizado, sem fichas de papel nem planilhas espalhadas.", points: ["Inscrição online das famílias", "Turmas, chamadas e carnê", "Acesso para coordenação e catequistas"], priceLabel: "Assinatura mensal", price: `R$ ${formatPrice(catequese.pricing.monthly)}/mês`, href: "/sistema-catequese", link: "Ver o sistema por dentro" },
+  { n: "03", title: "Catequese Hub", desc: "O sistema online para catequeses que querem tudo organizado, sem fichas de papel nem planilhas espalhadas.", points: ["Inscrição online das famílias", "Turmas, chamadas e carnê", "Acesso para coordenação e catequistas"], priceLabel: "Assinatura mensal", price: `R$ ${formatPrice(catequese.pricing.monthly)}/mês`, href: "/catequese-hub", link: "Ver o sistema por dentro" },
 ];
 /** Seções "Isso soa familiar?": problema antes do produto, nas palavras do cliente. */
 export type PainItem = { who?: string; pain: string; fix: string; href?: string; link?: string };
@@ -194,7 +198,7 @@ export const pains: PainsContent = {
   items: [
     { who: "Profissionais e empresas", pain: "“Os clientes me procuram no Google e encontram o concorrente.”", fix: "Um site claro, rápido e com um caminho direto para o WhatsApp.", href: "/criacao-de-sites", link: "Ver criação de sites" },
     { who: "Lojas Shopify e agências", pain: "“Toda mudança na loja vira uma briga com o tema.”", fix: "Seções, páginas e ajustes em Liquid, feitos sob medida para o seu tema.", href: "/shopify", link: "Ver desenvolvimento Shopify" },
-    { who: "Catequeses", pain: "“A catequese vive em planilhas, papéis e grupos de WhatsApp.”", fix: "Inscrições, turmas, chamadas e carnê em um só sistema online.", href: "/sistema-catequese", link: "Conhecer o Catequese Hub" },
+    { who: "Catequeses", pain: "“A catequese vive em planilhas, papéis e grupos de WhatsApp.”", fix: "Inscrições, turmas, chamadas e carnê em um só sistema online.", href: "/catequese-hub", link: "Conhecer o Catequese Hub" },
   ],
 };
 export const sitePains: PainsContent = {

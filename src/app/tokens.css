@@ -1,0 +1,90 @@
+/*
+ * Tokens da marca Philocode, no formato do Hallmark (theme: brand).
+ * Monocromática: o preto é a cor de ação; as faixas escuras usam o night.
+ * Nomes do projeto mantidos (canvas, surface, ink, line); os papéis do Hallmark estão em design.md.
+ */
+@theme static {
+  /* Papel e tinta */
+  --color-canvas: #fafafa;
+  --color-surface: #ffffff;
+  --color-well: #f4f4f5;
+  --color-ink: #09090b;
+  --color-graphite: #18181b;
+  /* Texto de apoio: 7,7:1 sobre o branco */
+  --color-muted: #52525b;
+  --color-line: #e4e4e7;
+  --color-brand: #71717a;
+  /* Ação principal no fundo claro */
+  --color-accent: #09090b;
+  --color-accent-strong: #27272a;
+  /* Faixas escuras (abertura e fechamento) */
+  --color-night: #000000;
+  --color-night-2: #0f0f10;
+  --color-night-line: #27272a;
+  --color-mist: #a1a1aa;
+  --color-snow: #fafafa;
+  /* Fundo do hero: brilho no canto, escurecendo até o night */
+  --color-hero-glow: #1c1c1f;
+  --color-hero-mid: #0f0f10;
+  /* Anel de foco: ink no claro; as faixas escuras trocam para snow */
+  --color-focus: #09090b;
+
+  /* Escala de tipo do Hallmark (nomes próprios, sem sobrescrever os do Tailwind) */
+  --text-display: clamp(2.25rem, 2.2vw + 1.25rem, 3.25rem);
+  --text-display--line-height: 1.04;
+  --text-display-s: clamp(2rem, 1.6vw + 1.25rem, 2.75rem);
+  --text-display-s--line-height: 1.06;
+  --text-section: clamp(1.625rem, 0.9vw + 1.25rem, 2.25rem);
+  --text-section--line-height: 1.12;
+  --text-title: clamp(1.125rem, 0.4vw + 1rem, 1.375rem);
+  --text-title--line-height: 1.2;
+  --text-lead: clamp(1.0625rem, 0.2vw + 1rem, 1.1875rem);
+  --text-lead--line-height: 1.5;
+  --text-md: 1rem;
+
+  --radius-card: 1rem;
+  --radius-frame: 0.75rem;
+  --shadow-frame: 0 1px 2px rgb(9 9 11 / 0.06), 0 24px 48px -24px rgb(9 9 11 / 0.28);
+  --shadow-cta: 0 8px 20px -10px rgb(9 9 11 / 0.55);
+  --shadow-cta-dark: 0 8px 28px -10px rgb(255 255 255 / 0.45);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-4xl: 144px;
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+  --container: 1440px;
+  --gutter: 64px;
+  --gap-columns: 32px;
+  --section-gap-s: 56px;
+  --section-gap: 64px;
+  --section-gap-l: 80px;
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 200;
+  --z-sticky-nav: 300;
+  --rule-hair: 1px;
+}
+@media (max-width: 60rem) {
+  :root { --gutter: 24px; --section-gap-s: 48px; --section-gap: 56px; --section-gap-l: 64px; }
+}
+@media (max-width: 40rem) {
+  :root { --gutter: 16px; --section-gap-s: 40px; --section-gap: 48px; --section-gap-l: 56px; --gap-columns: 16px; }
+}

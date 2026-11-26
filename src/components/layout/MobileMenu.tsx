@@ -9,7 +9,7 @@ import { CloseIcon, MenuIcon } from "@/components/ui/Icons";
 
 export function MobileMenu() {
   const pathname = usePathname();
-  const service = pathname === "/shopify" ? "shopify" : pathname === "/criacao-de-sites" ? "sites" : pathname === "/sistema-catequese" ? "catequese" : "default";
+  const service = pathname === "/shopify" ? "shopify" : pathname === "/criacao-de-sites" ? "sites" : pathname === "/catequese-hub" ? "catequese" : "default";
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
 
@@ -44,7 +44,7 @@ export function MobileMenu() {
         hidden={!open}
         className="absolute inset-x-0 top-full border-b border-line bg-surface shadow-card"
       >
-        <nav aria-label="Menu" className="mx-auto max-w-312 px-5 pt-2 pb-6 sm:px-8">
+        <nav aria-label="Menu" className="container pt-2 pb-6">
           <ul className="divide-y divide-line">
             {nav.map((item) => (
               <li key={item.href}>
@@ -55,7 +55,6 @@ export function MobileMenu() {
                   className="flex min-h-13 items-center justify-between text-lg font-medium text-ink aria-[current=page]:text-ink aria-[current=page]:underline underline-offset-4"
                 >
                   {item.label}
-                  <span aria-hidden className="h-0.75 w-4 rounded-full bg-line" />
                 </Link>
               </li>
             ))}

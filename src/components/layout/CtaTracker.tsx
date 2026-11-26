@@ -8,7 +8,7 @@ export function CtaTracker() {
   useEffect(() => {
     function context() {
       const page = window.location.pathname;
-      return { page, service: page === "/shopify" ? "shopify" : page === "/criacao-de-sites" ? "sites" : "home" };
+      return { page, service: page === "/shopify" ? "shopify" : page === "/criacao-de-sites" ? "sites" : page === "/catequese-hub" ? "catequese" : "home" };
     }
     function onClick(event: MouseEvent) {
       const target = event.target instanceof Element ? event.target.closest<HTMLAnchorElement>("a[data-cta]") : null;

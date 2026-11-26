@@ -1,5 +1,6 @@
 import clsx from "clsx";
 
+/** O container único do site: 1440px, gutter de 64px (24px no tablet, 16px no celular). Ver .container em base.css. */
 export function Container({ className, children }: { className?: string; children: React.ReactNode }) {
-  return <div className={clsx("mx-auto w-full max-w-312 px-5 sm:px-8", className)}>{children}</div>;
+  return <div className={clsx("container", className)}>{children}</div>;
 }

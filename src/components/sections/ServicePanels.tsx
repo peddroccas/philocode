@@ -1,23 +1,123 @@
 import Link from "next/link";
-import { products, whatsappMessages } from "@/content/site";
+import { catequese, formatPrice, pains, products, projects, shopifyOffers, whatsappMessages } from "@/content/site";
 import { Container } from "@/components/ui/Container";
 import { CtaButton } from "@/components/ui/CtaButton";
-import { SectionHeading } from "@/components/ui/Heading";
+import { BrowserFrame } from "@/components/ui/BrowserFrame";
 import { reveal } from "@/lib/reveal";
 
-export function Products() {
-  return <section id="produtos" aria-labelledby="produtos-title" className="scroll-mt-24 py-14 md:py-20 lg:py-24"><Container>
-    <span id="valores" className="scroll-mt-24" /><span id="lancamento" className="scroll-mt-24" />
-    <SectionHeading id="produtos-title" title={{ before: "Três caminhos. ", emphasis: "Escolha o seu", after: "." }} intro="Cada produto atende um tipo de negócio. Comece pelo que se parece com o seu." />
-    <div className="mt-9 grid gap-5 lg:grid-cols-3">
-      {products.map((item, i) => <article key={item.n} {...reveal("up", i)} className="brackets flex flex-col rounded-card border border-line bg-surface p-7 sm:p-8"><h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">{item.title}</h3><p className="mt-4 leading-relaxed text-muted">{item.desc}</p><ul className="my-6 space-y-3">{item.points.map(point => <li key={point} className="flex gap-3"><span aria-hidden className="text-brand">↗</span>{point}</li>)}</ul><div className="mt-auto border-t border-line pt-6"><p className="text-sm text-muted">{item.priceLabel}</p><p className="mt-1 text-2xl font-semibold">{item.price}</p><Link href={item.href} data-cta={`home-produto-${item.n}`} className="mt-5 inline-flex min-h-11 items-center gap-3 font-semibold text-ink underline decoration-line underline-offset-4 hover:decoration-ink">{item.link}</Link></div></article>)}
-    </div>
-  </Container></section>;
-}
-export function CustomSoftware() {
-  return <section aria-labelledby="sob-medida-title" className="bg-night py-14 text-snow md:py-20"><Container className="grid items-center gap-8 lg:grid-cols-[1.4fr_1fr]">
-    <div><h2 id="sob-medida-title" className="text-3xl font-semibold tracking-tight sm:text-4xl">Nenhum sistema pronto resolve o seu caso?</h2><p className="mt-5 max-w-2xl text-lg leading-relaxed text-mist">Sistemas internos, automações e integrações para a sua operação. Conte a ideia e avaliamos juntos o que faz sentido construir.</p></div>
-    <div className="lg:justify-self-end"><CtaButton location="home-sob-medida" message={whatsappMessages.custom} label="Contar minha ideia" tone="dark" /></div>
-  </Container></section>;
+/** O que cada produto mostra ao lado do texto: uma captura real ou, sem captura, os próprios preços. */
+function ProductVisual({ index }: { index: number }) {
+  if (index === 0) {
+    const project = projects.items[1];
+    return <BrowserFrame src={project.image} alt={project.alt} domain={project.domain} sizes="(min-width: 1024px) 52vw, 100vw" />;
+  }
+  if (index === 2) {
+    const screen = catequese.screens[1];
+    return <BrowserFrame src={screen.image} alt={screen.alt} domain={`${catequese.domain}, dados fictícios`} sizes="(min-width: 1024px) 52vw, 100vw" />;
+  }
+  return (
+    <table className="w-full text-left">
+      <caption className="sr-only">Alguns serviços Shopify e os preços de partida</caption>
+      <tbody>
+        {shopifyOffers.slice(0, 3).map((offer) => (
+          <tr key={offer.id} className="border-b border-line">
+            <th scope="row" className="py-4 pr-6 font-semibold text-ink">{offer.name}</th>
+            <td className="num py-4 text-right font-display text-title font-semibold whitespace-nowrap text-ink">R$ {formatPrice(offer.price)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
 }
 
+/** Início · Feature Stack: o título fica fixo à esquerda; os três produtos passam à direita, cada um aberto pela frase de quem precisa dele. */
+export function Products() {
+  return (
+    <section id="produtos" aria-labelledby="produtos-title" className="scroll-mt-24 bg-canvas py-[var(--section-gap)]">
+      <span id="valores" className="block scroll-mt-24" />
+      <span id="lancamento" className="block scroll-mt-24" />
+      <span id="familiar" className="block scroll-mt-24" />
+      <Container className="grid gap-14 lg:grid-cols-12 lg:gap-8">
+        <div {...reveal("up")} className="lg:sticky lg:top-28 lg:col-span-4 lg:self-start">
+          <h2 id="produtos-title" className="text-section text-ink">
+            Três caminhos. Escolha o seu.
+          </h2>
+          <p className="mt-4 max-w-[34ch] text-lead text-muted">Cada produto atende um tipo de negócio. Comece pelo que se parece com o seu.</p>
+          <ol aria-label="Os três caminhos" className="mt-8 hidden border-t border-ink lg:block">
+            {products.map((item) => (
+              <li key={item.n} className="border-b border-line">
+                <a href={`#caminho-${item.n}`} className="group flex min-h-14 items-center justify-between gap-4 py-3">
+                  <span className="font-semibold text-ink underline decoration-transparent decoration-2 underline-offset-[6px] transition-colors group-hover:decoration-ink">{item.title}</span>
+                  <span className="num text-sm whitespace-nowrap text-muted">{item.price}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <ol className="grid gap-[var(--space-2xl)] lg:col-span-7 lg:col-start-6">
+          {products.map((item, i) => {
+            const pain = pains.items[i];
+            return (
+              <li key={item.n} id={`caminho-${item.n}`} className="scroll-mt-28 border-t-2 border-ink pt-8">
+                <article aria-labelledby={`produto-${item.n}`} className="grid gap-7">
+                  <header className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                    <h3 id={`produto-${item.n}`} className="text-[1.75rem] leading-tight text-ink">{item.title}</h3>
+                    <p className="text-sm text-muted">
+                      {item.priceLabel} <span className="num font-display text-title font-semibold whitespace-nowrap text-ink">{item.price}</span>
+                    </p>
+                  </header>
+                  <figure>
+                    <blockquote className="font-display text-title leading-[1.3] font-semibold tracking-tight text-ink">{pain.pain}</blockquote>
+                    <figcaption className="mt-2 text-sm text-muted">{pain.who}</figcaption>
+                  </figure>
+                  <div {...reveal("up")}>
+                    <ProductVisual index={i} />
+                  </div>
+                  <div className="grid gap-5 sm:grid-cols-[1fr_auto] sm:items-end">
+                    <div>
+                      <p className="max-w-[52ch] font-medium text-ink">{pain.fix}</p>
+                      <p className="mt-2 max-w-[52ch] leading-relaxed text-muted">{item.desc}</p>
+                      <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-[0.9375rem] text-ink">
+                        {item.points.map((point) => (
+                          <li key={point} className="flex items-baseline gap-2">
+                            <span aria-hidden className="text-brand">✓</span>
+                            {point}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <Link
+                      href={item.href}
+                      data-cta={`home-produto-${item.n}`}
+                      className="inline-flex min-h-11 items-center font-semibold whitespace-nowrap text-ink underline decoration-line decoration-2 underline-offset-[6px] hover:decoration-ink"
+                    >
+                      {item.link}
+                    </Link>
+                  </div>
+                </article>
+              </li>
+            );
+          })}
+        </ol>
+      </Container>
+    </section>
+  );
+}
+
+/** Início · Statement: a pergunta do software sob medida, em uma frase grande. */
+export function CustomSoftware() {
+  return (
+    <section aria-labelledby="sob-medida-title" className="bg-well py-[var(--section-gap-s)]">
+      <Container className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-8">
+        <h2 id="sob-medida-title" {...reveal("up")} className="max-w-[22ch] text-section text-ink lg:col-span-8">
+          Nenhum sistema pronto resolve o seu caso?
+        </h2>
+        <div className="lg:col-span-4">
+          <p className="max-w-[40ch] text-lead text-muted">Sistemas internos, automações e integrações para a sua operação. Conte a ideia e avaliamos juntos o que faz sentido construir.</p>
+          <CtaButton location="home-sob-medida" message={whatsappMessages.custom} label="Contar minha ideia" className="mt-8 w-full sm:w-auto" />
+        </div>
+      </Container>
+    </section>
+  );
+}

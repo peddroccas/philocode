@@ -1,157 +1,59 @@
-/* Hallmark · checked: 2026-11-26 · genre: modern-minimal (inferred) · surface: absolute
- * floor: 0 FAIL · fixed: 26a, 33, 34, 38iii, 47a, 48, 54, 58, 62, 63, 64, 66, 67, 71 · structural: printed (3, 8, 42, 58, 59, 77) · finish-review: subagent, 5 resolved
- * built: the project · redesign: polish · v2.0.0 */
+/* Hallmark · shape: Feature Stack (/), Bento Grid (/criacao-de-sites), Narrative Workflow (/shopify), Workbench (/catequese-hub) · genre: modern-minimal · theme: brand · redesign: full
+ * paper: #fafafa · accent: #09090b (ink) · display: Sora · body: Inter · hero: Poster (/), Index (/criacao-de-sites), Banner (/shopify), Stage (/catequese-hub) · nav: edge-aligned · footer: colophon block · signature: the anchor drawn on its construction grid, and the real Catequese Hub screens
+ * axes: light/geometric-sans/neutral · posture: restrained · contrast: pass · fold: pass · draw: bc72a7 (/), 1815b6 (/criacao-de-sites), 64612f (/shopify), 98735f (/catequese-hub) · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, the service pages could belong to any studio; each now leads with its own material (formats and prices, the Shopify request in three stages, the real Catequese Hub screens) */
 /* Hallmark · waive 7b · surface: absolute, the night bands keep snow text at 19:1 · the Philocode brand is monochrome and its night bands are the pure black of the guide */
 /* Hallmark · waive 26b · no form control and no aria-disabled anywhere on the site · every Philocode control is a link to WhatsApp, e-mail or a page, nothing can be disabled */
-/* Hallmark · waive 72 · the answer paragraph sits inside a closed <details> and is measured while hidden · each FAQ answer on the Philocode pages has 24px of padding once the question is opened */
-/* Hallmark · answered F20 · the three proof items in the Shopify hero wrap only by text length, and they read as a list, not a grid */
+/* Hallmark · waive 72 · the answer paragraph sits inside a closed <details> and is measured while hidden · each FAQ answer on the Philocode pages has its padding once the question is opened */
+/* Hallmark · waive 44c · hero: Poster (/) and Banner (/shopify) by design; the Index and Stage heroes centre their content in a full-height screen · the Philocode home lets the anchor fill the screen and the Shopify page opens on a half-screen banner so its first stage shows */
+/* Hallmark · waive 77 · the contact close is each page's one band, its WhatsApp number and e-mail set large beside the invitation · the Philocode close is a plain phone and e-mail, the hire anatomy's ending */
+/* Hallmark · answered F20 · the three points under each Philocode product wrap by text length and read as a list, not a grid */
+/* Hallmark · waive 59 · sections part by --section-gap-s, --section-gap and --section-gap-l (56, 64 and 80px at 1440, so two neighbours sit about 120 to 160px apart), mixed · the owner found the Philocode section margins too large at 120 to 176px */
+/* Hallmark · waive 78 · section heads at --text-section, about 36px at 1440 · the owner found the Philocode section titles too large at 44 to 52px and asked for a smaller scale */
+/* Hallmark · dropped /sistema-catequese · the owner renamed the page to /catequese-hub; next.config.ts redirects the old address with a 308 */
+/* Hallmark · dropped Talvez você esteja aqui., Contato, Escolha o formato. O preço já está aqui., A coordenação merece menos papel., Ajuste ou correção, Seção personalizada, Página Shopify, Configuração de loja, Personalização ampliada, Desenvolvimento avulso · the quotes now open each product, the formats are the sites hero, and the Shopify offers are the rows of a price table whose first cell names each one */
+/* Hallmark · waive 71 · the Catequese Hub feature rows set each title beside its text and quote, so the space under a title is its row · each Philocode row is parted from the next by a hairline and 32px */
 /* Hallmark · dismissed 49 · the long label is the sr-only "(abre o WhatsApp em nova aba)" text, never painted */
 /* Hallmark · dismissed 54 · SectionHeading renders a real <h2> with the id the section is labelled by */
 @import "tailwindcss";
+@import "./tokens.css";
+@import "./base.css" layer(base);
 
-/*
- * Tokens da marca Philocode (rebranding 2026) — monocromática.
- * Direção da skill UI/UX Pro Max: "Minimalism & Swiss Style" (base clara, muito respiro, alto contraste)
- * + "Scroll-Triggered Storytelling" (abertura escura, capítulos claros, faixas e clímax escuros).
- * Tipografia mantida conforme o Brand Guidelines (Sora, Inter, JetBrains Mono).
- */
-@theme {
-  /* Papéis: canvas = fundo da página, surface = cartões, ink = texto principal */
-  --color-canvas: #fafafa;
-  --color-surface: #ffffff;
-  --color-ink: #09090b;
-  --color-graphite: #18181b;
-  /* Texto de apoio: 7,7:1 sobre o branco */
-  --color-muted: #52525b;
-  --color-line: #e4e4e7;
-  --color-brand: #71717a;
-  /* Ação principal no fundo claro */
-  --color-accent: #09090b;
-  --color-accent-strong: #27272a;
-  /* Faixas escuras (abertura, bandas e clímax) */
-  --color-night: #000000;
-  --color-mist: #a1a1aa;
-  --color-snow: #fafafa;
-  /* Fundo do hero: brilho no canto, escurecendo até o night */
-  --color-hero-glow: #1c1c1f;
-  --color-hero-mid: #0f0f10;
-  /* Anel de foco: ink no claro; as faixas escuras trocam para snow (ver .bg-night, .hero-surface) */
-  --color-focus: var(--color-ink);
-
-  --radius-card: 1.25rem;
-  --shadow-frame: 0 1px 2px rgb(9 9 11 / 0.06), 0 24px 48px -24px rgb(9 9 11 / 0.28);
-  --shadow-card: 0 1px 2px rgb(9 9 11 / 0.04), 0 8px 24px -16px rgb(9 9 11 / 0.16);
-  --shadow-cta: 0 8px 20px -10px rgb(9 9 11 / 0.55);
-  --shadow-cta-dark: 0 8px 28px -10px rgb(255 255 255 / 0.45);
+/* O container único do site (substitui o utilitário container do Tailwind): 1440px, gutter de 64px */
+@utility container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
 }
 
-@theme inline {
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-sora), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
-}
-
-@layer base {
-  html {
-    -webkit-text-size-adjust: 100%;
-    overflow-x: clip;
-    scrollbar-color: var(--color-brand) var(--color-canvas);
-    caret-color: var(--color-ink);
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
-  }
-
-  body {
-    background-color: var(--color-canvas);
-    color: var(--color-ink);
-    font-family: var(--font-sans);
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-family: var(--font-display);
-    letter-spacing: -0.025em;
-    text-wrap: balance;
-  }
-
-  :focus-visible {
-    outline: 2px solid var(--color-focus);
-    outline-offset: 3px;
-    border-radius: 4px;
-  }
-
-  /* Faixas escuras: o anel de foco passa a ser claro */
-  .bg-night,
-  .hero-surface {
-    --color-focus: var(--color-snow);
-  }
-
-  summary::-webkit-details-marker {
-    display: none;
-  }
-
-  /* Tudo que é clicável mostra a mãozinha */
-  button,
-  summary,
-  [role="button"] {
-    cursor: pointer;
-  }
-
-  ::selection {
-    background: var(--color-ink);
-    color: var(--color-canvas);
-  }
-}
-
-/*
- * Animação de entrada (ver src/lib/reveal.ts): só nas imagens de trabalho
- * (capturas do hero e cartões de projetos). Textos ficam sempre parados.
- */
-:root {
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-}
-
+/* ---------- Revelação na rolagem (src/lib/reveal.ts + RevealObserver): só com JS, visível sem ele ---------- */
 @media (prefers-reduced-motion: no-preference) {
   .js-reveal [data-reveal] {
     transition-property: opacity, transform;
-    transition-duration: 1s;
+    transition-duration: 0.7s;
     transition-timing-function: var(--ease-out-expo);
-    transition-delay: calc(var(--reveal-i, 0) * 90ms);
-    transform-origin: 50% 100%;
+    transition-delay: calc(var(--reveal-i, 0) * 70ms);
   }
 
   .js-reveal [data-reveal="fade"]:not([data-revealed]) {
     opacity: 0;
   }
 
-  .js-reveal [data-reveal="frame"]:not([data-revealed]) {
-    opacity: 0;
-    transform: translate3d(0, 32px, 0) scale(0.97);
-  }
-
-  .js-reveal [data-reveal="up"]:not([data-revealed]) {
-    opacity: 0;
-    transform: translate3d(0, 28px, 0);
-  }
-
+  .js-reveal [data-reveal="up"]:not([data-revealed]),
+  .js-reveal [data-reveal="frame"]:not([data-revealed]),
   .js-reveal [data-reveal="frame-left"]:not([data-revealed]) {
     opacity: 0;
-    transform: translate3d(-24px, 32px, 0) scale(0.97);
+    transform: translate3d(0, 16px, 0);
   }
 }
 
-@utility bg-pixel-grid {
-  background-image: radial-gradient(color-mix(in srgb, var(--color-ink) 7%, transparent) 1px, transparent 1px);
-  background-size: 24px 24px;
+/* ---------- Hero: fundo escuro com brilho no canto ---------- */
+.hero-surface {
+  background: radial-gradient(120% 90% at 80% 10%, var(--color-hero-glow) 0%, var(--color-hero-mid) 55%, var(--color-night) 100%);
 }
 
-
-/* ---------- Hero: grade de projeto (BlueprintGrid) ---------- */
+/* ---------- Hero: grade de construção da âncora (BlueprintGrid) ---------- */
 @property --mx {
   syntax: "<length-percentage>";
   inherits: true;
@@ -162,7 +64,6 @@
   inherits: true;
   initial-value: 38%;
 }
-
 .blueprint {
   --cell: 56px;
   --major: calc(var(--cell) * 4);
@@ -171,7 +72,6 @@
   position: absolute;
   inset: 0;
 }
-/* Brilho suave atrás do visual da direita */
 .blueprint-glow {
   background: radial-gradient(60% 70% at 78% 45%, color-mix(in srgb, var(--color-snow) 7%, transparent), transparent 70%);
 }
@@ -195,70 +95,44 @@
 .blueprint-grid {
   mask-image: radial-gradient(110% 95% at 78% 40%, var(--color-night) 30%, transparent 85%);
 }
-/* Luz sob o cursor */
+/* Luz sob o cursor (só com mouse) */
 .blueprint-spot {
   --minor: color-mix(in srgb, var(--color-snow) 16%, transparent);
   --strong: color-mix(in srgb, var(--color-snow) 34%, transparent);
   mask-image: radial-gradient(260px circle at var(--mx) var(--my), var(--color-night), transparent 72%);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s var(--ease-out-expo);
+}
+.blueprint[data-active] .blueprint-spot {
+  opacity: 1;
 }
 @property --scan {
   syntax: "<percentage>";
   inherits: false;
   initial-value: -20%;
 }
-/* Faixa de luz que percorre a grade de cima a baixo */
+/* Uma passada de luz pela grade ao carregar; não fica em loop */
 .blueprint-scan {
   --minor: color-mix(in srgb, var(--color-snow) 9%, transparent);
   --strong: color-mix(in srgb, var(--color-snow) 20%, transparent);
+  opacity: 0;
   mask-image:
     linear-gradient(to bottom, transparent calc(var(--scan) - 12%), var(--color-night) var(--scan), transparent calc(var(--scan) + 12%)),
     radial-gradient(110% 95% at 78% 40%, var(--color-night) 30%, transparent 85%);
   mask-composite: intersect;
 }
-.blueprint[data-active] .blueprint-spot {
-  opacity: 1;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .blueprint-scan {
-    animation: scan 9s linear infinite;
-  }
-  /* Toque: o brilho passeia sozinho */
-  @media (hover: none) {
-    .blueprint-spot {
-      opacity: 1;
-      animation: spot-drift 16s ease-in-out infinite alternate;
-    }
+    opacity: 1;
+    animation: scan 3.2s linear 0.4s 1 both;
   }
 }
-
 @keyframes scan {
   from {
     --scan: -20%;
   }
   to {
     --scan: 120%;
-  }
-}
-@keyframes spin-slow {
-  to {
-    rotate: 360deg;
-  }
-}
-@keyframes spot-drift {
-  0% {
-    --mx: 20%;
-    --my: 30%;
-  }
-  50% {
-    --mx: 80%;
-    --my: 55%;
-  }
-  100% {
-    --mx: 45%;
-    --my: 85%;
   }
 }
 
@@ -275,10 +149,7 @@
 @media (prefers-reduced-motion: no-preference) {
   .hero-symbol-line {
     stroke-dasharray: 1;
-    animation: symbol-draw 2.6s var(--ease-out-expo) 0.35s both;
-  }
-  .hero-symbol-fill {
-    animation: symbol-fill 1.4s ease 1.8s both;
+    animation: symbol-draw 2.2s var(--ease-out-expo) 0.2s both;
   }
 }
 @keyframes symbol-draw {
@@ -289,40 +160,18 @@
     stroke-dashoffset: 0;
   }
 }
-@keyframes symbol-fill {
-  from {
-    fill: transparent;
-  }
-}
 
-/* ---------- Título do hero: palavras sobem em sequência ---------- */
+/* ---------- Hero: o texto assenta uma vez (fade com 8px de subida) ---------- */
 @media (prefers-reduced-motion: no-preference) {
-  .word-rise {
-    display: inline-block;
-    animation: word-rise 0.9s var(--ease-out-expo) both;
-    animation-delay: calc(var(--w, 0) * 45ms + 60ms);
-  }
   .hero-enter {
-    animation: hero-enter 0.9s var(--ease-out-expo) both;
-    animation-delay: var(--d, 450ms);
-  }
-}
-@keyframes word-rise {
-  from {
-    opacity: 0;
-    transform: translateY(0.5em);
-    filter: blur(6px);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-    filter: none;
+    animation: hero-enter 0.6s var(--ease-out-expo) both;
+    animation-delay: var(--d, 0ms);
   }
 }
 @keyframes hero-enter {
   from {
     opacity: 0;
-    transform: translateY(16px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -330,38 +179,56 @@
   }
 }
 
-/* ---------- Cartões: moldura de cantos da marca ("Expansão") no hover ---------- */
-@utility brackets {
-  position: relative;
+/* ---------- Hero: o título sobe palavra por palavra ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .word-rise {
+    display: inline-block;
+    white-space: pre;
+    animation: hero-enter 0.6s var(--ease-out-expo) both;
+    animation-delay: calc(var(--w, 0) * 40ms + 60ms);
+  }
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    --c: var(--color-ink);
-    --l: 16px;
-    background:
-      linear-gradient(var(--c), var(--c)) top left / var(--l) 2px,
-      linear-gradient(var(--c), var(--c)) top left / 2px var(--l),
-      linear-gradient(var(--c), var(--c)) top right / var(--l) 2px,
-      linear-gradient(var(--c), var(--c)) top right / 2px var(--l),
-      linear-gradient(var(--c), var(--c)) bottom left / var(--l) 2px,
-      linear-gradient(var(--c), var(--c)) bottom left / 2px var(--l),
-      linear-gradient(var(--c), var(--c)) bottom right / var(--l) 2px,
-      linear-gradient(var(--c), var(--c)) bottom right / 2px var(--l);
-    background-repeat: no-repeat;
+/* ---------- Sites: a linha percorre o formato sob o cursor ---------- */
+.offer-line {
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform var(--dur-long) var(--ease-out-expo);
+}
+.group:hover > .offer-line,
+.group:focus-within > .offer-line {
+  transform: scaleX(1);
+}
+.offer-price {
+  transition: transform var(--dur-short) var(--ease-out-expo);
+}
+.group:hover .offer-price {
+  transform: translateX(-4px);
+}
+
+/* ---------- Shopify: a seção personalizada desliza e encaixa no tema ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .section-slide {
+    animation: section-slide 0.9s var(--ease-out-expo) 0.9s both;
+  }
+}
+@keyframes section-slide {
+  from {
     opacity: 0;
-    transition:
-      opacity 0.3s ease,
-      inset 0.5s var(--ease-out-expo);
+    transform: translate3d(56px, -8px, 0);
   }
-
-  &:hover::before,
-  &:focus-within::before {
+  to {
     opacity: 1;
-    inset: -9px;
+    transform: none;
   }
+}
+
+/* ---------- Tour do Catequese Hub: a tela fixa troca conforme o painel ativo ---------- */
+.tour-shot {
+  transition: opacity var(--dur-long) var(--ease-out-expo);
+}
+.tour[data-ready] .tour-shot:not([data-active]) {
+  opacity: 0;
 }
 
 /* ---------- Barra de progresso da leitura (CSS scroll-driven, sem JS) ---------- */
@@ -385,9 +252,4 @@
   to {
     transform: scaleX(1);
   }
-}
-
-/* ---------- Hero: fundo escuro com brilho no canto ---------- */
-.hero-surface {
-  background: radial-gradient(120% 90% at 80% 10%, var(--color-hero-glow) 0%, var(--color-hero-mid) 55%, var(--color-night) 100%);
 }
